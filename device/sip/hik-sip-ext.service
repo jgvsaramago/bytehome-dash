@@ -1,0 +1,14 @@
+[Unit]
+Description=Hikvision SIP indoor-extension registration (interim Python responder)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/bytehomedash.env
+ExecStart=/usr/bin/python3 -u -I /usr/local/lib/hik-sip/hik_extension.py --server <indoor station IP> --number <extension number> --media none
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

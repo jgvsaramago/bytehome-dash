@@ -1,0 +1,17 @@
+[Unit]
+Description=ByteHomeDash kiosk (flutter-pi)
+Wants=network-online.target
+After=network-online.target systemd-user-sessions.service
+
+[Service]
+Type=simple
+User=@USER@
+WorkingDirectory=@HOME@
+EnvironmentFile=-/etc/bytehomedash.env
+Environment=XDG_RUNTIME_DIR=/run/user/@UID@
+ExecStart=/usr/local/bin/flutter-pi -r @ROTATION@ --release @HOME@/bytehomedash/app
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

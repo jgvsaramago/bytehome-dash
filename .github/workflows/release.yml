@@ -1,0 +1,63 @@
+# One release for the whole project: pushing a tag vX.Y.Z (tool/release.sh
+# does it) builds the app for flutter-pi and publishes a GitHub release with
+# the app bundles attached and that version's notes from CHANGELOG.md — app
+# and Home Assistant integration together. HACS installs the integration
+# from the same release.
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    # An arm64 runner builds the same way the boards do (flutterpi_tool on an
+    # aarch64 host).
+    runs-on: ubuntu-24.04-arm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Versions match the tag
+        run: |
+          tag=${GITHUB_REF_NAME#v}
+          app=$(sed -n 's/^version: *\([^+]*\).*/\1/p' pubspec.yaml)
+          integration=$(python3 -c "import json;print(json.load(open('custom_components/bytehomedash/manifest.json'))['version'])")
+          echo "tag $tag, app $app, integration $integration"
+          [ "$tag" = "$app" ] && [ "$tag" = "$integration" ]
+          grep -q "^## $tag" CHANGELOG.md
+
+      - name: Flutter SDK
+        run: |
+          git clone -q --depth 1 --branch 3.44.6 https://github.com/flutter/flutter.git "$RUNNER_TEMP/flutter"
+          echo "$RUNNER_TEMP/flutter/bin" >> "$GITHUB_PATH"
+
+      - name: Build for flutter-pi
+        run: |
+          flutter --version
+          flutter pub get
+          # generic: any aarch64 board (Rock 5B, Pi 4); pi5: tuned for the Pi 5's A76.
+          for target in generic:aarch64-generic pi5:pi5-64; do
+            cpu=${target%%:*}; out=${target#*:}
+            dart run flutterpi_tool build --arch=arm64 --cpu=$cpu --release
+            tar -C build/flutter-pi/$out -czf "bytehomedash-$GITHUB_REF_NAME-$cpu.tar.gz" .
+          done
+          sha256sum bytehomedash-*.tar.gz > SHA256SUMS
+
+      - name: Release notes from CHANGELOG.md
+        run: |
+          awk -v v="## ${GITHUB_REF_NAME#v}" '
+            index($0, v) == 1 { on = 1; next }
+            on && /^## / { exit }
+            on { print }
+          ' CHANGELOG.md > notes.md
+          cat notes.md
+
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" bytehomedash-*.tar.gz SHA256SUMS \
+            --title "ByteHomeDash $GITHUB_REF_NAME" --notes-file notes.md

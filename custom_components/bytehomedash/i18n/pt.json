@@ -1,0 +1,61 @@
+{
+  "day": {
+    "today": "Hoje",
+    "tomorrow": "Amanhã",
+    "weekdays": "Segunda,Terça,Quarta,Quinta,Sexta,Sábado,Domingo",
+    "weekdays_short": "seg,ter,qua,qui,sex,sáb,dom",
+    "months_short": "jan,fev,mar,abr,mai,jun,jul,ago,set,out,nov,dez",
+    "date": "{weekday}, {day} {month}"
+  },
+  "event": {
+    "all_day": "todo o dia"
+  },
+  "tasks": {
+    "section": "Tarefas",
+    "until": "até às {time}",
+    "done_at": "feita às {time}"
+  },
+  "recado": {
+    "title": "Recado",
+    "from": "Recado de {name}",
+    "for": "Recado para {name}",
+    "for_all": "Recado para todos",
+    "sent_to_phone": "enviado para o telemóvel"
+  },
+  "calls": {
+    "today": "Hoje",
+    "last_days": "Nos últimos {days} dias",
+    "rang_one": "{span} tocaram 1 vez",
+    "rang_other": "{span} tocaram {count} vezes",
+    "none": "{span} ninguém tocou",
+    "door": "Porta",
+    "answered": "Atendida",
+    "missed": "Não atendida"
+  },
+  "phone": {
+    "default_title": "Do ecrã",
+    "sent_to": "Enviado para o telemóvel de {name}",
+    "no_phone": "{name} não tem telemóvel com a app do Home Assistant",
+    "not_a_person": "{name} não está em Pessoas"
+  },
+  "meals": {
+    "section": "Receitas",
+    "breakfast": "pequeno-almoço",
+    "lunch": "almoço",
+    "dinner": "jantar",
+    "planned_other": "{count} refeições planeadas",
+    "already_planned_other": "{count} refeições já planeadas",
+    "now": "Agora: {old} → {new}",
+    "replaced_one": "Substituído: {dish}, {slot}",
+    "replaced_other": "Substituídas",
+    "kept_one": "Mantive {dish}",
+    "kept_other": "Mantive o que estava planeado",
+    "nothing_to_confirm": "Já não há nada para confirmar"
+  },
+  "undo": {
+    "expired": "Já não é possível desfazer"
+  },
+  "recipe": {
+    "no_steps": "A página não tem os passos da receita"
+  }
+}

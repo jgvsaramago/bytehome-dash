@@ -1,0 +1,4986 @@
+{
+  "@@locale": "en",
+  "datesWeekdaysTitle": "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday",
+  "@datesWeekdaysTitle": {
+    "description": "Weekdays Monday to Sunday as standalone titles, comma-separated, no spaces."
+  },
+  "datesWeekdaysAbbr": "MON,TUE,WED,THU,FRI,SAT,SUN",
+  "@datesWeekdaysAbbr": {
+    "description": "Three-letter uppercase weekday abbreviations Monday to Sunday, comma-separated."
+  },
+  "datesWeekdayLetters": "M,T,W,T,F,S,S",
+  "@datesWeekdayLetters": {
+    "description": "One-letter weekday column heads Monday to Sunday, comma-separated."
+  },
+  "commonSave": "Save",
+  "commonCancel": "Cancel",
+  "commonClose": "Close",
+  "commonDelete": "Delete",
+  "commonRemove": "Remove",
+  "commonEdit": "Edit",
+  "commonAdd": "Add",
+  "commonDone": "Done",
+  "commonOpen": "Open",
+  "commonBack": "Back",
+  "commonYes": "Yes",
+  "commonNo": "No",
+  "commonOk": "OK",
+  "commonToday": "Today",
+  "commonTomorrow": "Tomorrow",
+  "commonYesterday": "Yesterday",
+  "commonOn": "On",
+  "commonOff": "Off",
+  "commonLoading": "Loading…",
+  "commonRetry": "Try again",
+  "commonNext": "Next",
+  "commonPrevious": "Previous",
+  "commonSeeAll": "See all",
+  "commonNone": "None",
+  "commonAuto": "Automatic",
+  "commonUnavailable": "Unavailable",
+  "settingsLanguage": "Language",
+  "settingsLanguageSub": "The screen's language. Automatic follows Home Assistant.",
+  "settingsLanguageAuto": "Automatic (Home Assistant)",
+  "languageName": "English",
+  "@languageName": {
+    "description": "This language's own name, shown in the language picker."
+  },
+  "assistantAgoDays": "{count, plural, =1{1 day ago} other{{count} days ago}}",
+  "@assistantAgoDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantAgoHours": "{count} h ago",
+  "@assistantAgoHours": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantAgoMinutes": "{count} min ago",
+  "@assistantAgoMinutes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantChooserNoPhones": "Nobody has the Home Assistant app on their phone, or the person still needs to be chosen in the ByteHomeDash panel, under People.",
+  "assistantChooserNotRecognised": "I didn’t recognise the voice. Choose who gets it on their phone.",
+  "assistantChooserSendTo": "Send to…",
+  "assistantChooserWho": "Who should I send it to?",
+  "assistantClimateOn": "On · {current} → {target}",
+  "@assistantClimateOn": {
+    "placeholders": {
+      "current": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantCoverClosed": "Closed",
+  "@assistantCoverClosed": {
+    "description": "State of a blind/shutter."
+  },
+  "assistantCoverOpen": "Open",
+  "@assistantCoverOpen": {
+    "description": "State of a blind/shutter."
+  },
+  "assistantDefaultList": "list",
+  "@assistantDefaultList": {
+    "description": "Fallback name of a to-do list, used mid-sentence."
+  },
+  "assistantDidntUnderstand": "I didn’t quite get that. Could you say it another way?",
+  "assistantDone": "Done.",
+  "@assistantDone": {
+    "description": "The assistant’s answer when the request was carried out without a reply."
+  },
+  "assistantExamplesHeading": "YOU CAN ASK, FOR EXAMPLE",
+  "assistantGotIt": "Got it",
+  "assistantItemsAdded": "{count, plural, =1{1 item in {list}} other{{count} items in {list}}}",
+  "@assistantItemsAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "list": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantItemsPending": "{list} · now {count} to buy",
+  "@assistantItemsPending": {
+    "placeholders": {
+      "list": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantKeyHowMuch": "How much",
+  "@assistantKeyHowMuch": {
+    "description": "Word suggestion on the on-screen keyboard to start a request."
+  },
+  "assistantKeyPlay": "Play",
+  "@assistantKeyPlay": {
+    "description": "Word suggestion on the on-screen keyboard to start a request."
+  },
+  "assistantKeyTurnOff": "Turn off",
+  "@assistantKeyTurnOff": {
+    "description": "Word suggestion on the on-screen keyboard to start a request."
+  },
+  "assistantKeyTurnOn": "Turn on",
+  "@assistantKeyTurnOn": {
+    "description": "Word suggestion on the on-screen keyboard to start a request."
+  },
+  "assistantKeyWhatIs": "What is",
+  "@assistantKeyWhatIs": {
+    "description": "Word suggestion on the on-screen keyboard to start a request."
+  },
+  "assistantLightOff": "Off",
+  "@assistantLightOff": {
+    "description": "State of a light."
+  },
+  "assistantLightOn": "On",
+  "@assistantLightOn": {
+    "description": "State of a light."
+  },
+  "assistantLightOnBrightness": "On · {percent}%",
+  "@assistantLightOnBrightness": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantLocked": "Locked",
+  "@assistantLocked": {
+    "description": "State of a lock."
+  },
+  "assistantMealsKept": "Kept what was there",
+  "@assistantMealsKept": {
+    "description": "Shown after the user declined to replace planned meals."
+  },
+  "assistantMealsReplaced": "Replaced",
+  "@assistantMealsReplaced": {
+    "description": "Shown after the user agreed to replace planned meals."
+  },
+  "assistantMealsVoiceHint": "or say “yes” or “no”",
+  "assistantMealsYesReplace": "Yes, replace",
+  "assistantMediaPaused": "Paused",
+  "assistantMediaPlaying": "Playing",
+  "assistantNoConnection": "Couldn’t reach Home Assistant. Try again.",
+  "assistantNotConfirmed": "Home Assistant didn’t confirm the change",
+  "assistantOtherPerson": "Someone else",
+  "@assistantOtherPerson": {
+    "description": "Button to send a web page to a different person’s phone."
+  },
+  "assistantPhaseListening": "Listening…",
+  "assistantPhaseReadyFresh": "How can I help?",
+  "assistantPhaseReadyMore": "Anything else?",
+  "assistantPhaseThinking": "Let me see…",
+  "assistantPrice": "{currency}{amount}",
+  "@assistantPrice": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      },
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantPromptSay": "Say what you need…",
+  "assistantPromptTapMic": "Tap the microphone to speak",
+  "assistantPromptType": "Type what you need…",
+  "assistantRecognisingVoice": "Recognising the voice…",
+  "assistantResultSeen": "{title} · seen",
+  "@assistantResultSeen": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantResultUndone": "{title} · undone",
+  "@assistantResultUndone": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantResults": "Results",
+  "assistantSearchingAndWriting": "Searching and writing… the final answer will appear shortly",
+  "assistantSeeHistory": "See history",
+  "@assistantSeeHistory": {
+    "description": "Opens the doorbell call history."
+  },
+  "assistantSend": "Send",
+  "@assistantSend": {
+    "description": "Keyboard button that sends the typed request."
+  },
+  "assistantSent": "Sent",
+  "assistantSentToPhone": "Sent to {name}’s phone",
+  "@assistantSentToPhone": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantServings": "{count, plural, =1{1 serving} other{{count} servings}}",
+  "@assistantServings": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantSpeakerSemantics": "Talking to {name}, recognised by voice",
+  "@assistantSpeakerSemantics": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantSpeakingNow": "Speaking now",
+  "assistantStatusListening": "Listening",
+  "@assistantStatusListening": {
+    "description": "Status chip."
+  },
+  "assistantStatusReady": "Ready",
+  "@assistantStatusReady": {
+    "description": "Status chip; the assistant (Nabu) is ready."
+  },
+  "assistantStatusSpeaking": "Answering",
+  "@assistantStatusSpeaking": {
+    "description": "Status chip."
+  },
+  "assistantStatusThinking": "Thinking",
+  "@assistantStatusThinking": {
+    "description": "Status chip."
+  },
+  "assistantSubtitle": "The house's assistant · Home Assistant",
+  "@assistantSubtitle": {
+    "description": "Subtitle under the assistant’s name; the second part is the product name."
+  },
+  "assistantSuggestDinner": "What’s for dinner?",
+  "@assistantSuggestDinner": {
+    "description": "Example request the user can tap to send to the assistant."
+  },
+  "assistantSuggestDoorbell": "Who rang the doorbell today?",
+  "@assistantSuggestDoorbell": {
+    "description": "Example request the user can tap to send to the assistant."
+  },
+  "assistantSuggestLightsOff": "Turn off all the lights",
+  "@assistantSuggestLightsOff": {
+    "description": "Example request the user can tap to send to the assistant."
+  },
+  "assistantSuggestWeather": "What’s the weather tomorrow?",
+  "@assistantSuggestWeather": {
+    "description": "Example request the user can tap to send to the assistant."
+  },
+  "assistantTypeHint": "Type a question…",
+  "assistantUndo": "Undo",
+  "assistantUnlocked": "Unlocked",
+  "@assistantUnlocked": {
+    "description": "State of a lock."
+  },
+  "assistantViews": "{count, plural, =1{1 view} other{{count} views}}",
+  "@assistantViews": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantViewsMillions": "{value}M views",
+  "@assistantViewsMillions": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "assistantViewsThousands": "{count}K views",
+  "@assistantViewsThousands": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "assistantWebLoading": "LOADING",
+  "@assistantWebLoading": {
+    "description": "Heading above web result cards still loading (all caps)."
+  },
+  "assistantWebNews": "NEWS",
+  "@assistantWebNews": {
+    "description": "Heading above a row of web result cards (all caps)."
+  },
+  "assistantWebOther": "ON THE WEB",
+  "@assistantWebOther": {
+    "description": "Heading above a row of web result cards (all caps)."
+  },
+  "assistantWebPlaces": "PLACES NEAR HOME",
+  "@assistantWebPlaces": {
+    "description": "Heading above a row of web result cards (all caps)."
+  },
+  "assistantWebProducts": "WHERE TO BUY",
+  "@assistantWebProducts": {
+    "description": "Heading above a row of web result cards (all caps)."
+  },
+  "assistantWebRecipes": "RECIPES ON THE WEB",
+  "@assistantWebRecipes": {
+    "description": "Heading above a row of web result cards (all caps)."
+  },
+  "assistantWebVideos": "VIDEOS",
+  "@assistantWebVideos": {
+    "description": "Heading above a row of web result cards (all caps)."
+  },
+  "assistantWriting": "Writing…",
+  "narratorSearching1": "I’ll look it up online.",
+  "@narratorSearching1": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorSearching2": "Let me search for that.",
+  "@narratorSearching2": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorSearching3": "Let’s see what I can find.",
+  "@narratorSearching3": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorSearching4": "Searching now.",
+  "@narratorSearching4": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorStillWorking1": "Still looking, just a little longer.",
+  "@narratorStillWorking1": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorStillWorking2": "Almost there.",
+  "@narratorStillWorking2": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorStillWorking3": "Still searching, one moment.",
+  "@narratorStillWorking3": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorStillWorking4": "Just a little bit more.",
+  "@narratorStillWorking4": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorThinking1": "Let me think.",
+  "@narratorThinking1": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorThinking2": "Hmm, one moment.",
+  "@narratorThinking2": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorThinking3": "I’m thinking about it.",
+  "@narratorThinking3": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "narratorThinking4": "Good question, let me see.",
+  "@narratorThinking4": {
+    "description": "Spoken (text-to-speech) while the assistant is working on an answer."
+  },
+  "recadoDayAt": "{day} at {time}",
+  "@recadoDayAt": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoFor": "For {name}",
+  "@recadoFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoForEveryone": "For everyone",
+  "recadoFrom": "from {name}",
+  "@recadoFrom": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoFromUnknown": "from someone · voice not recognised",
+  "recadoGreeting": "{count, plural, =1{Hi! First of all: there’s an unseen message.} other{Hi! First of all: there are {count} unseen messages.}}",
+  "@recadoGreeting": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recadoLater": "Later",
+  "recadoMarkAllSeen": "Mark all as seen",
+  "recadoNow": "just now",
+  "recadoQuoted": "“{text}”",
+  "@recadoQuoted": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoRow": "Message",
+  "recadoRowFrom": "Message from {name}",
+  "@recadoRowFrom": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoRowTo": "for {name}",
+  "@recadoRowTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoRowToEveryone": "for everyone",
+  "recadoSeen": "Seen",
+  "recadoSeenBy": "Seen by {name}",
+  "@recadoSeenBy": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoStayUntilSeen": "They stay here until someone marks them as seen",
+  "recadoTitleEveryone": "Message for everyone",
+  "recadoTitleFor": "Message for {name}",
+  "@recadoTitleFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoUnseenCount": "{count, plural, =1{1 unseen message} other{{count} unseen messages}}",
+  "@recadoUnseenCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "recadoVoiceHint": "Say “Ok Nabu, seen” or “later”. Once marked as seen, it disappears from every screen.",
+  "voicesAlmostDone": "Almost done",
+  "voicesDeleteBody": "The assistant will stop recognising this voice and will no longer use this person’s calendar or list. You can register it again at any time.",
+  "voicesDeleteTitle": "Delete {name}’s voice?",
+  "@voicesDeleteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesDeleted": "{name}’s voice deleted",
+  "@voicesDeleted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesDoneBetter": "Done! The assistant now recognises {name}’s voice better.",
+  "@voicesDoneBetter": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesDoneNew": "Done! The assistant now recognises {name}’s voice.",
+  "@voicesDoneNew": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesErrorIncompatible": "The registered voices are from another model ({reason}); delete them and register again.",
+  "@voicesErrorIncompatible": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesErrorNoResponse": "Voice identification didn’t respond ({details})",
+  "@voicesErrorNoResponse": {
+    "placeholders": {
+      "details": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesErrorUnknown": "unknown error",
+  "voicesIntroBody": "{name} will read {count} sentences aloud, one at a time, from where they usually talk to the screen, in their everyday voice.",
+  "@voicesIntroBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesIntroSummary": "{count} sentences · about 1 minute",
+  "@voicesIntroSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesIntroTakeLength": "Each recording lasts {seconds} seconds. The assistant stays quiet meanwhile.",
+  "@voicesIntroTakeLength": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesLoadError": "Couldn’t read the registered voices.",
+  "voicesLoading": "Loading voices…",
+  "voicesMicError": "Couldn’t use the microphone ({error}).",
+  "@voicesMicError": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesMoreSamples": "More samples",
+  "voicesMoreSamplesOf": "More samples of {name}",
+  "@voicesMoreSamplesOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesNoPeopleBody": "Add them in the ByteHomeDash panel in Home Assistant, under People. Then each person registers their voice here.",
+  "voicesNoPeopleTitle": "No people yet",
+  "voicesNotInstalledBody": "Voices can’t be registered without it. Check the installation in the ByteHomeDash panel in Home Assistant.",
+  "voicesNotInstalledTitle": "The voice assistant isn’t installed on this screen.",
+  "voicesNotRecognised": "The assistant doesn’t recognise this voice yet",
+  "voicesPhrase1": "Hi, it’s me. Turn on the living room lights and tell me what the weather’s like today.",
+  "@voicesPhrase1": {
+    "description": "A sentence the person reads aloud to enrol their voice; should sound like an ordinary request to the assistant."
+  },
+  "voicesPhrase2": "What events do I have on the calendar for tomorrow morning?",
+  "@voicesPhrase2": {
+    "description": "Read aloud when enrolling a voice."
+  },
+  "voicesPhrase3": "Add milk, eggs and bread to the shopping list, please.",
+  "@voicesPhrase3": {
+    "description": "Read aloud when enrolling a voice."
+  },
+  "voicesPhrase4": "Play some calm music in the kitchen and turn the volume down a little.",
+  "@voicesPhrase4": {
+    "description": "Read aloud when enrolling a voice."
+  },
+  "voicesPhrase5": "Remind me to call grandma on Saturday at ten in the morning.",
+  "@voicesPhrase5": {
+    "description": "Read aloud when enrolling a voice."
+  },
+  "voicesPhraseOf": "Sentence {index} of {count}",
+  "@voicesPhraseOf": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesPhraseQuoted": "“{phrase}”",
+  "@voicesPhraseQuoted": {
+    "placeholders": {
+      "phrase": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesPrivacyNote": "Everything stays on this screen: only a “fingerprint” of the voice is kept, never the recordings. Recognition is a convenience, not a password: it doesn’t open doors or turn off alarms.",
+  "voicesReadyHint": "Tap Record and read the sentence aloud.",
+  "voicesRecord": "Record",
+  "voicesRecordAgain": "Record again",
+  "voicesRecording": "Recording · {seconds} s",
+  "@voicesRecording": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesRecordingEnds": "Stops by itself after {seconds} seconds.",
+  "@voicesRecordingEnds": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesRegister": "Register voice",
+  "voicesRegisterFailed": "Couldn’t register the voice.",
+  "voicesRegisterOf": "Register {name}’s voice",
+  "@voicesRegisterOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesRegistered": "{count, plural, =1{Voice registered · 1 sample} other{Voice registered · {count} samples}}",
+  "@voicesRegistered": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesRejectedTakes": "{count, plural, =1{One recording wasn’t used} other{{count} recordings weren’t used}} (too little speech), but {samples} samples were kept.",
+  "@voicesRejectedTakes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "samples": {
+        "type": "int"
+      }
+    }
+  },
+  "voicesRetry": "I didn’t hear that well. Read it again, a little louder.",
+  "voicesSamplesAdded": "{count} more samples of {name}’s voice were added.",
+  "@voicesSamplesAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesSamplesKept": "{count} samples of {name}’s voice were kept.",
+  "@voicesSamplesKept": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voicesSaving": "Saving the voice…",
+  "voicesSomethingWrong": "Something went wrong",
+  "voicesStart": "Start",
+  "voicesSubtitle": "The assistant recognises who is speaking and uses that person’s calendar and reminders.",
+  "voicesTitle": "Recognised voices",
+  "acModeHeat": "Heat",
+  "acModeCool": "Cool",
+  "acModeFan": "Fan",
+  "acFanLow": "Low",
+  "acFanQuiet": "Quiet",
+  "acFanMedium": "Medium",
+  "acFanHigh": "High",
+  "houseLockLocked": "Locked",
+  "houseLockUnlocked": "Unlocked",
+  "houseGateClosed": "Closed",
+  "@houseGateClosed": {
+    "description": "State of a gate or door sensor (masculine in Portuguese, e.g. \"portão\")"
+  },
+  "houseGateOpen": "Open",
+  "@houseGateOpen": {
+    "description": "State of a gate or door sensor (masculine in Portuguese, e.g. \"portão\")"
+  },
+  "houseDoorClosed": "Closed",
+  "@houseDoorClosed": {
+    "description": "State of a door (feminine in Portuguese, \"porta\")"
+  },
+  "houseDoorOpen": "Open",
+  "@houseDoorOpen": {
+    "description": "State of a door (feminine in Portuguese, \"porta\")"
+  },
+  "houseLockUnlock": "Unlock",
+  "houseLockLock": "Lock",
+  "houseLocksSetupHint": "Choose the locks in Home Assistant: ByteHomeDash › House",
+  "roomExtraLocked": "{name} locked",
+  "@roomExtraLocked": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "roomExtraUnlocked": "{name} open",
+  "@roomExtraUnlocked": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    },
+    "description": "A lock entity that is not locked"
+  },
+  "roomExtraClosed": "{name} closed",
+  "@roomExtraClosed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    },
+    "description": "A cover (blind, gate) that is closed"
+  },
+  "roomExtraOpen": "{name} open",
+  "@roomExtraOpen": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    },
+    "description": "A cover (blind, gate) that is open"
+  },
+  "roomHighHumidity": "High humidity",
+  "carAtHome": "At home",
+  "carAway": "Away",
+  "carDefaultName": "Car",
+  "houseWeatherSunny": "Sunny",
+  "houseWeatherClearNight": "Clear sky",
+  "houseWeatherPartlyCloudy": "Partly cloudy",
+  "houseWeatherCloudy": "Cloudy",
+  "houseWeatherRainy": "Rain",
+  "houseWeatherPouring": "Heavy rain",
+  "houseWeatherLightning": "Thunderstorm",
+  "houseWeatherSnowy": "Snow",
+  "houseWeatherHail": "Hail",
+  "houseWeatherFog": "Fog",
+  "houseWeatherWindy": "Wind",
+  "houseWeatherExceptional": "Exceptional weather",
+  "houseWhenToday": "today at {time}",
+  "@houseWhenToday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "houseWhenYesterday": "yesterday at {time}",
+  "@houseWhenYesterday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "houseWhenDay": "{day} at {time}",
+  "@houseWhenDay": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    },
+    "description": "day is a short weekday (\"sat\") or a short date (\"12 oct\")"
+  },
+  "houseCompassN": "north",
+  "@houseCompassN": {
+    "description": "Wind direction, used in \"From {direction}\""
+  },
+  "houseCompassNE": "northeast",
+  "houseCompassE": "east",
+  "houseCompassSE": "southeast",
+  "houseCompassS": "south",
+  "houseCompassSW": "southwest",
+  "houseCompassW": "west",
+  "houseCompassNW": "northwest",
+  "houseUvLow": "Low",
+  "@houseUvLow": {
+    "description": "UV index level"
+  },
+  "houseUvModerate": "Moderate",
+  "houseUvHigh": "High",
+  "houseUvVeryHigh": "Very high",
+  "houseUvExtreme": "Extreme",
+  "houseUvNow": "{level} now",
+  "@houseUvNow": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    },
+    "description": "level is a UV level such as \"Moderate\""
+  },
+  "houseStationJustNow": "weather station, just now",
+  "houseStationMinutesAgo": "weather station, {minutes} min ago",
+  "@houseStationMinutesAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "houseTodayDate": "Today, {weekday}, {month} {day}",
+  "@houseTodayDate": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "day": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      }
+    }
+  },
+  "houseTrendSteadyHour": "Steady over the last hour",
+  "houseTrendRisingHour": "Rising · +{degrees}° in the last hour",
+  "@houseTrendRisingHour": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "houseTrendFallingHour": "Falling · −{degrees}° in the last hour",
+  "@houseTrendFallingHour": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "houseHumidity": "Humidity",
+  "houseDewPoint": "Dew point {degrees}°",
+  "@houseDewPoint": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "houseOutdoorHumidity": "Outdoor humidity",
+  "houseWind": "Wind",
+  "houseWindFrom": "From the {direction}",
+  "@houseWindFrom": {
+    "placeholders": {
+      "direction": {
+        "type": "String"
+      }
+    },
+    "description": "direction is a compass word such as \"north\""
+  },
+  "houseWindGustMax": "max gust {speed}",
+  "@houseWindGustMax": {
+    "placeholders": {
+      "speed": {
+        "type": "String"
+      }
+    }
+  },
+  "houseRainingRate": "Raining · {rate} mm/h",
+  "@houseRainingRate": {
+    "placeholders": {
+      "rate": {
+        "type": "String"
+      }
+    }
+  },
+  "houseRainAccumulatedToday": "Total today · no rain now",
+  "houseRainToday": "Rain today",
+  "housePressure": "Pressure",
+  "houseTrendRising": "Rising",
+  "houseTrendFalling": "Falling",
+  "houseTrendSteady": "Steady",
+  "houseAtmosphericPressure": "Atmospheric pressure",
+  "houseUvIndex": "UV index",
+  "houseSolarRadiation": "Solar radiation",
+  "houseTrendIncreasing": "Increasing",
+  "houseTrendDecreasing": "Decreasing",
+  "houseOutdoorTemperature": "Outdoor temperature",
+  "energySummaryHome": "Right now the house uses {power}",
+  "@energySummaryHome": {
+    "placeholders": {
+      "power": {
+        "type": "String"
+      }
+    }
+  },
+  "energySummaryHomeOwn": "Right now the house uses {power}, {percent}% from the sun and the battery",
+  "@energySummaryHomeOwn": {
+    "placeholders": {
+      "power": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "energySummaryBattery": "battery at {percent}%",
+  "@energySummaryBattery": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    },
+    "description": "Joined after the house usage with \" · \", capitalised if first"
+  },
+  "energySummaryBatteryUntil": "battery at {percent}%, lasts until {time}",
+  "@energySummaryBatteryUntil": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumStateDocked": "Docked",
+  "vacuumStateCleaning": "Cleaning",
+  "vacuumStatePaused": "Paused",
+  "vacuumStateReturning": "Returning to base",
+  "vacuumStateIdle": "Stopped",
+  "vacuumStateError": "Error",
+  "vacuumPartMainBrush": "Main brush",
+  "vacuumPartSideBrush": "Side brush",
+  "vacuumPartFilter": "Filter",
+  "vacuumPartSensors": "Sensors",
+  "vacuumPartWheels": "Wheels",
+  "vacuumPartScaleInhibitor": "Scale inhibitor",
+  "vacuumModeSweeping": "Vacuum",
+  "@vacuumModeSweeping": {
+    "description": "Robot vacuum cleaning mode"
+  },
+  "vacuumModeMopping": "Mop",
+  "@vacuumModeMopping": {
+    "description": "Robot vacuum cleaning mode"
+  },
+  "vacuumModeSweepingAndMopping": "Vacuum and mop",
+  "vacuumModeMoppingAfterSweeping": "Mop after vacuuming",
+  "vacuumSuctionQuiet": "Quiet",
+  "vacuumStandard": "Standard",
+  "@vacuumStandard": {
+    "description": "Suction level or cleaning route"
+  },
+  "vacuumSuctionStrong": "Strong",
+  "vacuumSuctionMax": "Max",
+  "vacuumMopSlightlyDry": "Slightly damp",
+  "@vacuumMopSlightlyDry": {
+    "description": "Mop pad humidity"
+  },
+  "vacuumMopMoist": "Damp",
+  "@vacuumMopMoist": {
+    "description": "Mop pad humidity"
+  },
+  "vacuumMopWet": "Wet",
+  "@vacuumMopWet": {
+    "description": "Mop pad humidity"
+  },
+  "vacuumRouteQuick": "Quick",
+  "@vacuumRouteQuick": {
+    "description": "Cleaning route"
+  },
+  "vacuumRouteIntensive": "Intensive",
+  "@vacuumRouteIntensive": {
+    "description": "Cleaning route"
+  },
+  "vacuumDeep": "Deep",
+  "@vacuumDeep": {
+    "description": "Cleaning route / CleanGenius mode"
+  },
+  "vacuumGeniusRoutine": "Routine",
+  "@vacuumGeniusRoutine": {
+    "description": "CleanGenius mode"
+  },
+  "vacuumErrorMainBrush": "Main brush stuck",
+  "vacuumErrorMainBrushFix": "Turn the robot over, remove hair or objects caught in the main brush and tap Resume.",
+  "vacuumErrorSideBrush": "Side brush stuck",
+  "vacuumErrorSideBrushFix": "Free the side brush and tap Resume.",
+  "vacuumErrorWheel": "Wheel stuck",
+  "vacuumErrorWheelFix": "Move the robot somewhere else and tap Resume.",
+  "vacuumErrorDrop": "Wheels off the floor",
+  "vacuumErrorDropFix": "Put the robot on the floor and tap Resume.",
+  "vacuumErrorBumper": "Bumper stuck",
+  "vacuumErrorBumperFix": "Check the bumper and tap Resume.",
+  "vacuumErrorDustBin": "Dust bin missing",
+  "vacuumErrorDustBinFix": "Put the dust bin back and tap Resume.",
+  "vacuumErrorWaterTank": "Water tank missing",
+  "vacuumErrorWaterTankFix": "Put the water tank back and tap Resume.",
+  "vacuumErrorLowBattery": "Low battery",
+  "vacuumErrorLowBatteryFix": "Take the robot to the base to charge.",
+  "vacuumRoomFallback": "Room {number}",
+  "@vacuumRoomFallback": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "vacuumTankCleanWater": "Clean water",
+  "vacuumTankDirtyWater": "Dirty water",
+  "vacuumTankDustBag": "Dust bag",
+  "vacuumTankDetergent": "Detergent",
+  "vacuumDaysLeft": "{count, plural, =1{1 day} other{{count} days}}",
+  "@vacuumDaysLeft": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "Time left on a consumable"
+  },
+  "vacuumBatteryHistory": "Battery · {name}",
+  "@vacuumBatteryHistory": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    },
+    "description": "History chart title; name is the robot's name"
+  },
+  "vacuumLocate": "Locate",
+  "@vacuumLocate": {
+    "description": "Makes the robot beep so it can be found"
+  },
+  "vacuumSession": "{area} m² in {minutes} min",
+  "@vacuumSession": {
+    "placeholders": {
+      "area": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumStoppedIn": "Stopped in the {room}.",
+  "@vacuumStoppedIn": {
+    "placeholders": {
+      "room": {
+        "type": "String"
+      }
+    },
+    "description": "room is a room name, e.g. \"kitchen\""
+  },
+  "vacuumCleaningRoom": "Cleaning: {room}",
+  "@vacuumCleaningRoom": {
+    "placeholders": {
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumPausedRoom": "Paused: {room}",
+  "@vacuumPausedRoom": {
+    "placeholders": {
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumPausedHint": "Tap Resume to carry on where it stopped.",
+  "vacuumCleaningFinished": "Cleaning finished · {session}",
+  "@vacuumCleaningFinished": {
+    "placeholders": {
+      "session": {
+        "type": "String"
+      }
+    },
+    "description": "session is e.g. \"24 m² in 31 min\""
+  },
+  "vacuumIdleTitle": "Stopped away from the base",
+  "vacuumIdleOffBase": "It’s away from the base. You can start again or send it to the base.",
+  "vacuumIdleInRoom": "It’s in the {room}. You can start again or send it to the base.",
+  "@vacuumIdleInRoom": {
+    "placeholders": {
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumDockedWashing": "At the base · washing the mop",
+  "vacuumDockedWashingHint": "The station is washing the mop and refreshing its water.",
+  "vacuumDockedDrying": "At the base · drying the mop",
+  "vacuumDryingHint": "You can start a clean at any time.",
+  "vacuumDryingLeftHint": "{duration} to go. You can start a clean at any time.",
+  "@vacuumDryingLeftHint": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    },
+    "description": "duration is e.g. \"1 h 20 min\""
+  },
+  "vacuumDockedEmptying": "At the base · emptying the bin",
+  "vacuumDockedEmptyingHint": "The dust goes into the station’s bag.",
+  "vacuumDockedCharging": "At the base · charging",
+  "vacuumDockedFull": "At the base · fully charged",
+  "vacuumLastCleaning": "Last clean: {session}",
+  "@vacuumLastCleaning": {
+    "placeholders": {
+      "session": {
+        "type": "String"
+      }
+    },
+    "description": "session is e.g. \"24 m² in 31 min\""
+  },
+  "vacuumPendingConfirm": "{action}… waiting for Home Assistant to confirm.",
+  "@vacuumPendingConfirm": {
+    "placeholders": {
+      "action": {
+        "type": "String"
+      }
+    },
+    "description": "action is a button label such as \"Pause\""
+  },
+  "vacuumMaintenanceNotice": "Maintenance: {parts}",
+  "@vacuumMaintenanceNotice": {
+    "placeholders": {
+      "parts": {
+        "type": "String"
+      }
+    },
+    "description": "parts is a list like \"filter 12%, side brush 8%\""
+  },
+  "vacuumSeeMaintenance": "See maintenance",
+  "vacuumMapLive": "Live map",
+  "vacuumMap": "Map",
+  "vacuumStatHistory": "{stat} · {name}",
+  "@vacuumStatHistory": {
+    "placeholders": {
+      "stat": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    },
+    "description": "History chart title: a statistic and the robot's name"
+  },
+  "vacuumAreaCleaned": "Area cleaned",
+  "vacuumLastCleaningLabel": "Last clean",
+  "vacuumTime": "Time",
+  "vacuumDuration": "Duration",
+  "vacuumCleaningTime": "Cleaning time",
+  "vacuumDone": "Done",
+  "@vacuumDone": {
+    "description": "Cleaning progress label, next to a percentage"
+  },
+  "vacuumProgress": "Progress",
+  "vacuumTotalCleanings": "Cleans in total",
+  "vacuumCleanings": "Cleans",
+  "vacuumCleanAll": "Clean everything",
+  "vacuumCleanRooms": "{count, plural, =1{Clean 1 room} other{Clean {count} rooms}}",
+  "@vacuumCleanRooms": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "vacuumPause": "Pause",
+  "vacuumReturnToBase": "Return to base",
+  "vacuumResume": "Resume",
+  "vacuumStop": "Stop",
+  "vacuumBase": "Base",
+  "@vacuumBase": {
+    "description": "The robot's docking station (button and tab)"
+  },
+  "vacuumTabCleaning": "Cleaning",
+  "vacuumTabMaintenance": "Maintenance",
+  "vacuumTabMore": "More",
+  "vacuumRoomsHeaderNone": "ROOMS · NONE · CLEANS THE WHOLE HOUSE",
+  "@vacuumRoomsHeaderNone": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumRoomsHeaderSome": "ROOMS · {selected} OF {total} IN THE ORDER CHOSEN",
+  "@vacuumRoomsHeaderSome": {
+    "placeholders": {
+      "selected": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    },
+    "description": "Section heading, all caps"
+  },
+  "vacuumSelectAll": "Select all",
+  "vacuumClearSelection": "Clear selection",
+  "vacuumGeniusSubtitle": "Smart automatic mode",
+  "vacuumGeniusHint": "CleanGenius picks the mode, suction, mop humidity and route for each room on its own. Turn it off to choose by hand.",
+  "vacuumCleaningModeLabel": "CLEANING MODE",
+  "@vacuumCleaningModeLabel": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumSuctionLabel": "SUCTION",
+  "@vacuumSuctionLabel": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumMopHumidityLabel": "MOP HUMIDITY",
+  "@vacuumMopHumidityLabel": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumRouteLabel": "ROUTE",
+  "@vacuumRouteLabel": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumFineTune": "Fine tuning",
+  "vacuumInstalled": "Installed",
+  "vacuumMissing": "Missing",
+  "vacuumStation": "Station",
+  "vacuumStationIdle": "Idle",
+  "@vacuumStationIdle": {
+    "description": "Station state (feminine in Portuguese)"
+  },
+  "vacuumStationWashing": "Washing",
+  "vacuumStationDrying": "Drying",
+  "vacuumAutoEmpty": "Auto-empty",
+  "vacuumEmptying": "Emptying",
+  "vacuumAutoEmptyIdle": "Idle",
+  "@vacuumAutoEmptyIdle": {
+    "description": "Auto-empty state (masculine in Portuguese)"
+  },
+  "vacuumLowWater": "Low water",
+  "vacuumActionEmptyBin": "Empty dust bin",
+  "vacuumActionWashMop": "Wash mop",
+  "vacuumActionDryMop": "Dry mop",
+  "vacuumActionCleanBase": "Clean the base",
+  "vacuumDryingMop": "Drying the mop",
+  "vacuumDryingProgress": "{percent}% · {duration} to go",
+  "@vacuumDryingProgress": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumStationLabel": "STATION",
+  "@vacuumStationLabel": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumBaseHistory": "{label} · base",
+  "@vacuumBaseHistory": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    },
+    "description": "History chart title for a station sensor"
+  },
+  "vacuumBaseActionsLabel": "BASE ACTIONS",
+  "@vacuumBaseActionsLabel": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumNoWearInfo": "This vacuum doesn’t report how worn its parts are.",
+  "vacuumPartLifeHistory": "{part} · life left",
+  "@vacuumPartLifeHistory": {
+    "placeholders": {
+      "part": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumReset": "Reset",
+  "vacuumResetAskClean": "Reset the {part} counter? Do it after cleaning the part.",
+  "@vacuumResetAskClean": {
+    "placeholders": {
+      "part": {
+        "type": "String"
+      }
+    },
+    "description": "part is a lower-case part name, e.g. \"sensors\""
+  },
+  "vacuumResetAskReplace": "Reset the {part} counter? Do it after replacing the part.",
+  "@vacuumResetAskReplace": {
+    "placeholders": {
+      "part": {
+        "type": "String"
+      }
+    },
+    "description": "part is a lower-case part name, e.g. \"filter\""
+  },
+  "vacuumResetTo100": "Reset to 100%",
+  "vacuumPartLeft": "{percent}% · {time} left",
+  "@vacuumPartLeft": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    },
+    "description": "time is e.g. \"172 h\" or \"22 days\""
+  },
+  "vacuumTotalArea": "Total area",
+  "vacuumTotalTime": "Total time",
+  "vacuumDnd": "Do not disturb",
+  "vacuumDndHint": "Doesn’t clean or speak during these hours",
+  "vacuumStartsAt": "Starts at",
+  "vacuumEndsAt": "Ends at",
+  "vacuumChildLock": "Child lock",
+  "vacuumChildLockHint": "The robot’s buttons stop working",
+  "vacuumStatsLabel": "STATISTICS",
+  "@vacuumStatsLabel": {
+    "description": "Section heading, all caps"
+  },
+  "vacuumVoiceVolume": "Voice volume",
+  "houseTitle": "House",
+  "@houseTitle": {
+    "description": "Page title"
+  },
+  "houseDoorsClosed": "Doors closed",
+  "houseDoorsOpen": "{count, plural, =1{1 door open} other{{count} doors open}}",
+  "@houseDoorsOpen": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "houseWindowsClosed": "Windows closed",
+  "houseWindowsOpen": "{count, plural, =1{1 window open} other{{count} windows open}}",
+  "@houseWindowsOpen": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "houseLightsOff": "Lights off",
+  "houseLightsOn": "{count, plural, =1{1 light on} other{{count} lights on}}",
+  "@houseLightsOn": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "roomLights": "Lights",
+  "roomWindow": "Window",
+  "roomBlinds": "Blinds",
+  "acTitle": "Air conditioning",
+  "roomVentilation": "Ventilation",
+  "roomRooms": "Rooms",
+  "@roomRooms": {
+    "description": "Section title: the house's rooms"
+  },
+  "roomAllLightsOff": "Turn off all lights",
+  "roomVentOn": "On",
+  "@roomVentOn": {
+    "description": "A fan/ventilation that is running (feminine in Portuguese)"
+  },
+  "energySolar": "Solar",
+  "energyOfForecast": "Of {amount} kWh forecast",
+  "@energyOfForecast": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "energyConsumption": "Consumption",
+  "energyYesterdayThisTime": "Yesterday at this time: {amount}",
+  "@energyYesterdayThisTime": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "energySelfUse": "Self-consumption",
+  "energyFromSunAndBattery": "From the sun and the battery",
+  "energyGrid": "Grid",
+  "energyImportedSold": "Imported · {amount} sold",
+  "@energyImportedSold": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "energyLessThanToday": "{percent}% less than today",
+  "@energyLessThanToday": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "energyMoreThanToday": "{percent}% more than today",
+  "@energyMoreThanToday": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "energyNowLabel": "NOW",
+  "@energyNowLabel": {
+    "description": "Label, all caps"
+  },
+  "energyTitle": "Energy",
+  "houseSeeMore": "See more",
+  "energyTodayLabel": "TODAY",
+  "@energyTodayLabel": {
+    "description": "Section heading, all caps"
+  },
+  "energyTomorrowLabel": "TOMORROW",
+  "@energyTomorrowLabel": {
+    "description": "Section heading, all caps"
+  },
+  "energySolarForecast": "Solar forecast",
+  "houseSecurity": "Security",
+  "houseAllClosed": "All closed",
+  "houseOpenCount": "{count, plural, =1{1 open} other{{count} open}}",
+  "@houseOpenCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "How many doors/locks are open"
+  },
+  "houseLockLastOpened": "{kind, select, lock{Last unlocked {when}} door{Last opened {when}} other{Last opened {when}}}",
+  "@houseLockLastOpened": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    },
+    "description": "kind: lock (a lock), door (feminine noun in Portuguese) or gate (masculine). when is e.g. \"yesterday at 19:40\""
+  },
+  "houseLockOpenSince": "{kind, select, lock{Unlocked since {time}} door{Open since {time}} other{Open since {time}}}",
+  "@houseLockOpenSince": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    },
+    "description": "kind: lock, door (feminine in Portuguese) or gate (masculine)"
+  },
+  "houseLockOpenJustNow": "{kind, select, lock{Unlocked just now} door{Opened just now} other{Opened just now}}",
+  "@houseLockOpenJustNow": {
+    "placeholders": {
+      "kind": {
+        "type": "String"
+      }
+    },
+    "description": "kind: lock, door (feminine in Portuguese) or gate (masculine)"
+  },
+  "houseFeelsLike": "Feels like {degrees}°",
+  "@houseFeelsLike": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "houseTodayMaxMin": "today high {max}°, low {min}°",
+  "@houseTodayMaxMin": {
+    "placeholders": {
+      "max": {
+        "type": "String"
+      },
+      "min": {
+        "type": "String"
+      }
+    }
+  },
+  "houseOutdoor": "Outdoor",
+  "@houseOutdoor": {
+    "description": "Card title: the weather outside"
+  },
+  "vacuumCountCleaning": "{count} cleaning",
+  "@vacuumCountCleaning": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "How many robot vacuums are cleaning now"
+  },
+  "vacuumBothDocked": "Both docked",
+  "vacuumAllDocked": "All docked",
+  "vacuumNoneCleaning": "None cleaning",
+  "vacuumTitle": "Robot vacuums",
+  "vacuumErrorInRoom": "{error} in the {room}",
+  "@vacuumErrorInRoom": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      },
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumBusyFoot": "Battery {battery}% · {area} m² · {minutes} min",
+  "@vacuumBusyFoot": {
+    "placeholders": {
+      "battery": {
+        "type": "String"
+      },
+      "area": {
+        "type": "String"
+      },
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "vacuumLastCleaningShort": "Last clean {session}",
+  "@vacuumLastCleaningShort": {
+    "placeholders": {
+      "session": {
+        "type": "String"
+      }
+    },
+    "description": "session is e.g. \"24 m² in 31 min\""
+  },
+  "vacuumOfCleaning": "of the clean",
+  "@vacuumOfCleaning": {
+    "description": "After a big percentage: \"42% of the clean\""
+  },
+  "vacuumBatteryCharging": "battery · charging",
+  "@vacuumBatteryCharging": {
+    "description": "After a big percentage"
+  },
+  "vacuumBatteryWord": "battery",
+  "@vacuumBatteryWord": {
+    "description": "After a big percentage"
+  },
+  "acSectionTitle": "Air conditioning",
+  "acNone": "No air conditioning",
+  "acAllOff": "All off",
+  "acOnOfTotal": "{on} of {total} on",
+  "@acOnOfTotal": {
+    "placeholders": {
+      "on": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "houseSeeAll": "See all",
+  "acNowTemp": "Now {temp}",
+  "@acNowTemp": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    },
+    "description": "temp is a formatted temperature like \"21,5°\""
+  },
+  "houseAllLocked": "All locked",
+  "houseAccessesOpen": "{count, plural, =1{1 entrance open} other{{count} entrances open}}",
+  "@houseAccessesOpen": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "Doors and gates that are open"
+  },
+  "houseAlarmTriggered": "Alarm triggered",
+  "houseAlarmOff": "Alarm off",
+  "houseAlarmHome": "Alarm home",
+  "@houseAlarmHome": {
+    "description": "Alarm armed in home mode"
+  },
+  "houseAlarmAway": "Alarm away",
+  "@houseAlarmAway": {
+    "description": "Alarm armed in away mode"
+  },
+  "houseWaterHeating": "Heating",
+  "@houseWaterHeating": {
+    "description": "Hot water tank state"
+  },
+  "houseWaterOff": "Off",
+  "@houseWaterOff": {
+    "description": "Hot water tank state (feminine in Portuguese)"
+  },
+  "houseWaterReady": "Ready",
+  "@houseWaterReady": {
+    "description": "Hot water tank state (feminine in Portuguese)"
+  },
+  "houseHotWater": "Hot water",
+  "houseHotWaterTemperature": "Hot water · temperature",
+  "houseWaterTarget": "Target {degrees} ºC",
+  "@houseWaterTarget": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "houseHeatPump": "Heat pump",
+  "houseJustNow": "just now",
+  "houseMinutesAgo": "{minutes} min ago",
+  "@houseMinutesAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "houseHoursAgo": "{hours} h ago",
+  "@houseHoursAgo": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "houseDaysAgo": "{count, plural, =1{1 day ago} other{{count} days ago}}",
+  "@houseDaysAgo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "houseMissedCalls": "{count, plural, =1{1 missed call} other{{count} missed calls}}",
+  "@houseMissedCalls": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "houseBuildingDoor": "Door",
+  "@houseBuildingDoor": {
+    "description": "The building's entrance door (intercom camera)"
+  },
+  "houseMissedShort": "{count, plural, =1{1 missed} other{{count} missed}}",
+  "@houseMissedShort": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    },
+    "description": "Missed intercom calls, short"
+  },
+  "houseIntercom": "Intercom",
+  "cameraLive": "LIVE",
+  "@cameraLive": {
+    "description": "Badge on a live camera image, all caps"
+  },
+  "cameraUnavailable": "Camera unavailable",
+  "roomTemperatureHistory": "Temperature · {room}",
+  "@roomTemperatureHistory": {
+    "placeholders": {
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "roomNoTemperatureSensor": "No temperature sensor",
+  "roomHumidityHistory": "Humidity · {room}",
+  "@roomHumidityHistory": {
+    "placeholders": {
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "roomHumidityValue": "humidity {percent}%",
+  "@roomHumidityValue": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "roomWindowHistory": "Window · {room}",
+  "@roomWindowHistory": {
+    "placeholders": {
+      "room": {
+        "type": "String"
+      }
+    }
+  },
+  "roomLightsOff": "Off",
+  "@roomLightsOff": {
+    "description": "Lights that are off (feminine plural in Portuguese)"
+  },
+  "roomBrightness": "Brightness",
+  "roomBlindsOpening": "Opening",
+  "roomBlindsClosing": "Closing",
+  "roomBlindsClosed": "Closed",
+  "@roomBlindsClosed": {
+    "description": "Blinds (masculine plural in Portuguese)"
+  },
+  "roomBlindsOpen": "Open",
+  "@roomBlindsOpen": {
+    "description": "Blinds (masculine plural in Portuguese)"
+  },
+  "roomBlindsOpenAt": "Open {percent}%",
+  "@roomBlindsOpenAt": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "roomBlindsHalf": "Half",
+  "@roomBlindsHalf": {
+    "description": "Button: move the blinds halfway"
+  },
+  "roomBlindsAperture": "Opening",
+  "@roomBlindsAperture": {
+    "description": "Slider label: how far the blinds are open"
+  },
+  "roomVentOff": "Off",
+  "@roomVentOff": {
+    "description": "Ventilation that is off (feminine in Portuguese)"
+  },
+  "acNowMode": "{mode, select, heat{Now {temp} · heating} cool{Now {temp} · cooling} fan{Now {temp} · fan} other{Now {temp} · auto}}",
+  "@acNowMode": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      },
+      "mode": {
+        "type": "String"
+      }
+    },
+    "description": "mode is the AC mode: heat, cool, fan or auto"
+  },
+  "acNowOff": "Now {temp} · off",
+  "@acNowOff": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "acTargetTemperature": "Target temperature",
+  "acOffTurnOnToAdjust": "Off · turn on to adjust",
+  "acModeLabel": "MODE",
+  "@acModeLabel": {
+    "description": "Section heading, all caps"
+  },
+  "acFanLabel": "FAN",
+  "@acFanLabel": {
+    "description": "Section heading, all caps"
+  },
+  "acAllUnits": "All air conditioners",
+  "acTurnOff": "Turn off",
+  "acTurnOn": "Turn on",
+  "acNowLower": "now {temp}",
+  "@acNowLower": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "acHeating": "Heating",
+  "acCooling": "Cooling",
+  "acVentilating": "Fan",
+  "acNoUnits": "No units",
+  "acHouseTemp": "House {temp}",
+  "@acHouseTemp": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    },
+    "description": "Average indoor temperature"
+  },
+  "acHouseTempNoHeating": "House {temp} · no heating",
+  "@acHouseTempNoHeating": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "acOutside": "Outside {degrees}°",
+  "@acOutside": {
+    "placeholders": {
+      "degrees": {
+        "type": "String"
+      }
+    }
+  },
+  "acTurnOffAll": "Turn all off",
+  "acNoneConfigured": "No air conditioning set up.",
+  "energySolarTodayLabel": "SOLAR TODAY",
+  "@energySolarTodayLabel": {
+    "description": "Card label, all caps"
+  },
+  "energyConsumptionLabel": "CONSUMPTION",
+  "@energyConsumptionLabel": {
+    "description": "Card label, all caps"
+  },
+  "energySelfUseLabel": "SELF-CONSUMPTION",
+  "@energySelfUseLabel": {
+    "description": "Card label, all caps"
+  },
+  "energyCameFromSunOrBattery": "Came from the sun or the battery",
+  "energySavingsLabel": "SAVINGS",
+  "@energySavingsLabel": {
+    "description": "Card label, all caps"
+  },
+  "energySavingsVsGrid": "Today, compared with grid only",
+  "energyNow": "Now",
+  "energyBatterySupplying": "Supplying {power}",
+  "@energyBatterySupplying": {
+    "placeholders": {
+      "power": {
+        "type": "String"
+      }
+    }
+  },
+  "energyBatteryCharging": "Charging {power}",
+  "@energyBatteryCharging": {
+    "placeholders": {
+      "power": {
+        "type": "String"
+      }
+    }
+  },
+  "energyBatteryIdle": "Idle",
+  "@energyBatteryIdle": {
+    "description": "Battery neither charging nor discharging"
+  },
+  "energyBatteryLastsUntil": "At the current rate it lasts until",
+  "@energyBatteryLastsUntil": {
+    "description": "Followed by a time"
+  },
+  "energyBatteryRechargesAt": "Charges again (forecast)",
+  "energyBatteryRechargesWithSun": "≈ {time}, with the sun",
+  "@energyBatteryRechargesWithSun": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "energyCapacity": "Capacity",
+  "energyGridIdle": "No exchange",
+  "@energyGridIdle": {
+    "description": "Nothing bought from or sold to the grid"
+  },
+  "energyGridImporting": "Importing {power}",
+  "@energyGridImporting": {
+    "placeholders": {
+      "power": {
+        "type": "String"
+      }
+    }
+  },
+  "energyGridSelling": "Selling {power}",
+  "@energyGridSelling": {
+    "placeholders": {
+      "power": {
+        "type": "String"
+      }
+    }
+  },
+  "energyImportedToday": "Imported today",
+  "energySoldToday": "Sold today",
+  "energyTariffNow": "Tariff now",
+  "energyPriceNow": "Price now",
+  "energyOther": "Other",
+  "@energyOther": {
+    "description": "Power drawn by everything not listed"
+  },
+  "energyTodayByHour": "Today, hour by hour",
+  "energyForecast": "Forecast",
+  "energySolarForecastTitle": "Solar forecast",
+  "energyBattery": "Battery",
+  "energyConsumptionNow": "Consumption now",
+  "energyLast7Days": "Last 7 days",
+  "energyProduced": "Produced",
+  "energyConsumed": "Consumed",
+  "energyExported": "Exported",
+  "energyWeekSummary": "Last 7 days: {produced} kWh produced, {consumed} kWh consumed, {exported} kWh exported.",
+  "@energyWeekSummary": {
+    "placeholders": {
+      "produced": {
+        "type": "String"
+      },
+      "consumed": {
+        "type": "String"
+      },
+      "exported": {
+        "type": "String"
+      }
+    }
+  },
+  "energyWeekSummarySavings": "Last 7 days: {produced} kWh produced, {consumed} kWh consumed, {exported} kWh exported · estimated savings {savings}.",
+  "@energyWeekSummarySavings": {
+    "placeholders": {
+      "produced": {
+        "type": "String"
+      },
+      "consumed": {
+        "type": "String"
+      },
+      "exported": {
+        "type": "String"
+      },
+      "savings": {
+        "type": "String"
+      }
+    }
+  },
+  "energyNotConfigured": "The totals, forecast and history come from Home Assistant’s Energy dashboard, which isn’t set up.",
+  "energyModalToday": "Today, {date}",
+  "@energyModalToday": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "energyModalTodayUpdated": "Today, {date} · updated at {time}",
+  "@energyModalTodayUpdated": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "energyForecastPeak": "Forecast peak {power} · {time}",
+  "@energyForecastPeak": {
+    "placeholders": {
+      "power": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "energyFlowLabel": "ENERGY",
+  "@energyFlowLabel": {
+    "description": "Corner label of the energy diagram, all caps"
+  },
+  "energyPowerGrid": "Power grid",
+  "energySolarProduction": "Solar production",
+  "energyHouseBattery": "House battery",
+  "energyHouseConsumption": "House consumption",
+  "carLocked": "Locked",
+  "@carLocked": {
+    "description": "A car (masculine in Portuguese)"
+  },
+  "carUnlocked": "Unlocked",
+  "@carUnlocked": {
+    "description": "A car (masculine in Portuguese)"
+  },
+  "carNoState": "No status",
+  "carCharging": "Charging",
+  "carBatteryLow": "Battery low",
+  "carWaitingToCharge": "Waiting to charge",
+  "carUnplugged": "Unplugged",
+  "carUpdatedAt": "Updated at {time}",
+  "@carUpdatedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "carRefuelSoon": "refuel soon",
+  "carChargeLimit": "up to {percent}%",
+  "@carChargeLimit": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    },
+    "description": "Charge limit while charging"
+  },
+  "carPlugIn": "plug in",
+  "@carPlugIn": {
+    "description": "Advice when an electric car's battery is low"
+  },
+  "carFuelHistory": "{name} · fuel",
+  "@carFuelHistory": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    },
+    "description": "History chart title"
+  },
+  "carBatteryHistory": "{name} · battery",
+  "@carBatteryHistory": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    },
+    "description": "History chart title"
+  },
+  "cameraSubtitle": "Camera · {place}",
+  "@cameraSubtitle": {
+    "placeholders": {
+      "place": {
+        "type": "String"
+      }
+    },
+    "description": "place is the camera's area or name"
+  },
+  "cameraLiveShort": "Live",
+  "speakersWholeHouse": "Whole house",
+  "@speakersWholeHouse": {
+    "description": "Quick group preset: every speaker"
+  },
+  "speakersOnly": "Only {name}",
+  "@speakersOnly": {
+    "description": "Quick group preset: only this speaker",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "speakersPlayingInSync": "{count} speakers playing in sync",
+  "@speakersPlayingInSync": {
+    "description": "Shown only when count is 2 or more",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "speakersPlayingOnlyOn": "Playing only on {name}",
+  "@speakersPlayingOnlyOn": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "speakersTitle": "Speakers",
+  "speakersIntro": "Tap a speaker to add it to or remove it from the group. The music keeps playing.",
+  "speakersNoConnection": "No connection to Music Assistant.",
+  "speakersAlsoPlaying": "ALSO PLAYING",
+  "@speakersAlsoPlaying": {
+    "description": "Section caption, upper case"
+  },
+  "speakersPlaying": "Playing",
+  "speakersControl": "Control",
+  "@speakersControl": {
+    "description": "Button: make this player the one the screen controls"
+  },
+  "speakersQuickGroups": "QUICK GROUPS",
+  "@speakersQuickGroups": {
+    "description": "Section caption, upper case"
+  },
+  "speakersGroupVolume": "GROUP VOLUME",
+  "@speakersGroupVolume": {
+    "description": "Section caption, upper case"
+  },
+  "speakersHouseSpeakers": "SPEAKERS IN THE HOUSE",
+  "@speakersHouseSpeakers": {
+    "description": "Section caption, upper case"
+  },
+  "speakersMixedBrandsNote": "Speakers from different systems play together in a Music Assistant group. There may be a small delay between them.",
+  "speakersSpeaker": "Speaker",
+  "@speakersSpeaker": {
+    "description": "Fallback name when a speaker has no model"
+  },
+  "speakersSubOff": "{model} · off",
+  "@speakersSubOff": {
+    "description": "Speaker model or 'Speaker', then its state",
+    "placeholders": {
+      "model": {
+        "type": "String"
+      }
+    }
+  },
+  "speakersSubPlaying": "{model} · playing {title}",
+  "@speakersSubPlaying": {
+    "placeholders": {
+      "model": {
+        "type": "String"
+      },
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "speakersSubCantGroup": "{model} · can’t group with {name}",
+  "@speakersSubCantGroup": {
+    "placeholders": {
+      "model": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "speakersChipInGroup": "In group",
+  "speakersChipBusy": "Busy",
+  "@speakersChipBusy": {
+    "description": "A speaker playing something else"
+  },
+  "speakersChipFree": "Free",
+  "@speakersChipFree": {
+    "description": "A speaker available to join"
+  },
+  "musicRadio": "Radio",
+  "musicLocalLibrary": "Local library",
+  "@musicLocalLibrary": {
+    "description": "Source name for files on a local or network disk"
+  },
+  "musicDurationHoursMinutes": "{hours} h {minutes} min",
+  "@musicDurationHoursMinutes": {
+    "description": "Total length of a playlist or album",
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "musicDurationMinutes": "{minutes} min",
+  "@musicDurationMinutes": {
+    "description": "Total length of a playlist or album",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "musicLive": "LIVE",
+  "@musicLive": {
+    "description": "Badge on a live radio station, upper case"
+  },
+  "musicPlaylist": "Playlist",
+  "musicPlaylistBy": "Playlist · {owner}",
+  "@musicPlaylistBy": {
+    "placeholders": {
+      "owner": {
+        "type": "String"
+      }
+    }
+  },
+  "musicArtist": "Artist",
+  "musicPodcast": "Podcast",
+  "musicPodcastBy": "Podcast · {owner}",
+  "@musicPodcastBy": {
+    "placeholders": {
+      "owner": {
+        "type": "String"
+      }
+    }
+  },
+  "musicSaveFailed": "Couldn’t save",
+  "@musicSaveFailed": {
+    "description": "Toast when marking a favourite fails"
+  },
+  "musicPlayingOn": "PLAYING ON {target}",
+  "@musicPlayingOn": {
+    "description": "Upper-case caption; target is the speaker or group name, already upper case",
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "musicQueue": "Queue",
+  "musicUpNext": "{count, plural, =1{UP NEXT · 1 track} other{UP NEXT · {count} tracks}}",
+  "@musicUpNext": {
+    "description": "Upper-case caption above the queue",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "musicClearQueue": "Clear queue",
+  "musicQueueEmpty": "The queue is empty. Tap “Add to queue” on a playlist or album.",
+  "musicFavoriteSongs": "Favourite songs",
+  "@musicFavoriteSongs": {
+    "description": "Name of the built-in playlist of hearted tracks"
+  },
+  "musicFamily": "Family",
+  "@musicFamily": {
+    "description": "Owner shown on the favourite songs playlist"
+  },
+  "musicContextLiveRadio": "LIVE RADIO",
+  "@musicContextLiveRadio": {
+    "description": "Upper-case caption above what is playing"
+  },
+  "musicContextPlaylist": "PLAYING FROM PLAYLIST",
+  "@musicContextPlaylist": {
+    "description": "Upper-case caption above what is playing"
+  },
+  "musicContextAlbum": "PLAYING FROM ALBUM",
+  "@musicContextAlbum": {
+    "description": "Upper-case caption above what is playing"
+  },
+  "musicContextArtist": "PLAYING FROM ARTIST",
+  "@musicContextArtist": {
+    "description": "Upper-case caption above what is playing"
+  },
+  "musicContextPodcast": "PLAYING FROM PODCAST",
+  "@musicContextPodcast": {
+    "description": "Upper-case caption above what is playing"
+  },
+  "musicContextPlaying": "NOW PLAYING",
+  "@musicContextPlaying": {
+    "description": "Upper-case caption above what is playing"
+  },
+  "musicContextArtistRadio": "ARTIST RADIO",
+  "@musicContextArtistRadio": {
+    "description": "Upper-case caption above what is playing"
+  },
+  "musicTabListenNow": "Listen now",
+  "@musicTabListenNow": {
+    "description": "Music tab"
+  },
+  "musicTabSearch": "Search",
+  "@musicTabSearch": {
+    "description": "Music tab, and the keyboard's search key"
+  },
+  "musicTabLibrary": "Library",
+  "@musicTabLibrary": {
+    "description": "Music tab and page title"
+  },
+  "musicMaUnavailable": "Music Assistant unavailable",
+  "musicMaConnecting": "Connecting to Music Assistant…",
+  "musicMaNotFound": "The Music Assistant add-on wasn’t found in Home Assistant.",
+  "musicGreetingMorning": "Good morning, family",
+  "@musicGreetingMorning": {
+    "description": "Greeting on the music home page, before 13:00"
+  },
+  "musicGreetingAfternoon": "Good afternoon, family",
+  "@musicGreetingAfternoon": {
+    "description": "Greeting on the music home page, 13:00–20:00"
+  },
+  "musicGreetingEvening": "Good evening, family",
+  "@musicGreetingEvening": {
+    "description": "Greeting on the music home page, after 20:00"
+  },
+  "musicRecentlyPlayed": "Recently played",
+  "musicInThisHouse": "In this house",
+  "@musicInThisHouse": {
+    "description": "Note beside 'Recently played'"
+  },
+  "musicYourPlaylists": "Your playlists",
+  "musicRadios": "Radios",
+  "musicLiveNote": "Live",
+  "@musicLiveNote": {
+    "description": "Note beside the radios row"
+  },
+  "musicPodcasts": "Podcasts",
+  "musicFavoriteArtists": "Favourite artists",
+  "musicGenrePortuguese": "Portuguese",
+  "@musicGenrePortuguese": {
+    "description": "Genre tile; also used as a search query"
+  },
+  "musicGenreClassical": "Classical",
+  "@musicGenreClassical": {
+    "description": "Genre tile; also used as a search query"
+  },
+  "musicGenreRelax": "Relax",
+  "@musicGenreRelax": {
+    "description": "Genre tile; also used as a search query"
+  },
+  "musicGenreParty": "Party",
+  "@musicGenreParty": {
+    "description": "Genre tile; also used as a search query"
+  },
+  "musicGenreWorkout": "Workout",
+  "@musicGenreWorkout": {
+    "description": "Genre tile; also used as a search query"
+  },
+  "musicGenreSleep": "Sleep",
+  "@musicGenreSleep": {
+    "description": "Genre tile; also used as a search query"
+  },
+  "musicGenre80s": "80s",
+  "@musicGenre80s": {
+    "description": "Genre tile; also used as a search query"
+  },
+  "musicSearchHint": "Artists, songs, albums, radios or podcasts",
+  "musicRecentSearches": "RECENT SEARCHES",
+  "@musicRecentSearches": {
+    "description": "Upper-case caption"
+  },
+  "musicBrowseAll": "Browse all",
+  "musicFilterAll": "All",
+  "@musicFilterAll": {
+    "description": "Search results filter"
+  },
+  "musicSongs": "Songs",
+  "musicArtists": "Artists",
+  "musicAlbums": "Albums",
+  "musicPlaylists": "Playlists",
+  "musicPodcastsAndRadios": "Podcasts and radios",
+  "musicNoResults": "No results for “{query}”",
+  "@musicNoResults": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "musicNoResultsDetail": "We searched every service connected to Music Assistant.",
+  "musicCaptionArtist": "ARTIST",
+  "@musicCaptionArtist": {
+    "description": "Upper-case caption"
+  },
+  "musicCaptionAlbum": "ALBUM",
+  "@musicCaptionAlbum": {
+    "description": "Upper-case caption; also a track-list column header"
+  },
+  "musicCaptionPlaylist": "PLAYLIST",
+  "@musicCaptionPlaylist": {
+    "description": "Upper-case caption"
+  },
+  "musicCaptionRadio": "RADIO",
+  "@musicCaptionRadio": {
+    "description": "Upper-case caption"
+  },
+  "musicCaptionPodcast": "PODCAST",
+  "@musicCaptionPodcast": {
+    "description": "Upper-case caption"
+  },
+  "musicTopResult": "Top result",
+  "musicSortRecent": "Recent",
+  "@musicSortRecent": {
+    "description": "Library sort order"
+  },
+  "musicSortAdded": "Added",
+  "@musicSortAdded": {
+    "description": "Library sort order: recently added first"
+  },
+  "musicLibraryEmpty": "Nothing saved here yet.",
+  "musicFavoritesSummary": "{count, plural, =1{Playlist · 1 song · Music Assistant} other{Playlist · {count} songs · Music Assistant}}",
+  "@musicFavoritesSummary": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "musicAlbum": "Album",
+  "musicEpisodesCount": "{count, plural, =1{1 episode} other{{count} episodes}}",
+  "@musicEpisodesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "musicSongsAndDuration": "{count, plural, =1{1 song, {duration}} other{{count} songs, {duration}}}",
+  "@musicSongsAndDuration": {
+    "description": "duration is already formatted, e.g. '1 h 12 min'",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "musicFavoritesDescription": "The songs marked with a heart.",
+  "musicAddedToQueue": "Added to queue",
+  "musicPlaysOn": "Plays on {target}",
+  "@musicPlaysOn": {
+    "description": "target (speaker or group name) is shown in bold",
+    "placeholders": {
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "musicColumnEpisode": "EPISODE",
+  "@musicColumnEpisode": {
+    "description": "Track-list column header"
+  },
+  "musicColumnTitle": "TITLE",
+  "@musicColumnTitle": {
+    "description": "Track-list column header"
+  },
+  "musicColumnDuration": "DURATION",
+  "@musicColumnDuration": {
+    "description": "Track-list column header"
+  },
+  "musicNoTracks": "No tracks.",
+  "musicFollowingArtist": "You follow this artist",
+  "musicFollowing": "Following",
+  "@musicFollowing": {
+    "description": "Button state: already following an artist"
+  },
+  "musicFollow": "Follow",
+  "@musicFollow": {
+    "description": "Button: follow an artist"
+  },
+  "musicArtistRadio": "Artist radio",
+  "musicPopular": "Popular",
+  "@musicPopular": {
+    "description": "An artist's most popular tracks"
+  },
+  "musicDiscography": "Discography",
+  "musicLoadFailed": "Couldn’t load.",
+  "browserFavWeather": "Weather",
+  "@browserFavWeather": {
+    "description": "Default favourite (a weather site)"
+  },
+  "browserFavNews": "News",
+  "@browserFavNews": {
+    "description": "Default favourite (a news site)"
+  },
+  "browserUnavailable": "The browser isn’t available on this screen.",
+  "browserKeySearch": "Search",
+  "@browserKeySearch": {
+    "description": "On-screen keyboard action key"
+  },
+  "browserKeySend": "Send",
+  "@browserKeySend": {
+    "description": "On-screen keyboard action key"
+  },
+  "browserKeyGo": "Go",
+  "@browserKeyGo": {
+    "description": "On-screen keyboard action key"
+  },
+  "browserTitle": "Browser",
+  "@browserTitle": {
+    "description": "Label under the minimised browser bubble; its first letter is the bubble's badge"
+  },
+  "browserReturnToStart": "Back to the browser · start page",
+  "@browserReturnToStart": {
+    "description": "Accessibility label of the minimised browser bubble"
+  },
+  "browserReturnTo": "Back to the browser · {site}",
+  "@browserReturnTo": {
+    "description": "Accessibility label of the minimised browser bubble; site is a host name",
+    "placeholders": {
+      "site": {
+        "type": "String"
+      }
+    }
+  },
+  "browserVolume": "Browser volume",
+  "browserMuted": "Muted",
+  "browserVolumeNote": "Only for sound from websites (videos, music). The screen volume stays the same, in Settings.",
+  "browserAddressHint": "Search {engine} or type an address",
+  "@browserAddressHint": {
+    "description": "engine is a search engine name, e.g. Google",
+    "placeholders": {
+      "engine": {
+        "type": "String"
+      }
+    }
+  },
+  "browserStartPage": "Start page",
+  "browserStartTitle": "Where to?",
+  "@browserStartTitle": {
+    "description": "Heading of the browser's start page"
+  },
+  "browserFavorites": "FAVOURITES",
+  "@browserFavorites": {
+    "description": "Upper-case caption"
+  },
+  "browserRecentlyVisited": "RECENTLY VISITED",
+  "@browserRecentlyVisited": {
+    "description": "Upper-case caption"
+  },
+  "browserJustNow": "just now",
+  "@browserJustNow": {
+    "description": "When a site was visited; lower case, after a host name and ·"
+  },
+  "browserMinutesAgo": "{minutes} min ago",
+  "@browserMinutesAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "browserHoursAgo": "{hours} h ago",
+  "@browserHoursAgo": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "browserYesterday": "yesterday",
+  "@browserYesterday": {
+    "description": "When a site was visited; lower case"
+  },
+  "doorbellGroupClassic": "Classic",
+  "@doorbellGroupClassic": {
+    "description": "Group of doorbell ringtones."
+  },
+  "doorbellGroupCustom": "My ringtones",
+  "@doorbellGroupCustom": {
+    "description": "Group of the user's own doorbell ringtones."
+  },
+  "doorbellGroupIntercom": "Intercom",
+  "@doorbellGroupIntercom": {
+    "description": "Group of doorbell ringtones in the style of building intercoms."
+  },
+  "doorbellGroupModern": "Modern",
+  "@doorbellGroupModern": {
+    "description": "Group of doorbell ringtones."
+  },
+  "doorbellToneAurora": "Aurora",
+  "@doorbellToneAurora": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneAuroraDesc": "Slow chord, for the night",
+  "doorbellToneBolhas": "Bubbles",
+  "@doorbellToneBolhas": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneBolhasDesc": "Rising bubbles, playful",
+  "doorbellToneCarrilhao": "Carillon",
+  "@doorbellToneCarrilhao": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneCarrilhaoDesc": "Cascading bells",
+  "doorbellToneCustomDesc": "Your file · plays continuously",
+  "doorbellToneDigital": "Digital",
+  "@doorbellToneDigital": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneDigitalDesc": "Double intercom beep",
+  "doorbellToneDingdong": "Ding-dong",
+  "@doorbellToneDingdong": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneDingdongDesc": "Classic two-tone doorbell",
+  "doorbellToneDoisToques": "Two rings",
+  "@doorbellToneDoisToques": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneDoisToquesDesc": "Electronic ring, repeated",
+  "doorbellToneHarpa": "Harp",
+  "@doorbellToneHarpa": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneHarpaDesc": "Delicate harp arpeggio",
+  "doorbellToneKalimba": "Kalimba",
+  "@doorbellToneKalimba": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneKalimbaDesc": "Thumb piano, soft",
+  "doorbellToneMarimba": "Marimba",
+  "@doorbellToneMarimba": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneMarimbaDesc": "Wooden notes, cheerful",
+  "doorbellToneMelodia": "Melody",
+  "@doorbellToneMelodia": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneMelodiaDesc": "Polyphonic monitor melody",
+  "doorbellTonePortaria": "Concierge",
+  "@doorbellTonePortaria": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellTonePortariaDesc": "The trill of building intercom monitors",
+  "doorbellTonePulsar": "Pulsar",
+  "@doorbellTonePulsar": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellTonePulsarDesc": "Synthesiser arpeggio",
+  "doorbellToneRetro": "Retro",
+  "@doorbellToneRetro": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneRetroDesc": "8-bit game",
+  "doorbellToneSuave": "Gentle",
+  "@doorbellToneSuave": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneSuaveDesc": "Two calm tones",
+  "doorbellToneTresTons": "Three tones",
+  "@doorbellToneTresTons": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneTresTonsDesc": "Rising chord, short",
+  "doorbellToneTriangulo": "Triangle",
+  "@doorbellToneTriangulo": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneTrianguloDesc": "Three metallic strikes",
+  "doorbellToneTrrrim": "Brrring",
+  "@doorbellToneTrrrim": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneTrrrimDesc": "Electric hammer bell",
+  "doorbellToneVidro": "Glass",
+  "@doorbellToneVidro": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneVidroDesc": "Crystal bells, clean",
+  "doorbellToneWestminster": "Westminster",
+  "@doorbellToneWestminster": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneWestminsterDesc": "Four-note chime",
+  "doorbellToneXilofone": "Xylophone",
+  "@doorbellToneXilofone": {
+    "description": "Name of a doorbell ringtone."
+  },
+  "doorbellToneXilofoneDesc": "Quick, cheerful scale",
+  "headerMax": "High {temp}°",
+  "@headerMax": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    },
+    "description": "Today's forecast maximum temperature."
+  },
+  "headerMin": "Low {temp}°",
+  "@headerMin": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    },
+    "description": "Today's forecast minimum temperature."
+  },
+  "headerNextHoliday": "Next holiday: {name}, {weekday} {date}",
+  "@headerNextHoliday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "weekday": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    },
+    "description": "{weekday} is an abbreviated lower-case weekday, {date} like \"17 Oct\"."
+  },
+  "headerSeeForecast": "See the weather forecast",
+  "@headerSeeForecast": {
+    "description": "Accessibility label of the weather button."
+  },
+  "headerWeek": "Week {week}",
+  "@headerWeek": {
+    "placeholders": {
+      "week": {
+        "type": "int"
+      }
+    }
+  },
+  "historyAtTime": "at {time}",
+  "@historyAtTime": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "historyAverage": "Average",
+  "historyDayAt": "{weekday}, {date} at {time}",
+  "@historyDayAt": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    },
+    "description": "{weekday} is an abbreviated lower-case weekday, {date} like \"17 Oct\"."
+  },
+  "historyDurationHm": "{hours} h {minutes} min",
+  "@historyDurationHm": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "historyDurationM": "{minutes} min",
+  "@historyDurationM": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "historyFooter": "History kept by Home Assistant (recorder). Slide your finger across the chart to see each moment.",
+  "historyInPeriod": "in the period",
+  "historyInTotal": "in total",
+  "historyLast24h": "Last 24 hours",
+  "historyLast30d": "Last 30 days",
+  "historyLast7d": "Last 7 days",
+  "historyLastChange": "Last change",
+  "historyMax": "Maximum",
+  "historyMin": "Minimum",
+  "historyNoChanges": "no changes",
+  "historyNoData": "No data",
+  "historyNone": "No history",
+  "historyNow": "Now",
+  "historyPercentOfTime": "{percent}% of the time",
+  "@historyPercentOfTime": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "historyRange24h": "24 hours",
+  "historyRange30d": "30 days",
+  "historyRange7d": "7 days",
+  "historyTimeIn": "Time {state}",
+  "@historyTimeIn": {
+    "placeholders": {
+      "state": {
+        "type": "String"
+      }
+    },
+    "description": "How long an entity was in a state, e.g. \"Time on\", \"Time open\"; {state} is lower-cased."
+  },
+  "historyTimes": "{count, plural, =1{1 time} other{{count} times}}",
+  "@historyTimes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "historyTodayAt": "Today at {time}",
+  "@historyTodayAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "intercomAnswer": "Answer",
+  "intercomBuildingDoor": "Building door",
+  "@intercomBuildingDoor": {
+    "description": "The building's front door (the intercom's door station)."
+  },
+  "intercomCallAtBuildingDoor": "Call at the building door",
+  "intercomCallCount": "{count, plural, =1{1 call} other{{count} calls}}",
+  "@intercomCallCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "intercomConnecting": "Connecting…",
+  "intercomDoorCalls": "Door calls",
+  "intercomDoorNotOpened": "Door was not opened",
+  "intercomDoorNotOpenedSub": "No device opened the door.",
+  "intercomDoorOpened": "Door open",
+  "intercomDoorOpenedSub": "During or right after the call.",
+  "intercomDoorUnlocked": "Door unlocked",
+  "intercomEmptySub": "Whenever someone rings the doorbell, we keep a picture of the door here, the time and what happened.",
+  "intercomEmptyTitle": "No calls yet since this screen started logging them.",
+  "intercomEndOfList": "End of the list. This screen keeps the last 200 calls.",
+  "intercomHangUp": "Hang up",
+  "intercomHistory": "History",
+  "intercomIgnore": "Ignore",
+  "intercomIgnoreHint": "Ignore only closes this screen. The indoor station keeps ringing and can be answered there.",
+  "intercomInCall": "In a call",
+  "intercomLive": "Live",
+  "intercomLoggedHere": "Intercom · logged by this screen",
+  "intercomMicOff": "Mic off",
+  "intercomMissedCount": "{count, plural, =1{1 not answered} other{{count} not answered}}",
+  "@intercomMissedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "intercomMute": "Mute",
+  "intercomNewTag": "NEW",
+  "@intercomNewTag": {
+    "description": "Small uppercase badge on a call not seen yet."
+  },
+  "intercomNewestFirst": "Newest first",
+  "intercomNoPicture": "No picture",
+  "intercomNotConnected": "The intercom isn’t connected to this screen yet",
+  "intercomOpenDoor": "Open door",
+  "intercomOutcomeHere": "Answered on this screen",
+  "intercomOutcomeHereSub": "The door was heard through this screen.",
+  "intercomOutcomeIndoor": "Answered on the intercom",
+  "@intercomOutcomeIndoor": {
+    "description": "A doorbell call answered on the indoor station."
+  },
+  "intercomOutcomeIndoorSub": "They talked through the indoor station.",
+  "intercomOutcomeMissed": "Not answered",
+  "intercomOutcomeMissedSub": "Nobody answered, neither here nor on the intercom.",
+  "intercomOutcomeRinging": "Ringing now",
+  "intercomOutcomeRingingSub": "You can still answer on the intercom.",
+  "intercomOutcomeWithDuration": "{outcome} Duration: {duration}.",
+  "@intercomOutcomeWithDuration": {
+    "placeholders": {
+      "outcome": {
+        "type": "String"
+      },
+      "duration": {
+        "type": "String"
+      }
+    },
+    "description": "{outcome} is a full sentence ending in a full stop; {duration} like 1:05."
+  },
+  "intercomPictureFailed": "Couldn’t capture the picture",
+  "intercomPictureFailedSub": "The camera didn’t respond when they rang.",
+  "intercomPosition": "{index} of {total}",
+  "@intercomPosition": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "intercomRelocksIn": "Locks again in {seconds} s",
+  "@intercomRelocksIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "intercomRinging": "Ringing…",
+  "intercomSeeCamera": "View camera",
+  "intercomSnapshots": "Images",
+  "@intercomSnapshots": {
+    "description": "Badge: the door camera fell back to still snapshots instead of live video."
+  },
+  "intercomSomeoneRang": "Someone rang the doorbell",
+  "intercomSubBuildingDoor": "Intercom · Building door",
+  "intercomTalk": "Talk",
+  "intercomVideoUnavailable": "Video unavailable",
+  "navCalendar": "Calendar",
+  "navHome": "Home",
+  "navHouse": "House",
+  "navLists": "Lists",
+  "navMeals": "Meals",
+  "navMusic": "Music",
+  "navSettings": "Settings",
+  "navTasks": "Tasks",
+  "settingsAddTone": "Add ringtone",
+  "settingsAddToneHow": "Your own ringtones come with the app: put .wav files in the project’s assets/ringtones/custom folder. They appear in \"{group}\" with the next update of this screen.",
+  "@settingsAddToneHow": {
+    "placeholders": {
+      "group": {
+        "type": "String"
+      }
+    },
+    "description": "{group} is the lower-cased name of the \"My ringtones\" group."
+  },
+  "settingsAddToneNotHere": "Can’t be added from the screen",
+  "settingsAddToneSub": "Your own .wav files. They become available like any other ringtone.",
+  "settingsAppearance": "Appearance",
+  "settingsAssistantLanguage": "Language",
+  "@settingsAssistantLanguage": {
+    "description": "The voice assistant's language (set in Home Assistant)."
+  },
+  "settingsBrightness": "Brightness",
+  "settingsBrightnessFailed": "Couldn’t change the brightness",
+  "settingsBrightnessSub": "The monitor’s brightness, over DDC/CI.",
+  "settingsBuildingDoorToneSub": "Rings until you answer or the call ends. The button to the right of each ringtone lets you hear it.",
+  "settingsConfigureEntities": "Set up entities",
+  "settingsConfigureEntitiesSub": "People, rooms, energy and cars are set up in the \"ByteHomeDash\" panel in Home Assistant.",
+  "settingsConnections": "Connections",
+  "settingsHaSub": "{host} · {count, plural, =1{1 entity} other{{count} entities}}",
+  "@settingsHaSub": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsIntercom": "Intercom",
+  "settingsIntercomBuildingDoor": "Hikvision · Building door",
+  "settingsIntercomConnection": "Connection",
+  "settingsIntercomDoorCamera": "Hikvision · door camera",
+  "settingsIntercomNotConfigured": "Hikvision · not set up on this screen",
+  "settingsIntercomPageSub": "This screen’s ringtone when someone rings from the building intercom.",
+  "settingsIntercomToneSub": "Building door: {tone}",
+  "@settingsIntercomToneSub": {
+    "placeholders": {
+      "tone": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsIntercomTones": "Ringtones and volume",
+  "settingsMaAddonMissing": "Add-on not found in Home Assistant",
+  "settingsMaSpeakersFound": "{count, plural, =1{1 speaker found} other{{count} speakers found}}",
+  "@settingsMaSpeakersFound": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsMaViaHa": "Through Home Assistant",
+  "settingsManage": "Manage",
+  "settingsMicNotConnected": "The microphone isn’t connected to this screen yet.",
+  "settingsNetNoCable": "No cable or no address",
+  "settingsNetSignal": "signal {percent}%",
+  "@settingsNetSignal": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    },
+    "description": "Wi-Fi signal strength, inside a \"network · signal · address\" line."
+  },
+  "settingsOwnTones": "{count, plural, =0{None of your own ringtones yet} =1{1 of your own ringtones} other{{count} of your own ringtones}}",
+  "@settingsOwnTones": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsRebootFailed": "Couldn’t restart",
+  "settingsRebootScreen": "Restart the screen",
+  "settingsRebootScreenSub": "Restarts the device. Takes about 1 minute.",
+  "settingsRebootScreenText": "The device restarts. The screen is unavailable for about 1 minute, intercom included.",
+  "settingsRebootScreenTitle": "Restart the screen?",
+  "settingsRebootingScreen": "Restarting the screen…",
+  "settingsRecognizedVoices": "Recognised voices",
+  "settingsRecognizedVoicesSub": "Who the assistant recognises by voice.",
+  "settingsRestart": "Restart",
+  "settingsRestartApp": "Restart the app",
+  "settingsRestartAppSub": "Reloads the screen. Takes a few seconds.",
+  "settingsRestartAppText": "The screen goes blank for a few seconds and comes back on the Home page.",
+  "settingsRestartAppTitle": "Restart the app?",
+  "settingsRestartingApp": "Restarting the app…",
+  "settingsScreenAndSound": "Screen and sound",
+  "settingsScreenOff": "Turn off the screen",
+  "settingsScreenOffButton": "Turn off",
+  "settingsScreenOffSub": "Goes dark right away. Touch it to wake it up.",
+  "settingsSetInHa": "Set in Home Assistant.",
+  "settingsStatusConnected": "Connected",
+  "@settingsStatusConnected": {
+    "description": "Connection status of a service or network link."
+  },
+  "settingsStatusConnecting": "Connecting",
+  "settingsStatusDisconnected": "Not connected",
+  "settingsSystem": "System",
+  "settingsTapClockHint": "Tap the clock on any page to come back here.",
+  "settingsThemeAlwaysDark": "Always dark",
+  "settingsThemeAlwaysLight": "Always light",
+  "settingsThemeAtSunsetSunrise": "At sunset and sunrise",
+  "settingsThemeBySun": "Follows the sun",
+  "settingsThemeDark": "Dark",
+  "@settingsThemeDark": {
+    "description": "Dark theme."
+  },
+  "settingsThemeDarkAtSunset": "Dark at sunset",
+  "settingsThemeDarkFrom": "Dark from",
+  "@settingsThemeDarkFrom": {
+    "description": "Above a time, e.g. \"Dark from 21:00\"."
+  },
+  "settingsThemeFixedTimes": "At fixed times",
+  "settingsThemeLight": "Light",
+  "@settingsThemeLight": {
+    "description": "Light theme."
+  },
+  "settingsThemeLightAtSunrise": "Light at sunrise",
+  "settingsThemeLightFrom": "Light from",
+  "@settingsThemeLightFrom": {
+    "description": "Above a time, e.g. \"Light from 07:00\"."
+  },
+  "settingsThemeNowDark": "Dark now · light at {time}",
+  "@settingsThemeNowDark": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsThemeNowLight": "Light now · dark at {time}",
+  "@settingsThemeNowLight": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsThemeSunToday": "Today’s times, from the Home Assistant sun (sun.sun). They follow the seasons by themselves.",
+  "settingsThemeTip": "You can also ask the assistant: {command}. In Home Assistant the theme is available as {entity}, for use in automations (for example, dark when a film starts).",
+  "@settingsThemeTip": {
+    "placeholders": {
+      "command": {
+        "type": "String"
+      },
+      "entity": {
+        "type": "String"
+      }
+    },
+    "description": "{command} is settingsThemeVoiceCommand and {entity} an entity id, both shown in bold."
+  },
+  "settingsThemeVoiceCommand": "“{wakePhrase}, switch to dark mode”",
+  "@settingsThemeVoiceCommand": {
+    "placeholders": {
+      "wakePhrase": {
+        "type": "String"
+      }
+    },
+    "description": "An example voice command; {wakePhrase} is e.g. \"Ok Nabu\"."
+  },
+  "settingsThemeWaitingForSun": "Waiting for the sun times from Home Assistant (sun.sun). Until then, it switches at {darkTime} and at {lightTime}.",
+  "@settingsThemeWaitingForSun": {
+    "placeholders": {
+      "darkTime": {
+        "type": "String"
+      },
+      "lightTime": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsThemeWhen": "When to switch",
+  "settingsTitle": "Settings",
+  "settingsToneCount": "{count, plural, =1{1 ringtone} other{{count} ringtones}}",
+  "@settingsToneCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsToneMine": "MINE",
+  "@settingsToneMine": {
+    "description": "Small badge on the user's own ringtone."
+  },
+  "settingsTonePlaying": "“{name}” · volume {percent}%",
+  "@settingsTonePlaying": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsToneVolume": "Ringtone volume",
+  "settingsToneVolumeSub": "Through the monitor’s speakers. Doesn’t change the music or intercom volume.",
+  "settingsUnavailableOnScreen": "Not available on this screen.",
+  "settingsVersion": "Version",
+  "settingsVersionSub": "Updated by the deploy on the device.",
+  "settingsVoiceAssistant": "Voice assistant",
+  "settingsVolume": "Volume",
+  "settingsVolumeFailed": "Couldn’t change the volume",
+  "settingsVolumePercent": "Volume {percent}%",
+  "@settingsVolumePercent": {
+    "placeholders": {
+      "percent": {
+        "type": "int"
+      }
+    }
+  },
+  "settingsVolumeSub": "This screen’s overall volume.",
+  "settingsWakeWord": "Wake word",
+  "settingsWakeWordSub": "Say “{wakePhrase}” to talk to the assistant.",
+  "@settingsWakeWordSub": {
+    "placeholders": {
+      "wakePhrase": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsWebBrowser": "Web browser",
+  "shellDoorbellWontRing": "The doorbell won’t ring on this screen",
+  "shellNoHaConnection": "No connection to Home Assistant",
+  "shellRetryingAuto": "Trying again automatically…",
+  "shellScreenSettings": "Screen settings",
+  "calendarHolidayNewYear": "New Year’s Day",
+  "@calendarHolidayNewYear": {
+    "description": "Portuguese public holiday name"
+  },
+  "calendarHolidayCarnival": "Carnival",
+  "calendarHolidayGoodFriday": "Good Friday",
+  "calendarHolidayEaster": "Easter",
+  "calendarHolidayFreedomDay": "Freedom Day",
+  "@calendarHolidayFreedomDay": {
+    "description": "Portugal, 25 April"
+  },
+  "calendarHolidayLabourDay": "Labour Day",
+  "calendarHolidayPortugalDay": "Portugal Day",
+  "calendarHolidayCorpusChristi": "Corpus Christi",
+  "calendarHolidaySaintAnthony": "Saint Anthony’s Day",
+  "calendarHolidayAssumption": "Assumption Day",
+  "calendarHolidayRepublicDay": "Republic Day",
+  "calendarHolidayAllSaints": "All Saints’ Day",
+  "calendarHolidayRestorationOfIndependence": "Restoration of Independence",
+  "calendarHolidayImmaculateConception": "Immaculate Conception",
+  "calendarHolidayChristmas": "Christmas Day",
+  "eventNotConfirmed": "Home Assistant didn’t confirm the event \"{title}\"",
+  "@eventNotConfirmed": {
+    "description": "Toast when a just-created calendar event never showed up in HA",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "eventSuggestionDinner": "Dinner",
+  "@eventSuggestionDinner": {
+    "description": "Event title suggestion"
+  },
+  "eventSuggestionLunch": "Lunch",
+  "@eventSuggestionLunch": {
+    "description": "Event title suggestion"
+  },
+  "eventSuggestionAppointment": "Appointment",
+  "@eventSuggestionAppointment": {
+    "description": "Event title suggestion (doctor etc.)"
+  },
+  "eventSuggestionBirthday": "Birthday",
+  "@eventSuggestionBirthday": {
+    "description": "Event title suggestion"
+  },
+  "eventSuggestionSchool": "School",
+  "@eventSuggestionSchool": {
+    "description": "Event title suggestion"
+  },
+  "eventSuggestionGym": "Gym",
+  "@eventSuggestionGym": {
+    "description": "Event title suggestion"
+  },
+  "eventSuggestionMeeting": "Meeting",
+  "@eventSuggestionMeeting": {
+    "description": "Event title suggestion"
+  },
+  "eventCreatedAllDay": "Event created: {title} · {date}, all day",
+  "@eventCreatedAllDay": {
+    "description": "Toast; date like \"sat 17 Oct\"",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "eventCreatedAt": "Event created: {title} · {date}, {time}",
+  "@eventCreatedAt": {
+    "description": "Toast; time like 09:00",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "eventDurationDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@eventDurationDays": {
+    "description": "Part of an event duration, followed by \"3 h 15 min\"",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "eventNewTitle": "New event",
+  "eventFieldTitle": "TITLE",
+  "@eventFieldTitle": {
+    "description": "Field label, uppercase"
+  },
+  "eventTitleHint": "E.g. Dinner with friends",
+  "eventFieldForWhom": "FOR WHOM",
+  "@eventFieldForWhom": {
+    "description": "Field label: whose calendar"
+  },
+  "eventNoWritableCalendar": "No writable calendar set up.",
+  "eventFieldDate": "DATE",
+  "eventFieldEndDays": "{count, plural, =1{END · 1 DAY} other{END · {count} DAYS}}",
+  "@eventFieldEndDays": {
+    "description": "Uppercase label of a multi-day event’s end date",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "eventFieldEnd": "END",
+  "@eventFieldEnd": {
+    "description": "Uppercase label"
+  },
+  "eventFieldStart": "START",
+  "@eventFieldStart": {
+    "description": "Uppercase label"
+  },
+  "eventSameDay": "Same day",
+  "eventFieldTime": "TIME",
+  "eventAllDay": "All day",
+  "eventStartOn": "Start · {date}",
+  "@eventStartOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "eventStart": "Start",
+  "eventEndOn": "End · {date}",
+  "@eventEndOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "eventEnd": "End",
+  "eventDuration": "Duration: {duration}",
+  "@eventDuration": {
+    "placeholders": {
+      "duration": {
+        "type": "String"
+      }
+    }
+  },
+  "eventFieldPlace": "PLACE",
+  "eventPlaceHint": "E.g. Grandma’s house",
+  "eventFieldRepeat": "REPEAT",
+  "eventRepeatNone": "Doesn’t repeat",
+  "eventRepeatDaily": "Every day",
+  "eventRepeatWeekly": "Every week",
+  "eventRepeatMonthly": "Every month",
+  "eventFieldNotes": "NOTES",
+  "eventNotesHint": "Details, what to bring, contacts…",
+  "eventSave": "Save event",
+  "eventNoCalendarToSave": "No calendar to save it to",
+  "eventWillBeAddedTo": "Will be added to {name}’s calendar",
+  "@eventWillBeAddedTo": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "eventTitleRequired": "Type a title to save",
+  "calendarViewDay": "Day",
+  "@calendarViewDay": {
+    "description": "Calendar view switch"
+  },
+  "calendarViewWeek": "Week",
+  "@calendarViewWeek": {
+    "description": "Calendar view switch"
+  },
+  "calendarViewMonth": "Month",
+  "@calendarViewMonth": {
+    "description": "Calendar view switch"
+  },
+  "calendarViewAgenda": "Agenda",
+  "@calendarViewAgenda": {
+    "description": "Calendar view switch: list of upcoming days"
+  },
+  "calendarDaySubtitleToday": "Today · {year} · Week {week}",
+  "@calendarDaySubtitleToday": {
+    "description": "Day view subtitle; week is the ISO week number",
+    "placeholders": {
+      "year": {
+        "type": "String"
+      },
+      "week": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarDaySubtitle": "{year} · Week {week}",
+  "@calendarDaySubtitle": {
+    "description": "Day view subtitle; week is the ISO week number",
+    "placeholders": {
+      "year": {
+        "type": "String"
+      },
+      "week": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarWeekSubtitle": "Week {week} · {range}",
+  "@calendarWeekSubtitle": {
+    "description": "Week view subtitle; range like \"13 Oct – 19 Oct\"",
+    "placeholders": {
+      "week": {
+        "type": "String"
+      },
+      "range": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarMonthHint": "Tap a day to see its details",
+  "calendarAgendaSubtitle": "Next 3 weeks, from {weekday}, {date}",
+  "@calendarAgendaSubtitle": {
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "calendarDayFree": "Free day",
+  "@calendarDayFree": {
+    "description": "Nothing scheduled on this day"
+  },
+  "calendarNothingScheduled": "Nothing scheduled",
+  "calendarDayIsFree": "This day is free.",
+  "calendarAllDayStacked": "ALL\nDAY",
+  "@calendarAllDayStacked": {
+    "description": "Uppercase label in a narrow column, on two lines"
+  },
+  "calendarNoAllDayEvents": "No all-day events",
+  "calendarDaySummary": "Day summary",
+  "calendarEventCount": "{count, plural, =1{1 event} other{{count} events}}",
+  "@calendarEventCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarUpcomingHolidays": "Upcoming holidays",
+  "calendarMore": "+{count} more",
+  "@calendarMore": {
+    "description": "More events than fit in a month-view cell",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "calendarAllDay": "All day",
+  "@calendarAllDay": {
+    "description": "Agenda row time column for an all-day event"
+  },
+  "calendarDayFreeNothingScheduled": "Free day · nothing scheduled",
+  "forecastSubtitleDays": "{count, plural, =1{Next day} other{Next {count} days}}",
+  "@forecastSubtitleDays": {
+    "description": "Forecast modal subtitle, daily tab",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "forecastSubtitleDaysUpdated": "{count, plural, =1{Next day · updated at {time}} other{Next {count} days · updated at {time}}}",
+  "@forecastSubtitleDaysUpdated": {
+    "description": "Forecast modal subtitle, daily tab; time the forecast was fetched",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastSubtitleHours": "Next 48 hours",
+  "forecastSubtitleHoursUpdated": "Next 48 hours · updated at {time}",
+  "@forecastSubtitleHoursUpdated": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastNoEntity": "No weather entity set up.",
+  "forecastLoadFailed": "Couldn’t get the forecast.",
+  "forecastLoading": "Loading the forecast…",
+  "forecastUnavailable": "Forecast unavailable.",
+  "forecastTodayDotHint": "The dot on today’s bar marks the current temperature.",
+  "forecastHoursHint": "Tap the chart or an hour to see its details.",
+  "forecastTitle": "Weather forecast",
+  "forecastTabDays": "Days",
+  "@forecastTabDays": {
+    "description": "Tab"
+  },
+  "forecastTabDaysCount": "{count, plural, =1{1 day} other{{count} days}}",
+  "@forecastTabDaysCount": {
+    "description": "Tab",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "forecastTabHours": "48 hours",
+  "@forecastTabHours": {
+    "description": "Tab"
+  },
+  "forecastNow": "Now",
+  "forecastNowOn": "Now · {date}",
+  "@forecastNowOn": {
+    "description": "date like \"sat 17\"",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastRain": "Rain {pct}%",
+  "@forecastRain": {
+    "description": "Chance of rain",
+    "placeholders": {
+      "pct": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastWind": "Wind {speed} {unit}",
+  "@forecastWind": {
+    "placeholders": {
+      "speed": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastMax": "max {temp}",
+  "@forecastMax": {
+    "description": "Today’s high, temp like 21°",
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastMin": "min {temp}",
+  "@forecastMin": {
+    "description": "Today’s low, temp like 12°",
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastSunrise": "Sunrise {time}",
+  "@forecastSunrise": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastSunset": "Sunset {time}",
+  "@forecastSunset": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "forecastHeadToday": "{day} · TODAY",
+  "@forecastHeadToday": {
+    "description": "Uppercase day heading, day like \"SATURDAY 17\"",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherNoWarnings": "No warnings in effect",
+  "@weatherNoWarnings": {
+    "description": "Weather warnings (IPMA)"
+  },
+  "weatherWarningFrom": "from {when}",
+  "@weatherWarningFrom": {
+    "description": "when like \"at 18:00\", \"tomorrow at 06:00\", \"sat at 06:00\"",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherWarningUntil": "until {when}",
+  "@weatherWarningUntil": {
+    "description": "when like \"at 18:00\", \"tomorrow at 06:00\", \"sat at 06:00\"",
+    "placeholders": {
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherWarningActive": "Warning in effect",
+  "weatherWarningLabel": "WARNING",
+  "@weatherWarningLabel": {
+    "description": "Uppercase card label"
+  },
+  "weatherWarningGreen": "Green",
+  "@weatherWarningGreen": {
+    "description": "Warning level"
+  },
+  "weatherWarningYellow": "Yellow",
+  "@weatherWarningYellow": {
+    "description": "Warning level"
+  },
+  "weatherWarningOrange": "Orange",
+  "@weatherWarningOrange": {
+    "description": "Warning level"
+  },
+  "weatherWarningRed": "Red",
+  "@weatherWarningRed": {
+    "description": "Warning level"
+  },
+  "weatherUvAtHour": "At {time}",
+  "@weatherUvAtHour": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherUvAtHourWithMax": "At {time} · max. {max} at {maxTime}",
+  "@weatherUvAtHourWithMax": {
+    "description": "UV index card; max is today’s peak UV index",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "max": {
+        "type": "String"
+      },
+      "maxTime": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherUvNowWithMax": "Now · max. {max} at {maxTime}",
+  "@weatherUvNowWithMax": {
+    "description": "UV index card; max is today’s peak UV index",
+    "placeholders": {
+      "max": {
+        "type": "String"
+      },
+      "maxTime": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherUvTodayMax": "Today’s forecast peak",
+  "@weatherUvTodayMax": {
+    "description": "UV index card"
+  },
+  "weatherUvLow": "Low",
+  "@weatherUvLow": {
+    "description": "UV index level"
+  },
+  "weatherLevelModerate": "Moderate",
+  "@weatherLevelModerate": {
+    "description": "UV index and fire risk level"
+  },
+  "weatherLevelHigh": "High",
+  "@weatherLevelHigh": {
+    "description": "UV index and fire risk level"
+  },
+  "weatherLevelVeryHigh": "Very high",
+  "@weatherLevelVeryHigh": {
+    "description": "UV index and fire risk level"
+  },
+  "weatherUvExtreme": "Extreme",
+  "@weatherUvExtreme": {
+    "description": "UV index level"
+  },
+  "weatherUvLabel": "UV INDEX",
+  "@weatherUvLabel": {
+    "description": "Uppercase card label"
+  },
+  "weatherUvNoSun": "No sun",
+  "@weatherUvNoSun": {
+    "description": "UV index 0"
+  },
+  "weatherFireRiskLabel": "FIRE RISK",
+  "@weatherFireRiskLabel": {
+    "description": "Uppercase card label"
+  },
+  "weatherFireLow": "Low",
+  "@weatherFireLow": {
+    "description": "Fire risk level"
+  },
+  "weatherFireMaximum": "Maximum",
+  "@weatherFireMaximum": {
+    "description": "Fire risk level"
+  },
+  "weatherFireAdvice": "Avoid bonfires and burning",
+  "weatherFireTodayIpma": "Today · IPMA forecast",
+  "@weatherFireTodayIpma": {
+    "description": "IPMA is the Portuguese weather service"
+  },
+  "weatherAtTime": "at {time}",
+  "@weatherAtTime": {
+    "description": "Lowercase, used inside a sentence",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherTomorrowAtTime": "tomorrow at {time}",
+  "@weatherTomorrowAtTime": {
+    "description": "Lowercase, used inside a sentence",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherDayAtTime": "{day} at {time}",
+  "@weatherDayAtTime": {
+    "description": "day is a short weekday like \"sat\"",
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "homeHouseTitle": "House",
+  "@homeHouseTitle": {
+    "description": "Home page card title, opens the House page"
+  },
+  "homeHolidayTag": "HOLIDAY",
+  "@homeHolidayTag": {
+    "description": "Uppercase tag above an all-day event"
+  },
+  "homeAllDayTag": "ALL DAY",
+  "@homeAllDayTag": {
+    "description": "Uppercase tag above an all-day event"
+  },
+  "homeNow": "Now",
+  "@homeNow": {
+    "description": "Current-time marker in the week strip"
+  },
+  "homeTasksTitle": "Tasks",
+  "@homeTasksTitle": {
+    "description": "Card title"
+  },
+  "homeTasksNothingToday": "Nothing for today",
+  "homeTasksDone": "{done} of {total} done",
+  "@homeTasksDone": {
+    "description": "Today’s tasks progress",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "homeNoTasksToday": "No tasks for today",
+  "homeEnjoyFreeDay": "Enjoy the free day.",
+  "@homeEnjoyFreeDay": {
+    "description": "Addressed to the whole family"
+  },
+  "homeMealsTitle": "Meals",
+  "@homeMealsTitle": {
+    "description": "Card title"
+  },
+  "homeMealPlan": "+ Plan",
+  "@homeMealPlan": {
+    "description": "Empty meal slot: tap to plan a meal"
+  },
+  "homeMealOut": "Out · {dish}",
+  "@homeMealOut": {
+    "description": "Meal eaten out",
+    "placeholders": {
+      "dish": {
+        "type": "String"
+      }
+    }
+  },
+  "homeMealDelivery": "{dish} · Takeaway",
+  "@homeMealDelivery": {
+    "description": "Meal ordered in",
+    "placeholders": {
+      "dish": {
+        "type": "String"
+      }
+    }
+  },
+  "homeMealTomorrowUnplanned": "Tomorrow: not planned",
+  "homeMealTomorrow": "Tomorrow: {dish}",
+  "@homeMealTomorrow": {
+    "placeholders": {
+      "dish": {
+        "type": "String"
+      }
+    }
+  },
+  "homeShoppingTitle": "Shopping",
+  "@homeShoppingTitle": {
+    "description": "Card title when no list is chosen"
+  },
+  "homeNoList": "No list",
+  "homeSeeAllCount": "See all ({count})",
+  "@homeSeeAllCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "homeOpenList": "Open list",
+  "kitchenRecipeDefaultTitle": "Recipe",
+  "@kitchenRecipeDefaultTitle": {
+    "description": "Title of a recipe page that has none"
+  },
+  "kitchenVoiceNextStep": "By voice · “next step”",
+  "@kitchenVoiceNextStep": {
+    "description": "Shown briefly when a voice command moved the recipe on"
+  },
+  "kitchenVoiceRepeat": "By voice · “repeat”",
+  "kitchenVoiceBack": "By voice · “go back”",
+  "kitchenVoiceStep": "By voice · step {step}",
+  "@kitchenVoiceStep": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenStepN": "Step {step}",
+  "@kitchenStepN": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenTimerEndedShort": "done!",
+  "@kitchenTimerEndedShort": {
+    "description": "A step timer chip, after \"Step 3\": the timer has ended"
+  },
+  "kitchenTimerPaused": "{time} · paused",
+  "@kitchenTimerPaused": {
+    "description": "time like 04:30",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "kitchenExitTitle": "Leave the recipe?",
+  "kitchenExitBodyWithTimer": "You’re on step {step} of {total}. The timer stops and the recipe closes. You can minimize it and come back later from the bubble.",
+  "@kitchenExitBodyWithTimer": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenExitBody": "You’re on step {step} of {total}. The recipe closes. You can minimize it and come back later from the bubble.",
+  "@kitchenExitBody": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenExitVoiceHint": "Say “Ok Nabu, exit”, “minimize” or “continue”.",
+  "@kitchenExitVoiceHint": {
+    "description": "Nabu is the voice assistant’s name"
+  },
+  "kitchenContinue": "Continue",
+  "kitchenMinimize": "Minimize",
+  "kitchenExit": "Exit",
+  "kitchenModeLabel": "COOKING MODE",
+  "@kitchenModeLabel": {
+    "description": "Uppercase label above the recipe title"
+  },
+  "kitchenProgress": "Step {step} {ofTotal}",
+  "@kitchenProgress": {
+    "description": "ofTotal is kitchenOfTotal, drawn fainter",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "ofTotal": {
+        "type": "String"
+      }
+    }
+  },
+  "kitchenOfTotal": "of {total}",
+  "@kitchenOfTotal": {
+    "description": "Second half of \"Step 3 of 12\"",
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenAllSteps": "All steps",
+  "kitchenTabStep": "Step",
+  "@kitchenTabStep": {
+    "description": "Tab"
+  },
+  "kitchenTabIngredients": "Ingredients · {count}",
+  "@kitchenTabIngredients": {
+    "description": "Tab",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenTimerRunning": "Timer running",
+  "kitchenPause": "Pause",
+  "kitchenTimeUp": "Time’s up!",
+  "kitchenStopAlarm": "Stop alarm",
+  "kitchenTimerMinutes": "Timer · {minutes} min",
+  "@kitchenTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenStart": "Start",
+  "@kitchenStart": {
+    "description": "Start the timer"
+  },
+  "kitchenIngredientsReady": "{ready} of {total} ready",
+  "@kitchenIngredientsReady": {
+    "description": "Ingredients ticked off",
+    "placeholders": {
+      "ready": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenIngredientsTapHint": "Tap to cross off what you already have",
+  "kitchenNoServings": "The recipe doesn’t say how many it serves",
+  "kitchenNoServingsReady": "The recipe doesn’t say how many it serves · {ready} of {total} ready",
+  "@kitchenNoServingsReady": {
+    "placeholders": {
+      "ready": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenIngredients": "Ingredients",
+  "kitchenServesFor": "For",
+  "@kitchenServesFor": {
+    "description": "Before a number of people: \"For 4 people\""
+  },
+  "kitchenScaledNote": "Quantities adjusted from {from} to {to}. Step times don’t change.",
+  "@kitchenScaledNote": {
+    "description": "from/to like \"4 people\"",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "kitchenEnjoy": "Enjoy your meal!",
+  "kitchenRecipeDone": "{count, plural, =1{Recipe done · 1 step} other{Recipe done · {count} steps}}",
+  "@kitchenRecipeDone": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenReviewSteps": "Review the steps",
+  "kitchenExitMode": "Exit cooking mode",
+  "kitchenVoiceHint": "Say {command}, “repeat”, “go back” or “ingredients”. The screen stays on while you cook.",
+  "@kitchenVoiceHint": {
+    "description": "command is kitchenVoiceHintCommand, drawn bold",
+    "placeholders": {
+      "command": {
+        "type": "String"
+      }
+    }
+  },
+  "kitchenVoiceHintCommand": "“Ok Nabu, next step”",
+  "@kitchenVoiceHintCommand": {
+    "description": "Example voice command; Nabu is the assistant’s name"
+  },
+  "kitchenFinish": "Finish",
+  "@kitchenFinish": {
+    "description": "Last step: finish the recipe"
+  },
+  "kitchenPeople": "{count, plural, =1{1 person} other{{count} people}}",
+  "@kitchenPeople": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenBubbleStep": "Step {step}/{total}",
+  "@kitchenBubbleStep": {
+    "description": "Under the minimized recipe bubble",
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "kitchenTimerEnded": "Done!",
+  "@kitchenTimerEnded": {
+    "description": "Under the minimized recipe bubble: the timer has ended"
+  },
+  "kitchenBubbleSemantics": "Back to the recipe {title}",
+  "@kitchenBubbleSemantics": {
+    "description": "Accessibility label",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "kitchenBubbleSemanticsTimer": "Back to the recipe {title}, timer {time}",
+  "@kitchenBubbleSemanticsTimer": {
+    "description": "Accessibility label",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "kitchenBubbleSemanticsTimerEnded": "Back to the recipe {title}, timer done",
+  "@kitchenBubbleSemanticsTimerEnded": {
+    "description": "Accessibility label",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      }
+    }
+  },
+  "choresOnlyThisDay": "Only on this day",
+  "@choresOnlyThisDay": {
+    "description": "Repeat label of a one-off household task"
+  },
+  "choresEveryDay": "Every day",
+  "@choresEveryDay": {
+    "description": "Task repeats daily"
+  },
+  "choresWeekdays": "Weekdays",
+  "@choresWeekdays": {
+    "description": "Task repeats Monday to Friday"
+  },
+  "choresMetaDue": "{repeat} · by {time}",
+  "@choresMetaDue": {
+    "description": "A task's repeat label and its deadline (HH:MM)",
+    "placeholders": {
+      "repeat": {
+        "type": "String"
+      },
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "tasksTitle": "Tasks",
+  "@tasksTitle": {
+    "description": "Page title"
+  },
+  "tasksWeekdayDate": "{weekday}, {date}",
+  "@tasksWeekdayDate": {
+    "description": "Selected day in the Tasks header, e.g. 'Monday, 27 Oct'",
+    "placeholders": {
+      "weekday": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "tasksSummaryNone": "no tasks",
+  "@tasksSummaryNone": {
+    "description": "Header summary when the selected day has no tasks (after 'Today · ')"
+  },
+  "tasksSummaryDone": "{done} of {total} done",
+  "@tasksSummaryDone": {
+    "description": "Header summary of the selected day's tasks",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "tasksNew": "New task",
+  "tasksEdit": "Edit task",
+  "tasksCreate": "Create task",
+  "@tasksCreate": {
+    "description": "Save button for a new task"
+  },
+  "tasksFree": "Free",
+  "@tasksFree": {
+    "description": "A person with no tasks on the day"
+  },
+  "tasksCountOf": "{done} of {total}",
+  "@tasksCountOf": {
+    "description": "Tasks done by one person on the day",
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "tasksAllDone": "All done!",
+  "tasksNoneTitle": "No tasks",
+  "tasksHouseholdFreeToday": "Nothing for the family today",
+  "@tasksHouseholdFreeToday": {
+    "description": "Empty column of the shared household member"
+  },
+  "tasksHouseholdFreeDay": "Nothing for the family on this day",
+  "tasksMemberFreeToday": "{name} is free today",
+  "@tasksMemberFreeToday": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "tasksMemberFreeDay": "{name} is free on this day",
+  "@tasksMemberFreeDay": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "tasksEmptyDayTitle": "No tasks on this day",
+  "tasksEmptyDayBodyToday": "No one has tasks set for today.",
+  "tasksEmptyDayBody": "No one has tasks set for {date}.",
+  "@tasksEmptyDayBody": {
+    "description": "date is a long lowercase date, e.g. 'monday, 27 october'",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "tasksFieldTask": "TASK",
+  "@tasksFieldTask": {
+    "description": "Field label (upper case)"
+  },
+  "tasksNameHint": "e.g. Tidy the bedroom",
+  "tasksFieldWho": "FOR WHOM",
+  "@tasksFieldWho": {
+    "description": "Field label (upper case)"
+  },
+  "tasksFieldRepeat": "REPEAT",
+  "@tasksFieldRepeat": {
+    "description": "Field label (upper case)"
+  },
+  "tasksRepeatNone": "Doesn't repeat",
+  "tasksRepeatDays": "Specific days",
+  "tasksFieldDue": "DEADLINE",
+  "@tasksFieldDue": {
+    "description": "Field label (upper case)"
+  },
+  "tasksDueToggle": "By a set time",
+  "@tasksDueToggle": {
+    "description": "Switch that gives a task a deadline"
+  },
+  "tasksDueBy": "By",
+  "@tasksDueBy": {
+    "description": "Shown right before the deadline time, e.g. 'By 20:00'"
+  },
+  "tasksSuggestTidyRoom": "Tidy the bedroom",
+  "@tasksSuggestTidyRoom": {
+    "description": "Suggested task name"
+  },
+  "tasksSuggestMakeBed": "Make the bed",
+  "@tasksSuggestMakeBed": {
+    "description": "Suggested task name"
+  },
+  "tasksSuggestDust": "Dust",
+  "@tasksSuggestDust": {
+    "description": "Suggested task name"
+  },
+  "tasksSuggestHangLaundry": "Hang out the washing",
+  "@tasksSuggestHangLaundry": {
+    "description": "Suggested task name"
+  },
+  "tasksSuggestWashCar": "Wash the car",
+  "@tasksSuggestWashCar": {
+    "description": "Suggested task name"
+  },
+  "tasksSuggestEmptyDishwasher": "Empty the dishwasher",
+  "@tasksSuggestEmptyDishwasher": {
+    "description": "Suggested task name"
+  },
+  "tasksSuggestTakeOutRubbish": "Take out the rubbish",
+  "@tasksSuggestTakeOutRubbish": {
+    "description": "Suggested task name"
+  },
+  "tasksSuggestWaterPlants": "Water the plants",
+  "@tasksSuggestWaterPlants": {
+    "description": "Suggested task name"
+  },
+  "mealsTitle": "Meals",
+  "@mealsTitle": {
+    "description": "Page title"
+  },
+  "mealsWeekRange": "Week {week} · {from} – {to}",
+  "@mealsWeekRange": {
+    "description": "ISO week number and its first and last day",
+    "placeholders": {
+      "week": {
+        "type": "int"
+      },
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "mealsBreakfast": "Breakfast",
+  "mealsLunch": "Lunch",
+  "mealsDinner": "Dinner",
+  "mealsPlaceHome": "At home",
+  "@mealsPlaceHome": {
+    "description": "Where a meal happens"
+  },
+  "mealsPlaceOut": "Eating out",
+  "@mealsPlaceOut": {
+    "description": "Where a meal happens"
+  },
+  "mealsPlaceDelivery": "Takeaway",
+  "@mealsPlaceDelivery": {
+    "description": "Where a meal happens: ordered in"
+  },
+  "mealsCopiedTo": "{dish} copied to {meal} on {weekday} {day}",
+  "@mealsCopiedTo": {
+    "description": "Toast after dragging a meal to another slot; meal is lowercase (e.g. 'dinner'), weekday e.g. 'Monday', day is the day of the month",
+    "placeholders": {
+      "dish": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      },
+      "weekday": {
+        "type": "String"
+      },
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "mealsUndo": "Undo",
+  "mealsCopyHere": "Copy here",
+  "@mealsCopyHere": {
+    "description": "Empty slot while a meal is dragged over it"
+  },
+  "mealsPlan": "Plan",
+  "@mealsPlan": {
+    "description": "Empty meal slot button"
+  },
+  "mealsRecipe": "Recipe",
+  "mealsRecipeNoSteps": "the recipe page has no steps",
+  "@mealsRecipeNoSteps": {
+    "description": "Error shown when Cooking mode can't read the recipe"
+  },
+  "mealsFieldDish": "DISH",
+  "@mealsFieldDish": {
+    "description": "Field label (upper case)"
+  },
+  "mealsDishHint": "e.g. Vegetable soup",
+  "mealsOpenSite": "Open the site",
+  "mealsOpening": "Opening…",
+  "mealsKitchenMode": "Cooking mode",
+  "mealsRecipeSearch": "{dish} recipe",
+  "@mealsRecipeSearch": {
+    "description": "Web search query for a dish's recipe",
+    "placeholders": {
+      "dish": {
+        "type": "String"
+      }
+    }
+  },
+  "mealsSearchRecipe": "Search for a recipe online",
+  "mealsFieldFavorites": "FAVOURITES",
+  "@mealsFieldFavorites": {
+    "description": "Field label (upper case)"
+  },
+  "mealsFieldWhere": "WHERE",
+  "@mealsFieldWhere": {
+    "description": "Field label (upper case)"
+  },
+  "mealsFieldTime": "TIME",
+  "@mealsFieldTime": {
+    "description": "Field label (upper case)"
+  },
+  "mealsFieldNotes": "NOTES",
+  "@mealsFieldNotes": {
+    "description": "Field label (upper case)"
+  },
+  "mealsNoteHint": "e.g. defrost in the morning",
+  "mealsDishToastFruit": "Toast and fruit",
+  "@mealsDishToastFruit": {
+    "description": "Suggested breakfast"
+  },
+  "mealsDishOatPancakes": "Oat pancakes",
+  "@mealsDishOatPancakes": {
+    "description": "Suggested breakfast"
+  },
+  "mealsDishYogurtGranola": "Yoghurt with granola",
+  "@mealsDishYogurtGranola": {
+    "description": "Suggested breakfast"
+  },
+  "mealsDishPorridge": "Porridge",
+  "@mealsDishPorridge": {
+    "description": "Suggested breakfast"
+  },
+  "mealsDishScrambledEggs": "Scrambled eggs",
+  "@mealsDishScrambledEggs": {
+    "description": "Suggested breakfast"
+  },
+  "mealsDishSoupSandwich": "Soup and a sandwich",
+  "@mealsDishSoupSandwich": {
+    "description": "Suggested lunch"
+  },
+  "mealsDishTunaSalad": "Tuna salad",
+  "@mealsDishTunaSalad": {
+    "description": "Suggested lunch"
+  },
+  "mealsDishBitoque": "Steak with fried egg",
+  "@mealsDishBitoque": {
+    "description": "Suggested lunch (Portuguese steak, egg and chips)"
+  },
+  "mealsDishVegetablePasta": "Pasta with vegetables",
+  "@mealsDishVegetablePasta": {
+    "description": "Suggested lunch"
+  },
+  "mealsDishGrilledChicken": "Grilled chicken",
+  "@mealsDishGrilledChicken": {
+    "description": "Suggested lunch"
+  },
+  "mealsDishBacalhauBras": "Cod à Brás",
+  "@mealsDishBacalhauBras": {
+    "description": "Suggested dinner (shredded salt cod with eggs and straw potatoes)"
+  },
+  "mealsDishDuckRice": "Duck rice",
+  "@mealsDishDuckRice": {
+    "description": "Suggested dinner"
+  },
+  "mealsDishBolognese": "Spaghetti bolognese",
+  "@mealsDishBolognese": {
+    "description": "Suggested dinner"
+  },
+  "mealsDishRoastChicken": "Roast chicken",
+  "@mealsDishRoastChicken": {
+    "description": "Suggested dinner"
+  },
+  "mealsDishVegetableSoup": "Vegetable soup",
+  "@mealsDishVegetableSoup": {
+    "description": "Suggested dinner"
+  },
+  "mealsDishGrilledSalmon": "Grilled salmon",
+  "@mealsDishGrilledSalmon": {
+    "description": "Suggested dinner"
+  },
+  "mealsDishLasagne": "Lasagne",
+  "@mealsDishLasagne": {
+    "description": "Suggested dinner"
+  },
+  "mealsDishPizza": "Pizza",
+  "@mealsDishPizza": {
+    "description": "Suggested dinner"
+  },
+  "listsTitle": "Lists",
+  "@listsTitle": {
+    "description": "Page title; also shown upper case as a section label"
+  },
+  "listsNew": "New list",
+  "listsNoneInHa": "No lists in Home Assistant",
+  "listsAllDone": "All done",
+  "@listsAllDone": {
+    "description": "A list with nothing left to do"
+  },
+  "listsItemsPending": "{count, plural, =1{1 item to do} other{{count} items to do}}",
+  "@listsItemsPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listsPendingCount": "{count} to do",
+  "@listsPendingCount": {
+    "description": "Pending items on a list, in the list picker",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listsClearDone": "Clear completed",
+  "listsAddItem": "Add item…",
+  "listsNothingPending": "Nothing to do on this list",
+  "listsDoneCount": "Completed ({count})",
+  "@listsDoneCount": {
+    "description": "Header of the folded completed items",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listsMessagesTitle": "Messages",
+  "@listsMessagesTitle": {
+    "description": "Voice messages left for the family"
+  },
+  "listsMessagesUnseen": "{count} unseen",
+  "@listsMessagesUnseen": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listsMessagesNone": "No messages",
+  "listsMessagesAllSeen": "All seen",
+  "listsMessagesExpiry": "deleted after 7 days",
+  "@listsMessagesExpiry": {
+    "description": "Subtitle of Messages: they delete themselves after 7 days"
+  },
+  "listsMessagesEmptyBody": "Messages left by voice show up here until someone sees them, and delete themselves after 7 days.",
+  "listsMessagesUnseenBadge": "Unseen",
+  "@listsMessagesUnseenBadge": {
+    "description": "Badge on a message nobody has seen yet"
+  },
+  "listsMessagesMarkSeen": "Mark as seen",
+  "listsMessagesDeletesIn": "{count, plural, =1{Deleted tomorrow} other{Deleted in {count} days}}",
+  "@listsMessagesDeletesIn": {
+    "description": "When a message deletes itself; count is days left",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "listsCreated": "List created: {name}",
+  "@listsCreated": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "listsFieldName": "NAME",
+  "@listsFieldName": {
+    "description": "Field label (upper case)"
+  },
+  "listsNameHint": "e.g. Attic clear-out",
+  "listsCreateShort": "Create",
+  "@listsCreateShort": {
+    "description": "Keyboard done key that creates the list"
+  },
+  "listsFieldIcon": "ICON",
+  "@listsFieldIcon": {
+    "description": "Field label (upper case)"
+  },
+  "listsCreate": "Create list",
+  "itemNew": "New item",
+  "@itemNew": {
+    "description": "Modal title for a new list item"
+  },
+  "itemEdit": "Edit item",
+  "itemFieldItem": "ITEM",
+  "@itemFieldItem": {
+    "description": "Field label (upper case)"
+  },
+  "itemFieldQuantity": "QUANTITY",
+  "@itemFieldQuantity": {
+    "description": "Field label (upper case)"
+  },
+  "itemNoQuantity": "No quantity",
+  "itemFieldNote": "NOTE",
+  "@itemFieldNote": {
+    "description": "Field label (upper case)"
+  },
+  "itemNoteHint": "e.g. whole beans, brand, lactose-free…",
+  "itemSuggestOliveOil": "Olive oil",
+  "@itemSuggestOliveOil": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestRice": "Rice",
+  "@itemSuggestRice": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestButter": "Butter",
+  "@itemSuggestButter": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestFruit": "Fruit",
+  "@itemSuggestFruit": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestWater": "Water",
+  "@itemSuggestWater": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestToiletPaper": "Toilet paper",
+  "@itemSuggestToiletPaper": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestCheese": "Cheese",
+  "@itemSuggestCheese": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestMilk": "Milk",
+  "@itemSuggestMilk": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestBread": "Bread",
+  "@itemSuggestBread": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestEggs": "Eggs",
+  "@itemSuggestEggs": {
+    "description": "Suggested shopping item"
+  },
+  "itemSuggestIbuprofen": "Ibuprofen",
+  "@itemSuggestIbuprofen": {
+    "description": "Suggested pharmacy item"
+  },
+  "itemSuggestParacetamol": "Paracetamol",
+  "@itemSuggestParacetamol": {
+    "description": "Suggested pharmacy item"
+  },
+  "itemSuggestSaline": "Saline solution",
+  "@itemSuggestSaline": {
+    "description": "Suggested pharmacy item"
+  },
+  "itemSuggestThermometer": "Thermometer",
+  "@itemSuggestThermometer": {
+    "description": "Suggested pharmacy item"
+  },
+  "itemSuggestPlasters": "Plasters",
+  "@itemSuggestPlasters": {
+    "description": "Suggested pharmacy item (adhesive bandages)"
+  },
+  "itemSuggestBatteries": "Batteries",
+  "@itemSuggestBatteries": {
+    "description": "Suggested household item"
+  },
+  "itemSuggestLightBulbs": "Light bulbs",
+  "@itemSuggestLightBulbs": {
+    "description": "Suggested household item"
+  },
+  "itemSuggestSilicone": "Silicone",
+  "@itemSuggestSilicone": {
+    "description": "Suggested household item (sealant)"
+  },
+  "itemSuggestScrews": "Screws",
+  "@itemSuggestScrews": {
+    "description": "Suggested household item"
+  },
+  "todoUnitPieceOne": "pc",
+  "@todoUnitPieceOne": {
+    "description": "Quantity unit 'piece', singular (short). Also written into the Home Assistant item description"
+  },
+  "todoUnitPieceMany": "pcs",
+  "@todoUnitPieceMany": {
+    "description": "Quantity unit 'pieces', plural (short)"
+  },
+  "todoUnitPackOne": "pack",
+  "@todoUnitPackOne": {
+    "description": "Quantity unit, singular"
+  },
+  "todoUnitPackMany": "packs",
+  "@todoUnitPackMany": {
+    "description": "Quantity unit, plural"
+  },
+  "todoUnitDozenOne": "dozen",
+  "@todoUnitDozenOne": {
+    "description": "Quantity unit, singular"
+  },
+  "todoUnitDozenMany": "dozen",
+  "@todoUnitDozenMany": {
+    "description": "Quantity unit, plural"
+  },
+  "todoNotConfirmed": "Home Assistant didn't confirm the change to the list",
+  "@todoNotConfirmed": {
+    "description": "Toast when a list change timed out and was undone"
+  },
+  "todoNoConnection": "Not connected to Home Assistant",
+  "familyHolidays": "Holidays",
+  "@familyHolidays": {
+    "description": "Name shown for a public-holidays calendar"
+  },
+  "entitiesNotConfirmed": "Home Assistant didn't confirm the change",
+  "@entitiesNotConfirmed": {
+    "description": "Toast when a device change timed out and was undone"
+  },
+  "uiOptionalSuffix": "(optional)",
+  "@uiOptionalSuffix": {
+    "description": "Shown after a form field label, e.g. \"Notes (optional)\"."
+  },
+  "uiSaving": "Saving…",
+  "@uiSaving": {
+    "description": "Save button label while saving."
+  },
+  "uiActionFailed": "Couldn't finish: {reason}",
+  "@uiActionFailed": {
+    "description": "Error toast; reason is the error text.",
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "keyboardSpace": "space",
+  "@keyboardSpace": {
+    "description": "On-screen keyboard space bar label (lowercase, like phone keyboards)."
+  },
+  "keyboardFloat": "Float",
+  "@keyboardFloat": {
+    "description": "On-screen keyboard button: detach the keyboard into a small movable panel."
+  },
+  "powerSensorIconGeneric": "Generic",
+  "@powerSensorIconGeneric": {
+    "description": "Icon choice for an energy-card device: generic plug."
+  },
+  "powerSensorIconWasher": "Washing machine",
+  "powerSensorIconFridge": "Fridge",
+  "powerSensorIconAirConditioning": "Air conditioning",
+  "powerSensorIconHeatPump": "Heat pump (hot water)",
+  "@powerSensorIconHeatPump": {
+    "description": "A heat-pump water heater (AQS = domestic hot water)."
+  },
+  "powerSensorIconOven": "Oven",
+  "optimisticMusicNotConfirmed": "Music Assistant didn't confirm the change",
+  "@optimisticMusicNotConfirmed": {
+    "description": "Toast when a music change was undone because Music Assistant never confirmed it."
+  },
+  "miscMusicNoSpeakers": "No speakers",
+  "miscMusicSpeakersMore": "{name} + {count, plural, =1{1 speaker} other{{count} speakers}}",
+  "@miscMusicSpeakersMore": {
+    "description": "Music target label: the first speaker's name plus how many other speakers are grouped with it.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "miscMusicUnavailable": "Music Assistant unavailable",
+  "miscMusicChooseSpeaker": "Choose a speaker",
+  "miscMusicCannotGroup": "{speaker} can't play in a group with {target}",
+  "@miscMusicCannotGroup": {
+    "placeholders": {
+      "speaker": {
+        "type": "String"
+      },
+      "target": {
+        "type": "String"
+      }
+    }
+  },
+  "miscMusicNotConnected": "Music Assistant isn't connected",
+  "miscMusicNoReply": "No reply from Music Assistant ({command})",
+  "@miscMusicNoReply": {
+    "description": "command is a technical Music Assistant command name.",
+    "placeholders": {
+      "command": {
+        "type": "String"
+      }
+    }
+  },
+  "haCreateListsDeviceOnly": "Creating lists only works on the screen at home",
+  "@haCreateListsDeviceOnly": {
+    "description": "Shown in the web preview, where creating a to-do list isn't possible."
+  },
+  "themeLight": "Light",
+  "@themeLight": {
+    "description": "Theme option; also the option name in the Home Assistant theme select entity."
+  },
+  "themeDark": "Dark",
+  "@themeDark": {
+    "description": "Theme option; also the option name in the Home Assistant theme select entity."
+  },
+  "themeMqttSelectName": "Theme",
+  "@themeMqttSelectName": {
+    "description": "Name of this screen's theme select entity in Home Assistant."
+  },
+  "doorIndoorNotYetConnected": "Not connected to the home intercom yet ({host}).",
+  "@doorIndoorNotYetConnected": {
+    "description": "Doorbell problem banner. The home intercom is the indoor station in the flat.",
+    "placeholders": {
+      "host": {
+        "type": "String"
+      }
+    }
+  },
+  "doorIndoorLinkStopped": "The connection to the home intercom stopped; reconnecting.",
+  "doorIndoorStartFailed": "Couldn't start the connection to the home intercom: {details}",
+  "@doorIndoorStartFailed": {
+    "placeholders": {
+      "details": {
+        "type": "String"
+      }
+    }
+  },
+  "doorIndoorNoLibrary": "The intercom library is missing ({path}).",
+  "@doorIndoorNoLibrary": {
+    "placeholders": {
+      "path": {
+        "type": "String"
+      }
+    }
+  },
+  "doorIndoorSdkFailed": "The intercom SDK didn't start (error {code}).",
+  "@doorIndoorSdkFailed": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "doorIndoorBadPassword": "Wrong username or password for the home intercom.",
+  "doorIndoorLocked": "The home intercom blocked access (too many attempts); trying again in 10 min.",
+  "doorIndoorStoppedResponding": "The home intercom stopped responding (error {code}); reconnecting.",
+  "@doorIndoorStoppedResponding": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "doorIndoorLoginFailed": "Couldn't connect to the home intercom ({host}, error {code}).",
+  "@doorIndoorLoginFailed": {
+    "placeholders": {
+      "host": {
+        "type": "String"
+      },
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "doorIndoorNotConfigured": "The home intercom isn't set up on this screen (INDOOR_HOST).",
+  "@doorIndoorNotConfigured": {
+    "description": "INDOOR_HOST is a configuration variable name; keep it."
+  },
+  "doorSipConnecting": "Connecting to the main station (SIP)…",
+  "doorSipNoConnection": "No connection to the main station (SIP {server}).",
+  "@doorSipNoConnection": {
+    "placeholders": {
+      "server": {
+        "type": "String"
+      }
+    }
+  },
+  "doorSipStartFailed": "Couldn't start the SIP extension: {details}",
+  "@doorSipStartFailed": {
+    "placeholders": {
+      "details": {
+        "type": "String"
+      }
+    }
+  },
+  "doorSipRegistrationRefused": "SIP registration refused (number/password). Check the extension and the admin password.",
+  "doorSipDeviceOnly": "The SIP extension only works on the device, not in the web preview.",
+  "doorCameraReconnecting": "Reconnecting to the camera…",
+  "doorCameraConnecting": "Connecting to the building's door camera…",
+  "doorOpenFailed": "Couldn't open the door (HTTP {status})",
+  "@doorOpenFailed": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "doorTalkRefused": "The door didn't accept talking right now (HTTP {status})",
+  "@doorTalkRefused": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "settingsBrowserEngineDuckSub": "duckduckgo.com · doesn’t keep what you search",
+  "settingsBrowserEngineEcosiaSub": "ecosia.org · plants trees with your searches",
+  "browserMenuAddToMeal": "Add to a meal",
+  "@browserMenuAddToMeal": {
+    "description": "Browser ⋮ menu item and the title of its sheet: plan this web page (a recipe) for a meal, keeping its link."
+  },
+  "browserMenuAddToMealSub": "Keeps this page’s link",
+  "browserMenuAddToMealNoSite": "Open a website’s page first",
+  "@browserMenuAddToMealNoSite": {
+    "description": "Under the disabled menu item while the browser shows its own start page."
+  },
+  "browserMenuSendToPhone": "Send to phone",
+  "browserMenuHome": "Home page",
+  "@browserMenuHome": {
+    "description": "Browser ⋮ menu item: go to the home page chosen in Settings."
+  },
+  "browserMealAddedToday": "Added to today’s {meal}, with the link",
+  "@browserMealAddedToday": {
+    "description": "Toast; meal is the lowercase meal name (breakfast, lunch, dinner).",
+    "placeholders": {
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "browserMealAddedTomorrow": "Added to tomorrow’s {meal}, with the link",
+  "@browserMealAddedTomorrow": {
+    "description": "Toast; meal is the lowercase meal name.",
+    "placeholders": {
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "browserMealAddedOn": "Added to {day}’s {meal}, with the link",
+  "@browserMealAddedOn": {
+    "description": "Toast; day is the weekday name as the locale writes it (Thursday / quinta-feira), meal the lowercase meal name.",
+    "placeholders": {
+      "meal": {
+        "type": "String"
+      },
+      "day": {
+        "type": "String"
+      }
+    }
+  },
+  "browserMealDish": "DISH",
+  "browserMealDishHint": "Name of the dish",
+  "browserMealKeepsLink": "Keeps the link: {site}",
+  "@browserMealKeepsLink": {
+    "placeholders": {
+      "site": {
+        "type": "String"
+      }
+    }
+  },
+  "browserMealDay": "DAY",
+  "browserMealMeal": "MEAL",
+  "browserMealSlotFree": "free",
+  "@browserMealSlotFree": {
+    "description": "Under a meal in the add-to-meal sheet when nothing is planned for it yet."
+  },
+  "browserMealReplaces": "There’s already {dish} for this {meal}. Adding replaces it.",
+  "@browserMealReplaces": {
+    "description": "meal is the lowercase meal name.",
+    "placeholders": {
+      "dish": {
+        "type": "String"
+      },
+      "meal": {
+        "type": "String"
+      }
+    }
+  },
+  "browserMealReplace": "Replace",
+  "settingsBrowserOpenSub": "Opens with the home page and mode chosen in the browser settings.",
+  "settingsBrowserSettings": "Browser settings",
+  "settingsBrowserSettingsSub": "Home page, search engine and how it opens.",
+  "settingsBrowserManage": "Manage",
+  "settingsBrowserTitle": "Web browser",
+  "settingsBrowserSubtitle": "Choose the home page, the search engine and how the browser opens.",
+  "settingsBrowserOpen": "Open browser",
+  "settingsBrowserEngine": "Search engine",
+  "settingsBrowserEngineSub": "Used when what you type isn’t an address.",
+  "settingsBrowserMode": "Open by default",
+  "settingsBrowserModeSub": "How the browser appears when it opens. You can always change it in the browser’s bar.",
+  "settingsBrowserHome": "Home page",
+  "settingsBrowserHomeSub": "What shows when it opens and on the home button.",
+  "settingsBrowserHomeStart": "Favourites and search",
+  "settingsBrowserHomeStartSub": "The browser’s start page",
+  "settingsBrowserHomeHaMissing": "Not connected to Home Assistant yet",
+  "settingsBrowserHomeOther": "Another page",
+  "settingsBrowserHomeOtherSub": "Choose an address",
+  "settingsBrowserHomeUrlHint": "Tap to type the address",
+  "settingsBrowserModeWindow": "Floating window",
+  "settingsBrowserModeWindowSub": "The app stays behind it",
+  "settingsBrowserModeModal": "Modal",
+  "settingsBrowserModeModalSub": "Centred, background dimmed",
+  "settingsBrowserModeFull": "Full screen",
+  "settingsBrowserModeFullSub": "Fills the whole screen",
+  "settingsIntercomOff": "Intercom off",
+  "settingsIntercomOffSub": "To answer the door on this screen, set up the door station in this screen's settings (/etc/bytehomedash.env).",
+  "@settingsIntercomOffSub": {
+    "description": "Shown in Settings when the screen has no intercom configured."
+  },
+  "settingsIntercomOffValue": "Off",
+  "listsMessagesWrite": "Write a message…",
+  "@listsMessagesWrite": {
+    "description": "Button in Lists › Messages that opens the new-message modal"
+  },
+  "listsMessagesByVoice": "Or by voice: “Ok Nabu, leave a message for {name}: …”",
+  "@listsMessagesByVoice": {
+    "description": "Hint under the write button; {name} is the first household member, as an example",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "listsMessagesByVoiceEveryone": "Or by voice: “Ok Nabu, leave a message for everyone: …”",
+  "@listsMessagesByVoiceEveryone": {
+    "description": "Hint under the write button when no household members are set up"
+  },
+  "recadoNewTitle": "New message",
+  "recadoNewSubtitle": "Shows on the screen until someone sees it · deleted after 7 days",
+  "recadoNewEveryone": "Everyone",
+  "@recadoNewEveryone": {
+    "description": "Recipient chip: the message is for everyone"
+  },
+  "recadoNewText": "MESSAGE",
+  "@recadoNewText": {
+    "description": "Field label, in capitals like the other field labels"
+  },
+  "recadoNewHint": "E.g. Dinner is in the oven, just heat it up.",
+  "recadoNewFrom": "FROM",
+  "@recadoNewFrom": {
+    "description": "Field label for who is leaving the message, in capitals"
+  },
+  "recadoNewAnonymous": "Don't say",
+  "@recadoNewAnonymous": {
+    "description": "Sender chip: leave the message without saying who it's from"
+  },
+  "recadoNewPhone": "Also send to their phone",
+  "@recadoNewPhone": {
+    "description": "Phone switch label before a recipient is chosen"
+  },
+  "recadoNewPhoneEveryone": "Also send to everyone's phones",
+  "recadoNewPhoneOf": "Also send to {name}'s phone",
+  "@recadoNewPhoneOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "recadoNewPhoneSub": "Through the Home Assistant app",
+  "recadoNewSave": "Leave message",
+  "recadoNewSuggestDinner": "Dinner is in the oven",
+  "@recadoNewSuggestDinner": {
+    "description": "Keyboard suggestion to start a message"
+  },
+  "recadoNewSuggestBack": "Back at 7 pm",
+  "@recadoNewSuggestBack": {
+    "description": "Keyboard suggestion to start a message"
+  },
+  "recadoNewSuggestDontForget": "Don't forget to",
+  "@recadoNewSuggestDontForget": {
+    "description": "Keyboard suggestion to start a message"
+  }
+}

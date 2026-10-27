@@ -1,0 +1,29 @@
+[Unit]
+Description=Linux Voice Assistant (ESPHome voice satellite for Home Assistant)
+Wants=network-online.target
+After=network-online.target bytehomedash.service
+
+[Service]
+Type=simple
+User=@USER@
+WorkingDirectory=@HOME@/linux-voice-assistant
+# The kiosk user's PipeWire (same session the app plays into).
+Environment=XDG_RUNTIME_DIR=/run/user/@UID@
+Environment=PULSE_SERVER=/run/user/@UID@/pulse/native
+# Mic: the reSpeaker's processed voice channel (respeaker-voice.conf).
+# Speaker: PipeWire's default output. --speaker-id: identifies who is
+# speaking (local; docs/speaker_identification.md in the fork), so HA can
+# personalise answers. The peripheral API (port 6055) is only
+# for the app on this same board, so it stays on loopback.
+ExecStart=@HOME@/linux-voice-assistant/.venv/bin/python -m linux_voice_assistant \
+  --name @NAME@ \
+  --audio-input-device "reSpeaker Voice" \
+  --audio-output-device pipewire \
+  --preferences-file @HOME@/linux-voice-assistant/preferences.json \
+  --peripheral-host 127.0.0.1 \
+  --speaker-id
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

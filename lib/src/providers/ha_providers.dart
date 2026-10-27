@@ -1,0 +1,419 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../ha_client/ha_connection_config.dart';
+import '../ha_client/ha_credentials_store.dart';
+import '../ha_client/ha_websocket_client.dart';
+import '../models/ha_area.dart';
+import '../models/ha_entity.dart';
+import '../models/ha_floor.dart';
+import '../services/device_identity.dart';
+import '../services/screen_power_controller.dart';
+import 'calendar_entities_provider.dart';
+import 'energy_entities_provider.dart';
+import 'ev_cars_provider.dart';
+import 'individual_sensors_provider.dart';
+import 'rooms_provider.dart';
+import 'temperature_entities_provider.dart';
+
+final haCredentialsStoreProvider = Provider<HaCredentialsStore>((ref) => HaCredentialsStore());
+
+/// Single long-lived websocket client shared by the whole app.
+final haWebSocketClientProvider = Provider<HaWebSocketClient>((ref) {
+  final client = HaWebSocketClient();
+  ref.onDispose(client.dispose);
+  return client;
+});
+
+/// Credentials persisted from a previous session, read once at startup.
+final savedConnectionConfigProvider = FutureProvider<HaConnectionConfig?>((ref) {
+  return ref.watch(haCredentialsStoreProvider).read();
+});
+
+/// The connection currently in use. Null means no `--ha-url`/`--ha-token`
+/// was ever passed on the launch command (see `main.dart`) — [entitiesProvider]
+/// just resolves to an empty entity set in that case rather than connecting.
+/// Set this to trigger [entitiesProvider] to (re)connect the shared client.
+final connectionConfigProvider = StateProvider<HaConnectionConfig?>((ref) => null);
+
+final haConnectionStateProvider = StreamProvider<HaConnectionState>((ref) {
+  return ref.watch(haWebSocketClientProvider).connectionState;
+});
+
+/// How often accumulated `state_changed` events get flushed into [state] at
+/// most. On a small HA instance this is invisible; on a large one (found by
+/// testing against a real instance with ~3200 entities) pushing a brand new
+/// state on every single event meant every screen watching [entitiesProvider]
+/// — grouping, sorting, and rebuilding its whole widget tree — dozens of
+/// times per second, which visibly outran the dev build's paint pipeline and
+/// looked like the page randomly going blank. Entities still feel live at
+/// this batching interval; nothing but raw update frequency changes.
+const _entityUpdateFlushInterval = Duration(milliseconds: 200);
+
+/// Backoff schedule for reconnect attempts after the connection drops —
+/// capped at 30s rather than growing unbounded, so a long HA outage still
+/// gets noticed and recovered from within half a minute of it coming back,
+/// without hammering it while it's down.
+const _reconnectBackoff = [Duration(seconds: 2), Duration(seconds: 5), Duration(seconds: 10), Duration(seconds: 20), Duration(seconds: 30)];
+
+/// All known entities, keyed by entity_id, kept live via `state_changed`
+/// subscription. Depends on [connectionConfigProvider]; reconnects whenever
+/// it changes.
+///
+/// Also reconnects on its own whenever the *same* config's connection drops
+/// mid-session (an HA restart, a network blip) — without this, a dropped
+/// websocket left the whole dashboard frozen on its last snapshot forever,
+/// since nothing was ever watching for the disconnect and retrying.
+///
+/// And it keeps trying for as long as it takes, including when HA isn't
+/// there at all when the app starts (after a power cut the Pi boots well
+/// before the HA VM does): a failed first connect retries itself on the
+/// same backoff instead of waiting for someone to tap "Tentar de novo".
+class EntitiesNotifier extends AsyncNotifier<Map<String, HaEntity>> {
+  Timer? _flushTimer;
+  final Map<String, HaEntity> _pendingUpdates = {};
+  StreamSubscription<HaConnectionState>? _connectionSubscription;
+  Timer? _reconnectTimer;
+  Timer? _settingsRetry;
+  int _reconnectAttempt = 0;
+  bool _disposed = false;
+
+  /// One attempt at a time: the connection-state listener and a failing
+  /// attempt's own retry both ask for reconnects, and two overlapping
+  /// connects on the one client once left it wedged for good.
+  bool _reconnecting = false;
+
+  @override
+  Future<Map<String, HaEntity>> build() async {
+    final config = ref.watch(connectionConfigProvider);
+    if (config == null) return const {};
+    _disposed = false;
+
+    final client = ref.read(haWebSocketClientProvider);
+    final Map<String, HaEntity> initial;
+    try {
+      initial = await _connectAndFetch(client, config);
+    } catch (e) {
+      final delay = _reconnectBackoff[_reconnectAttempt.clamp(0, _reconnectBackoff.length - 1)];
+      _reconnectAttempt++;
+      debugPrint('[ha websocket] initial connect failed ($e); retrying in ${delay.inSeconds}s...');
+      final retry = Timer(delay, ref.invalidateSelf);
+      ref.onDispose(retry.cancel);
+      rethrow;
+    }
+    _reconnectAttempt = 0;
+
+    final entityUpdatesSub = client.entityUpdates.listen(_bufferUpdate);
+    _connectionSubscription = client.connectionState.listen((s) => _onConnectionStateChanged(s, client, config));
+    ScreenPowerController.instance.isOn.addListener(_onScreenPowerChanged);
+
+    ref.onDispose(() {
+      _disposed = true;
+      entityUpdatesSub.cancel();
+      _connectionSubscription?.cancel();
+      _reconnectTimer?.cancel();
+      _settingsRetry?.cancel();
+      _flushTimer?.cancel();
+      ScreenPowerController.instance.isOn.removeListener(_onScreenPowerChanged);
+    });
+
+    return initial;
+  }
+
+  /// The full "become live" sequence: connect, subscribe, fetch a fresh
+  /// snapshot. Used for the initial connect and for every reconnect, so a
+  /// resumed connection can never leave [state] stuck on a stale snapshot —
+  /// state changes missed while disconnected are exactly why this re-fetches
+  /// everything rather than trying to resume from where it left off.
+  Future<Map<String, HaEntity>> _connectAndFetch(HaWebSocketClient client, HaConnectionConfig config) async {
+    // Each step has its own timeout in the client; this bounds the whole
+    // sequence too, so a retry is always coming.
+    return _connectAndFetchUnbounded(client, config).timeout(const Duration(seconds: 120));
+  }
+
+  Future<Map<String, HaEntity>> _connectAndFetchUnbounded(HaWebSocketClient client, HaConnectionConfig config) async {
+    await client.connect(config);
+    await client.subscribeToStateChanges();
+    await _subscribeToSettings(client);
+    final states = await client.getStates();
+    return {for (final entity in states) entity.entityId: entity};
+  }
+
+  /// Both need the bytehomedash integration; without them the screen just
+  /// doesn't pick up panel edits live. Right after an HA restart the
+  /// websocket answers before the integration has loaded, so a failure is
+  /// retried for as long as this connection lasts.
+  Future<void> _subscribeToSettings(HaWebSocketClient client) async {
+    _settingsRetry?.cancel();
+    try {
+      await client.subscribeToSettings();
+      await client.registerScreen(screenName());
+      // Optional: an older integration doesn't have it, and the settings
+      // above must not depend on it.
+      unawaited(client.subscribeToAssistant(screenName()).catchError((Object e) => debugPrint('[ha websocket] no assistant cards ($e)')));
+      // The integration fills in its automatic choices as it starts, before
+      // this screen could have been listening.
+      client.resyncSettings();
+    } catch (e) {
+      debugPrint('[ha websocket] settings subscription unavailable ($e); retrying in 30s');
+      _settingsRetry = Timer(const Duration(seconds: 30), () {
+        if (!_disposed && client.state == HaConnectionState.connected) _subscribeToSettings(client);
+      });
+    }
+  }
+
+  void _onConnectionStateChanged(HaConnectionState connState, HaWebSocketClient client, HaConnectionConfig config) {
+    if (connState == HaConnectionState.connected) {
+      _reconnectAttempt = 0;
+    } else if (connState == HaConnectionState.disconnected || connState == HaConnectionState.error) {
+      _scheduleReconnect(client, config);
+    }
+  }
+
+  void _scheduleReconnect(HaWebSocketClient client, HaConnectionConfig config) {
+    // Already have one pending or running — a disconnect and a follow-up
+    // error for the same drop can both reach here, and an attempt in
+    // progress reports its own failure; only one chain may exist.
+    if (_disposed || _reconnectTimer != null || _reconnecting) return;
+    final delay = _reconnectBackoff[_reconnectAttempt.clamp(0, _reconnectBackoff.length - 1)];
+    _reconnectAttempt++;
+    debugPrint('[ha websocket] reconnecting in ${delay.inSeconds}s...');
+    _reconnectTimer = Timer(delay, () => _reconnect(client, config));
+  }
+
+  Future<void> _reconnect(HaWebSocketClient client, HaConnectionConfig config) async {
+    _reconnectTimer = null;
+    if (_disposed || _reconnecting) return;
+    _reconnecting = true;
+    Object? failure;
+    try {
+      final fresh = await _connectAndFetch(client, config);
+      if (_disposed) return;
+      _reconnectAttempt = 0;
+      // Whatever was buffered belongs to the dead connection's session —
+      // the fresh snapshot above already reflects everything current.
+      _pendingUpdates.clear();
+      state = AsyncData(fresh);
+    } catch (e) {
+      failure = e;
+    } finally {
+      _reconnecting = false;
+    }
+    if (failure != null) {
+      debugPrint('[ha websocket] reconnect attempt failed: $failure');
+      _scheduleReconnect(client, config);
+    }
+  }
+
+  void _bufferUpdate(HaEntity entity) {
+    _pendingUpdates[entity.entityId] = entity;
+    // While the screen is off nothing on it is visible, so there's no point
+    // paying for the rebuild/layout/paint this flush causes across every
+    // dashboard widget watching this provider — just keep accumulating in
+    // memory and catch up in one shot in `_onScreenPowerChanged` once it's
+    // actually worth being live again. A busy HA instance can otherwise
+    // flush 5x/second indefinitely, which was the dashboard's real idle CPU
+    // cost, not the card animations.
+    if (!ScreenPowerController.instance.isOn.value) return;
+    _flushTimer ??= Timer(_entityUpdateFlushInterval, _flushUpdates);
+  }
+
+  void _onScreenPowerChanged() {
+    if (ScreenPowerController.instance.isOn.value) _flushUpdates();
+  }
+
+  void _flushUpdates() {
+    _flushTimer?.cancel();
+    _flushTimer = null;
+    if (_pendingUpdates.isEmpty) return;
+    final current = Map<String, HaEntity>.from(state.value ?? const {})..addAll(_pendingUpdates);
+    _pendingUpdates.clear();
+    state = AsyncData(current);
+  }
+}
+
+final entitiesProvider = AsyncNotifierProvider<EntitiesNotifier, Map<String, HaEntity>>(EntitiesNotifier.new);
+
+/// Waits until HA is connected. Use this, not `ref.watch(entitiesProvider.future)`:
+/// that future is replaced on every state flush (several a second on a busy
+/// HA), which re-ran the watching provider each time and dropped its value
+/// back to loading — the Início "Compras" card blinked empty and back.
+Future<void> haReady(Ref ref) async {
+  ref.watch(entitiesProvider.select((async) => async.hasValue));
+  await ref.read(entitiesProvider.future);
+}
+
+/// Entities grouped by domain and sorted by friendly name within each group,
+/// with domains sorted alphabetically by their display label.
+final entitiesByDomainProvider = Provider<List<MapEntry<String, List<HaEntity>>>>((ref) {
+  final entities = ref.watch(entitiesProvider).value ?? const {};
+
+  final byDomain = <String, List<HaEntity>>{};
+  for (final entity in entities.values) {
+    byDomain.putIfAbsent(entity.domain, () => []).add(entity);
+  }
+
+  for (final list in byDomain.values) {
+    list.sort((a, b) => a.friendlyName.toLowerCase().compareTo(b.friendlyName.toLowerCase()));
+  }
+
+  final entries = byDomain.entries.toList()..sort((a, b) => a.key.compareTo(b.key));
+  return entries;
+});
+
+/// Sorted entity ids, optionally restricted to one domain (`null` for every
+/// domain) — the list `EntityIdField`'s autocomplete searches.
+///
+/// Cached per [domainFilter] and recomputed only when [entitiesProvider]
+/// itself actually changes, unlike computing this inline in each field's own
+/// `build()`: a settings screen can have well over a dozen `EntityIdField`s
+/// on one page (see `EvCarsCard`), and every one of them rebuilds on every
+/// keystroke into *any* field on that page (each field's `onChanged` bubbles
+/// up to a `setState` on the whole card). Sorting a real HA instance's full
+/// entity list — several thousand entries isn't unusual — that many times
+/// per keystroke is exactly the kind of cost that reads as "the on-screen
+/// keyboard feels laggy" without anything actually being wrong with the
+/// keyboard itself.
+final entityIdsProvider = Provider.family<List<String>, String?>((ref, domainFilter) {
+  final entities = ref.watch(entitiesProvider).value ?? const {};
+  return entities.keys.where((id) => domainFilter == null || id.startsWith('$domainFilter.')).toList()..sort();
+});
+
+/// entity_id -> area name, resolved once per connection via the entity /
+/// device / area registries.
+///
+/// Watches [connectionConfigProvider] explicitly (changes only on
+/// connect/disconnect) rather than `entitiesProvider.future` — the latter
+/// is meant to only resolve once per connection too, and a test confirms it
+/// doesn't actually re-fire on plain `state_changed`-driven state updates,
+/// but it's an easy thing to get wrong (the pattern name doesn't make that
+/// guarantee obvious) so this is the more explicit, harder-to-regress
+/// version of the same intent.
+final areaByEntityIdProvider = FutureProvider<Map<String, String>>((ref) async {
+  final config = ref.watch(connectionConfigProvider);
+  if (config == null) return const {};
+
+  await ref.read(entitiesProvider.future);
+  return ref.read(haWebSocketClientProvider).getAreaByEntityId();
+});
+
+/// Config persisted in HA itself, read once at startup — same idiom as
+/// [areaByEntityIdProvider], but the raw area registry rather than a
+/// derived entity_id -> name map. The Divisões room list is built from
+/// this (see `RoomConfig`/`roomEntriesProvider`), so it needs the areas
+/// themselves (id, name, floor, temperature/humidity sensors), not just
+/// their names.
+final savedAreasProvider = FutureProvider<List<HaArea>>((ref) async {
+  final config = ref.watch(connectionConfigProvider);
+  if (config == null) return const [];
+  await ref.read(entitiesProvider.future);
+  return ref.read(haWebSocketClientProvider).getAreas();
+});
+
+/// The area list currently in use — set from [savedAreasProvider] at
+/// startup (see `settingsHydrationProvider`), same pattern as
+/// `roomsProvider`. Starts empty; a stale/never-hydrated app just shows no
+/// divisões rather than guessing.
+final areasProvider = StateProvider<List<HaArea>>((ref) => const []);
+
+/// Same idea as [savedAreasProvider]/[areasProvider], for HA's floor
+/// registry — feeds the Climatização page's per-floor stat tiles via
+/// whichever floor each area (see [HaArea.floorId]) belongs to.
+final savedFloorsProvider = FutureProvider<List<HaFloor>>((ref) async {
+  final config = ref.watch(connectionConfigProvider);
+  if (config == null) return const [];
+  await ref.read(entitiesProvider.future);
+  return ref.read(haWebSocketClientProvider).getFloors();
+});
+
+final floorsProvider = StateProvider<List<HaFloor>>((ref) => const []);
+
+/// Loads the dashboard-config settings from HA once the connection is up,
+/// hydrating each domain's "live" `StateProvider` — the one-time job
+/// `RootScreen._bootstrap` used to do directly against `SharedPreferences`
+/// before settings moved behind the HA connection. Watched by `MainShell`
+/// alongside [entitiesProvider] so both gate behind the same loading/error/
+/// retry UI, rather than `RootScreen`'s own bare spinner waiting on a
+/// network call it has no retry affordance for.
+///
+/// Each domain's read is independently try/caught, same as the blocks this
+/// replaced — one bad/unreachable domain shouldn't block the whole
+/// dashboard. Every `xProvider.notifier.state = ...` assignment below is
+/// safe specifically because it happens after the `await` above: Riverpod
+/// only forbids a provider from modifying another provider's state during
+/// its own *synchronous* build phase, which ends the moment this function
+/// first suspends. Don't hoist any of these assignments earlier.
+final settingsHydrationProvider = FutureProvider<void>((ref) async {
+  await haReady(ref);
+
+  try {
+    final savedEnergyEntities = await ref.read(savedEnergyEntityConfigProvider.future);
+    if (!savedEnergyEntities.isEmpty) {
+      ref.read(energyEntityConfigProvider.notifier).state = savedEnergyEntities;
+    }
+  } catch (_) {
+    // Proceed with the energy card's own "--" fallback for every field.
+  }
+  try {
+    final savedTemperatureEntities = await ref.read(savedTemperatureEntityConfigProvider.future);
+    ref.read(temperatureEntityConfigProvider.notifier).state = savedTemperatureEntities;
+  } catch (_) {
+    // Proceed with the Temperatures sheet's own hardcoded/"--" defaults.
+  }
+  try {
+    final savedCalendars = await ref.read(savedCalendarEntriesProvider.future);
+    if (savedCalendars.isNotEmpty) {
+      ref.read(calendarEntriesProvider.notifier).state = savedCalendars;
+    }
+  } catch (_) {
+    // Proceed with no calendars configured — the card/sheet show an empty state.
+  }
+  try {
+    final savedCars = await ref.read(savedCarsConfigProvider.future);
+    if (!savedCars.isEmpty) {
+      ref.read(carsConfigProvider.notifier).state = savedCars;
+    }
+  } catch (_) {
+    // Proceed with no cars.
+  }
+  try {
+    final savedIndividualSensors = await ref.read(savedIndividualSensorsProvider.future);
+    // An empty read (nothing saved yet) must not clobber whatever
+    // individualSensorsProvider was set to at ProviderScope creation —
+    // including a demo-mode override.
+    if (savedIndividualSensors.isNotEmpty) {
+      ref.read(individualSensorsProvider.notifier).state = savedIndividualSensors;
+    }
+  } catch (_) {
+    // Proceed with the energy card's device slots left empty.
+  }
+  // Areas/floors are hydrated before rooms below: `savedRoomsProvider`
+  // reads `savedAreasProvider.future` itself to migrate any pre-Area-picker
+  // saved room (identified by name, not area id) — awaiting it here too is
+  // just Riverpod's normal FutureProvider caching, not a second fetch.
+  try {
+    final savedAreas = await ref.read(savedAreasProvider.future);
+    ref.read(areasProvider.notifier).state = savedAreas;
+  } catch (_) {
+    // Proceed with the Divisões page's own empty state.
+  }
+  try {
+    final savedFloors = await ref.read(savedFloorsProvider.future);
+    ref.read(floorsProvider.notifier).state = savedFloors;
+  } catch (_) {
+    // Proceed without floor grouping on the Climatização page — areas with
+    // no resolvable floor still show their AC/shutter cards, just no stat
+    // tile.
+  }
+  try {
+    final savedRooms = await ref.read(savedRoomsProvider.future);
+    // Same guard as calendars/individual sensors above.
+    if (savedRooms.isNotEmpty) {
+      ref.read(roomsProvider.notifier).state = savedRooms;
+    }
+  } catch (_) {
+    // Proceed with the Divisões page's own empty state.
+  }
+});

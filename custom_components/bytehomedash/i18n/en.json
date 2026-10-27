@@ -1,0 +1,61 @@
+{
+  "day": {
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "weekdays": "Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday",
+    "weekdays_short": "Mon,Tue,Wed,Thu,Fri,Sat,Sun",
+    "months_short": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",
+    "date": "{weekday}, {day} {month}"
+  },
+  "event": {
+    "all_day": "all day"
+  },
+  "tasks": {
+    "section": "Tasks",
+    "until": "until {time}",
+    "done_at": "done at {time}"
+  },
+  "recado": {
+    "title": "Message",
+    "from": "Message from {name}",
+    "for": "Message for {name}",
+    "for_all": "Message for everyone",
+    "sent_to_phone": "sent to the phone"
+  },
+  "calls": {
+    "today": "Today",
+    "last_days": "In the last {days} days",
+    "rang_one": "{span} the doorbell rang once",
+    "rang_other": "{span} the doorbell rang {count} times",
+    "none": "{span} nobody rang",
+    "door": "Door",
+    "answered": "Answered",
+    "missed": "Missed"
+  },
+  "phone": {
+    "default_title": "From the screen",
+    "sent_to": "Sent to {name}'s phone",
+    "no_phone": "{name} has no phone with the Home Assistant app",
+    "not_a_person": "{name} isn't in People"
+  },
+  "meals": {
+    "section": "Meals",
+    "breakfast": "breakfast",
+    "lunch": "lunch",
+    "dinner": "dinner",
+    "planned_other": "{count} meals planned",
+    "already_planned_other": "{count} meals already planned",
+    "now": "Now: {old} → {new}",
+    "replaced_one": "Replaced: {dish}, {slot}",
+    "replaced_other": "Replaced",
+    "kept_one": "Kept {dish}",
+    "kept_other": "Kept what was planned",
+    "nothing_to_confirm": "There's nothing left to confirm"
+  },
+  "undo": {
+    "expired": "It can no longer be undone"
+  },
+  "recipe": {
+    "no_steps": "The page doesn't have the recipe's steps"
+  }
+}

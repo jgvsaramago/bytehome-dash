@@ -1,0 +1,9 @@
+#!/bin/sh
+# /etc/initramfs-tools/hooks/edid: the display driver loads in the initramfs
+# (for the splash), so the EDID file from drm.edid_firmware must be there too.
+PREREQ=""
+prereqs() { echo "$PREREQ"; }
+case $1 in prereqs) prereqs; exit 0 ;; esac
+. /usr/share/initramfs-tools/hook-functions
+mkdir -p "${DESTDIR}/usr/lib/firmware/edid"
+cp /usr/lib/firmware/edid/*.bin "${DESTDIR}/usr/lib/firmware/edid/"

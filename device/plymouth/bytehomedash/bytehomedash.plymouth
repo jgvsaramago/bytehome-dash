@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=ByteHomeDash
+Description=ByteHomeDash boot splash (design "Arranque")
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/bytehomedash
+ScriptFile=/usr/share/plymouth/themes/bytehomedash/bytehomedash.script

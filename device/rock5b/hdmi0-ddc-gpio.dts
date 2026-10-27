@@ -1,0 +1,49 @@
+// HDMI0's DDC pins as a bit-banged I2C bus, so ddcutil can do DDC/CI
+// (brightness, standby). The HDMI controller's own I2C engine only does
+// EDID-style register reads, and the mainline driver refuses the DDC/CI
+// address. Taking the pins away from it means it can't read the EDID any
+// more: the kernel loads it from a file instead (drm.edid_firmware, see
+// README.md).
+//
+// GPIO4_B7 (15) = SCL, GPIO4_C0 (16) = SDA. Flags 6 = open drain.
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "radxa,rock-5b";
+
+	fragment@0 {
+		target = <&pinctrl>;
+		__overlay__ {
+			hdmi0-ddc-gpio {
+				hdmi0_ddc_gpio_pins: hdmi0-ddc-gpio-pins {
+					rockchip,pins = <4 15 0 &pcfg_pull_none>,
+							<4 16 0 &pcfg_pull_none>;
+				};
+			};
+		};
+	};
+
+	fragment@1 {
+		target = <&hdmi0>;
+		__overlay__ {
+			pinctrl-0 = <&hdmim0_tx0_cec &hdmim0_tx0_hpd>;
+		};
+	};
+
+	fragment@2 {
+		target-path = "/";
+		__overlay__ {
+			i2c-hdmi0-ddc {
+				compatible = "i2c-gpio";
+				scl-gpios = <&gpio4 15 6>;
+				sda-gpios = <&gpio4 16 6>;
+				i2c-gpio,delay-us = <5>;
+				pinctrl-names = "default";
+				pinctrl-0 = <&hdmi0_ddc_gpio_pins>;
+				#address-cells = <1>;
+				#size-cells = <0>;
+			};
+		};
+	};
+};

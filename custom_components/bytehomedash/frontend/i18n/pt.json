@@ -1,0 +1,632 @@
+{
+  "common": {
+    "menu": "Menu",
+    "back": "Voltar",
+    "cancel": "Cancelar",
+    "changed": "Alterado",
+    "optional": "opcional",
+    "advanced": "Avançado",
+    "of_max": "{items} de {max}",
+    "max_reached": "Máximo de {max} atingido",
+    "move_up": "Subir {name}",
+    "move_down": "Descer {name}",
+    "remove": "Remover {name}"
+  },
+  "colors": {
+    "blue": "Azul",
+    "amber": "Laranja",
+    "green": "Verde",
+    "accent": "Roxo",
+    "pink": "Rosa",
+    "red": "Vermelho"
+  },
+  "appliances": {
+    "boiler": "Bomba de calor",
+    "fridge": "Frigorífico",
+    "tv": "Televisão",
+    "washer": "Máquina de lavar",
+    "oven": "Forno",
+    "plug": "Tomada"
+  },
+  "domains": {
+    "calendar": "calendário",
+    "sensor": "sensor",
+    "weather": "meteorologia",
+    "light": "luz",
+    "switch": "interruptor",
+    "climate": "clima",
+    "binary_sensor": "sensor binário",
+    "cover": "estore/portão",
+    "lock": "fechadura",
+    "alarm_control_panel": "alarme",
+    "water_heater": "aquecedor de água",
+    "scene": "cena",
+    "script": "script",
+    "camera": "câmara",
+    "number": "número",
+    "device_tracker": "localização",
+    "person": "pessoa",
+    "sun": "sol",
+    "todo": "lista",
+    "select": "seleção",
+    "vacuum": "aspirador"
+  },
+  "auto": {
+    "badge": "Automático",
+    "badge_tooltip": "Escolhido pela integração. Mude o valor para o fixar.",
+    "home_note_one": "A integração escolheu sozinha {count} entidade ou lista, marcadas com «Automático» em cada secção. Acompanham dispositivos novos até as mudar; o que mudar fica escolhido por si.",
+    "home_note_other": "A integração escolheu sozinha {count} entidades e listas, marcadas com «Automático» em cada secção. Acompanham dispositivos novos até as mudar; o que mudar fica escolhido por si.",
+    "takeover_title": "{name}: escolha automática",
+    "takeover_list": "Esta lista foi preenchida pela integração, que a mantém atualizada sozinha (por exemplo, quando aparecem novos dispositivos no Home Assistant). Se alterar, a lista inteira passa a ser sua e a integração deixa de a atualizar.",
+    "takeover_field": "Este campo foi escolhido pela integração, que o mantém atualizado sozinho (por exemplo, se a entidade desaparecer). Se alterar, passa a ser escolha sua e a integração deixa de o atualizar.",
+    "takeover_confirm": "Alterar",
+    "reset": "Repor automático",
+    "reset_tooltip": "Devolver esta escolha à integração",
+    "reset_title": "Voltar ao automático?",
+    "reset_text_list": "A integração volta a escolher a lista {list} sozinha e a mantê-la atualizada. A sua escolha atual perde-se e a alteração fica guardada logo.",
+    "reset_text_field": "A integração volta a escolher este campo sozinha e a mantê-lo atualizado. A sua escolha atual perde-se e a alteração fica guardada logo.",
+    "reset_confirm": "Voltar ao automático",
+    "reset_done": "Voltou ao automático.",
+    "reset_failed": "O Home Assistant não respondeu. A escolha continua a ser sua."
+  },
+  "home": {
+    "title": "Configurar o ecrã",
+    "lead": "O que o ecrã mostra e de que entidades lê os dados. As refeições, tarefas e listas editam-se no próprio ecrã.",
+    "load_error": "Não foi possível ler as definições: {error}",
+    "loading": "A carregar…"
+  },
+  "status": {
+    "unknown_title": "Estado do ecrã desconhecido",
+    "unknown_text": "Reinicie o Home Assistant depois de atualizar a integração para ver aqui se o ecrã está ligado.",
+    "none_title": "Nenhum ecrã ligado",
+    "none_text": "O ecrã aparece aqui quando estiver ligado ao Home Assistant.",
+    "connected_one": "Ecrã {name} ligado",
+    "connected_other": "{count} ecrãs ligados",
+    "live_text": "As alterações guardadas aparecem no ecrã em poucos segundos."
+  },
+  "sections": {
+    "family": {
+      "title": "Família",
+      "desc": "Pessoas da casa, cores e calendários pessoais.",
+      "intro": "Quem vive na casa. A cor aparece nas tarefas e nos eventos.",
+      "empty": "Ninguém"
+    },
+    "calendars": {
+      "title": "Outros calendários",
+      "desc": "Feriados e calendários que não são de ninguém.",
+      "intro": "Um calendário de feriados é reconhecido pelo nome e fica sempre a vermelho.",
+      "empty": "Nenhum"
+    },
+    "weather": {
+      "title": "Meteorologia",
+      "desc": "Temperatura exterior e previsão do cabeçalho.",
+      "intro": "O que aparece no cabeçalho do ecrã, ao lado do relógio.",
+      "complete": "Configurada",
+      "partial": "{count} de 2 configurados"
+    },
+    "rooms": {
+      "title": "Divisões",
+      "desc": "Luz, clima, janela e estores de cada área.",
+      "intro": "Um cartão por área do Home Assistant, pela ordem em que aparecem na página Casa.",
+      "summary": "{count} de {total} áreas"
+    },
+    "house": {
+      "title": "Casa",
+      "desc": "Alarme, água quente, cenários, fechaduras e câmaras.",
+      "intro": "Segurança, água quente e atalhos da página Casa.",
+      "alarm": "Alarme"
+    },
+    "energy": {
+      "title": "Energia",
+      "desc": "Fluxo solar, rede, bateria e consumos.",
+      "intro": "Os sensores do cartão Energia.",
+      "sensors": "{count} de 5 sensores"
+    },
+    "assistant": {
+      "title": "Assistente de voz",
+      "desc": "Nome e palavra de ativação.",
+      "intro": "Como o assistente se chama no ecrã. A integração tira-os da palavra de ativação do satélite de voz.",
+      "summary": "{name} · «{phrase}»",
+      "unnamed": "Sem nome"
+    },
+    "lists": {
+      "title": "Listas",
+      "desc": "Que listas de tarefas aparecem no ecrã.",
+      "intro": "As listas da página Listas e o cartão Compras do Início.",
+      "empty": "Nenhuma"
+    },
+    "vacuums": {
+      "title": "Aspiradores",
+      "desc": "Robôs aspiradores e o que o ecrã controla.",
+      "intro": "O cartão Aspiradores da página Casa e o controlo de cada robô.",
+      "empty": "Nenhum"
+    },
+    "cars": {
+      "title": "Carros",
+      "desc": "Elétricos e a combustão, e quando estão em casa.",
+      "intro": "O ecrã mostra até 2 carros, os que estiverem em casa, pela ordem desta lista.",
+      "empty": "Nenhum carro",
+      "missing_one": "falta {count} campo",
+      "missing_other": "faltam {count} campos"
+    }
+  },
+  "people": {
+    "title": "Pessoas",
+    "add": "Adicionar pessoa",
+    "empty": "Sem pessoas configuradas: o ecrã não mostra ninguém nas tarefas nem nos eventos.",
+    "count_one": "{count} pessoa",
+    "count_other": "{count} pessoas",
+    "new_item": "Nova pessoa",
+    "missing": "Falta nome: será descartado ao guardar",
+    "required": "Obrigatório. Sem nome, este item é descartado ao guardar.",
+    "dropped_one": "{count} pessoa sem nome foi descartada",
+    "dropped_other": "{count} pessoas sem nome foram descartadas",
+    "personal_calendar": "{calendar} · calendário pessoal",
+    "no_personal_calendar": "Sem calendário pessoal",
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Ana"
+      },
+      "calendarEntityId": {
+        "label": "Calendário pessoal",
+        "help": "Os eventos novos \"para\" esta pessoa são criados neste calendário."
+      },
+      "todoEntityId": {
+        "label": "Lista de tarefas pessoal",
+        "help": "Os lembretes e tarefas \"meus\" quando o assistente reconhece a voz desta pessoa."
+      },
+      "speakerId": {
+        "label": "Identificação por voz",
+        "ph": "Ex.: ana",
+        "help": "O nome com que a voz desta pessoa foi registada no assistente de voz (enroll). Quando a reconhece, o assistente usa o calendário e a lista dela."
+      },
+      "personEntityId": {
+        "label": "Pessoa no Home Assistant",
+        "help": "O telemóvel desta pessoa (com a app do Home Assistant) recebe as páginas enviadas do assistente. Vazio: a pessoa do Home Assistant com o mesmo nome."
+      },
+      "color": {
+        "label": "Cor",
+        "help": "Aparece nas tarefas e nos eventos desta pessoa."
+      }
+    }
+  },
+  "calendars": {
+    "title": "Calendários",
+    "add": "Adicionar calendário",
+    "hint": "Calendários que não são de ninguém, como feriados ou um calendário da casa.",
+    "empty": "Nenhum calendário extra. O ecrã mostra só os calendários das pessoas.",
+    "count_one": "{count} calendário",
+    "count_other": "{count} calendários",
+    "new_item": "Novo calendário",
+    "missing": "Falta calendário: será descartado ao guardar",
+    "required": "Obrigatório. Sem calendário, este item é descartado ao guardar.",
+    "dropped_one": "{count} entrada sem calendário foi descartada",
+    "dropped_other": "{count} entradas sem calendário foram descartadas",
+    "owner": "Calendário de {name}",
+    "owner_color": "Calendário de {name}: tem sempre a cor desta pessoa. Muda-a em Família.",
+    "holiday_color": "Reconhecido como feriados: fica sempre a vermelho.",
+    "fields": {
+      "entityId": {
+        "label": "Calendário"
+      },
+      "color": {
+        "label": "Cor"
+      }
+    }
+  },
+  "weather": {
+    "title": "Meteorologia",
+    "fields": {
+      "exteriorTempEntityId": {
+        "label": "Temperatura exterior",
+        "help": "O número grande no cabeçalho do ecrã."
+      },
+      "weatherStateEntityId": {
+        "label": "Entidade de meteorologia",
+        "help": "Dá o estado do tempo, as máximas e mínimas e a previsão."
+      },
+      "sunEntityId": {
+        "label": "Sol",
+        "help": "Nascer e pôr do sol: na previsão e no modo escuro automático."
+      },
+      "warningEntityId": {
+        "label": "Aviso meteorológico",
+        "help": "Ex.: o aviso do IPMA. Aparece na previsão do tempo."
+      },
+      "fireRiskEntityId": {
+        "label": "Risco de incêndio"
+      },
+      "uvEntityId": {
+        "label": "Índice UV previsto"
+      }
+    }
+  },
+  "assistant": {
+    "title": "Assistente de voz",
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Nabu",
+        "help": "Aparece no topo do assistente no ecrã."
+      },
+      "wakePhrase": {
+        "label": "Palavra de ativação",
+        "ph": "Ex.: Ok Nabu",
+        "help": "O que se diz para o chamar. Deve ser a do satélite de voz."
+      }
+    }
+  },
+  "weather_station": {
+    "title": "Estação meteorológica",
+    "hint": "As leituras do cartão Exterior, na página Casa. Vazio: a leitura não aparece.",
+    "fields": {
+      "feels": {
+        "label": "Sensação térmica"
+      },
+      "dewPoint": {
+        "label": "Ponto de orvalho"
+      },
+      "humidity": {
+        "label": "Humidade"
+      },
+      "pressure": {
+        "label": "Pressão"
+      },
+      "wind": {
+        "label": "Vento"
+      },
+      "windDir": {
+        "label": "Direção do vento"
+      },
+      "gust": {
+        "label": "Rajada"
+      },
+      "gustMax": {
+        "label": "Rajada máxima do dia"
+      },
+      "rain": {
+        "label": "Chuva hoje"
+      },
+      "rainRate": {
+        "label": "Intensidade da chuva"
+      },
+      "uv": {
+        "label": "UV"
+      },
+      "irradiance": {
+        "label": "Radiação solar"
+      }
+    }
+  },
+  "rooms": {
+    "title": "Áreas do Home Assistant",
+    "hint": "As áreas e os pisos vêm do Home Assistant. A temperatura e a humidade são os sensores da própria área no Home Assistant. A integração escolhe sozinha a luz, o ar condicionado, a janela e os estores de cada área (marcados «Automático»); o que mudar aqui fica escolhido por si. Uma área sem nada (nem sensores de temperatura ou humidade) não aparece no ecrã.",
+    "configured": "{count} de {total} áreas configuradas",
+    "empty": "Nenhuma área no Home Assistant. Crie áreas em Definições › Áreas, etiquetas e zonas.",
+    "no_floor": "Sem piso",
+    "fields_configured": "{floor} · {count} de {total} campos configurados",
+    "drag": "Arrastar {name} para mudar a ordem",
+    "expand": "Abrir {name}",
+    "collapse": "Fechar {name}",
+    "area_note": "O nome, o piso e os sensores de temperatura e humidade vêm da área \"{name}\" no Home Assistant (Definições › Áreas).",
+    "fields": {
+      "lightEntityId": {
+        "label": "Luz",
+        "help": "O botão de luz no cartão e o \"Apagar todas as luzes\"."
+      },
+      "climateEntityId": {
+        "label": "Ar condicionado",
+        "help": "Os controlos de Clima."
+      },
+      "windowEntityId": {
+        "label": "Janela",
+        "help": "Mostra \"Janela aberta\"."
+      },
+      "coverEntityId": {
+        "label": "Estores",
+        "help": "A posição dos estores."
+      },
+      "secondaryEntityId": {
+        "label": "Linha extra",
+        "help": "Um estado a mais. Uma fechadura aparece como trancada/aberta."
+      }
+    }
+  },
+  "alarm": {
+    "title": "Alarme e água quente",
+    "fields": {
+      "alarmEntityId": {
+        "label": "Alarme"
+      },
+      "waterHeaterEntityId": {
+        "label": "Água quente (bomba de calor)"
+      },
+      "waterHeaterTempEntityId": {
+        "label": "Temperatura da água"
+      },
+      "waterHeaterPowerEntityId": {
+        "label": "Potência"
+      }
+    }
+  },
+  "scenes": {
+    "title": "Cenários",
+    "add": "Adicionar cenário",
+    "empty": "Sem cenários configurados.",
+    "count_one": "{count} cenário",
+    "count_other": "{count} cenários",
+    "new_item": "Novo cenário",
+    "missing": "Falta cena ou script: será descartado ao guardar",
+    "required": "Obrigatório. Sem cena ou script, este item é descartado ao guardar.",
+    "dropped_one": "{count} entrada sem cena ou script foi descartada",
+    "dropped_other": "{count} entradas sem cena ou script foram descartadas",
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Bom dia"
+      },
+      "entityId": {
+        "label": "Cena ou script"
+      }
+    }
+  },
+  "locks": {
+    "title": "Fechaduras e portões",
+    "add": "Adicionar fechadura ou portão",
+    "empty": "Sem fechaduras configuradas: o ecrã não mostra fechaduras.",
+    "count_one": "{count} fechadura ou portão",
+    "count_other": "{count} fechaduras e portões",
+    "new_item": "Nova fechadura ou portão",
+    "missing": "Falta fechadura ou portão: será descartado ao guardar",
+    "required": "Obrigatório. Sem fechadura ou portão, este item é descartado ao guardar.",
+    "dropped_one": "{count} entrada sem fechadura ou portão foi descartada",
+    "dropped_other": "{count} entradas sem fechadura ou portão foram descartadas",
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Portão"
+      },
+      "entityId": {
+        "label": "Fechadura, portão ou sensor",
+        "help": "Um sensor de porta ou portão mostra só se está aberto ou fechado."
+      }
+    }
+  },
+  "vacuums": {
+    "title": "Aspiradores",
+    "add": "Adicionar aspirador",
+    "hint": "Basta o aspirador: a integração encontra sozinha o resto do mesmo dispositivo (modo, sucção, base, manutenção, mapa…).",
+    "empty": "Sem aspiradores: o ecrã não mostra o cartão Aspiradores.",
+    "count_one": "{count} aspirador",
+    "count_other": "{count} aspiradores",
+    "new_item": "Novo aspirador",
+    "missing": "Falta aspirador: será descartado ao guardar",
+    "required": "Obrigatório. Sem aspirador, este item é descartado ao guardar.",
+    "dropped_one": "{count} entrada sem aspirador foi descartada",
+    "dropped_other": "{count} entradas sem aspirador foram descartadas",
+    "fields": {
+      "entityId": {
+        "label": "Aspirador"
+      },
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Zé Come-Pó",
+        "help": "Vazio usa o nome do aspirador no Home Assistant."
+      },
+      "where": {
+        "label": "Onde",
+        "ph": "Ex.: Primeiro Andar",
+        "help": "Aparece por baixo do nome."
+      }
+    }
+  },
+  "cameras": {
+    "title": "Câmaras",
+    "add": "Adicionar câmara",
+    "empty": "Sem câmaras configuradas.",
+    "count_one": "{count} câmara",
+    "count_other": "{count} câmaras",
+    "new_item": "Nova câmara",
+    "missing": "Falta câmara: será descartado ao guardar",
+    "required": "Obrigatório. Sem câmara, este item é descartado ao guardar.",
+    "dropped_one": "{count} entrada sem câmara foi descartada",
+    "dropped_other": "{count} entradas sem câmara foram descartadas",
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Portão"
+      },
+      "entityId": {
+        "label": "Câmara"
+      }
+    }
+  },
+  "energy_flow": {
+    "title": "Fluxo de energia",
+    "adv_same": "Ignorar abaixo de {value} W",
+    "adv_mixed": "Limites por fonte",
+    "adv_note": "O fluxo ignora valores abaixo destes limites, para não piscar com ruído dos sensores. Por defeito: 10 W.",
+    "fields": {
+      "solarPowerEntityId": {
+        "label": "Potência solar",
+        "help": "Sempre positiva."
+      },
+      "gridPowerEntityId": {
+        "label": "Potência da rede",
+        "help": "Positivo = a importar, negativo = a exportar."
+      },
+      "batteryPowerEntityId": {
+        "label": "Potência da bateria",
+        "help": "Positivo = a descarregar, negativo = a carregar."
+      },
+      "batterySocEntityId": {
+        "label": "Carga da bateria",
+        "help": "Em %."
+      },
+      "homePowerEntityId": {
+        "label": "Consumo da casa",
+        "help": "Sempre positivo. Repartido pelas fontes no centro do cartão."
+      },
+      "tariffEntityId": {
+        "label": "Tarifário",
+        "help": "O período atual (Vazio, Cheias, Ponta) no modal de energia."
+      },
+      "solarZeroThresholdW": {
+        "label": "Solar: ignorar abaixo de"
+      },
+      "gridZeroThresholdW": {
+        "label": "Rede: ignorar abaixo de"
+      },
+      "batteryZeroThresholdW": {
+        "label": "Bateria: ignorar abaixo de"
+      },
+      "homeZeroThresholdW": {
+        "label": "Casa: ignorar abaixo de"
+      }
+    }
+  },
+  "consumers": {
+    "title": "Consumos",
+    "add": "Adicionar consumo",
+    "hint": "Até 4 aparelhos à volta da casa no cartão Energia.",
+    "empty": "Sem consumos: o cartão mostra só as fontes e a casa.",
+    "count_one": "{count} consumo",
+    "count_other": "{count} consumos",
+    "new_item": "Novo consumo",
+    "missing": "Falta sensor de potência: será descartado ao guardar",
+    "required": "Obrigatório. Sem sensor de potência, este item é descartado ao guardar.",
+    "dropped_one": "{count} entrada sem sensor de potência foi descartada",
+    "dropped_other": "{count} entradas sem sensor de potência foram descartadas",
+    "boiler_help_own": "O cartão Água quente usa as entidades de Casa › Alarme e água quente.",
+    "boiler_help_shared": "Também alimenta o cartão Água quente, que não tem entidades próprias.",
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Frigorífico"
+      },
+      "powerEntityId": {
+        "label": "Potência"
+      },
+      "icon": {
+        "label": "Ícone"
+      },
+      "temperatureEntityId": {
+        "label": "Temperatura"
+      }
+    }
+  },
+  "lists": {
+    "title": "Listas",
+    "add": "Adicionar lista",
+    "hint": "As listas de tarefas do Home Assistant que aparecem na página Listas. A lista de compras é a que tem o ícone do carrinho.",
+    "empty": "Sem listas: a página Listas fica vazia.",
+    "count_one": "{count} lista",
+    "count_other": "{count} listas",
+    "new_item": "Nova lista",
+    "missing": "Falta lista: será descartado ao guardar",
+    "required": "Obrigatório. Sem lista, este item é descartado ao guardar.",
+    "dropped_one": "{count} entrada sem lista foi descartada",
+    "dropped_other": "{count} entradas sem lista foram descartadas",
+    "fields": {
+      "entityId": {
+        "label": "Lista"
+      }
+    }
+  },
+  "cars": {
+    "title": "Carros",
+    "add": "Adicionar carro",
+    "hint": "O ecrã mostra até 2 carros: os primeiros desta lista que estejam em casa. Quem decide é a entidade «Em casa» de cada carro.",
+    "empty": "Sem carros configurados: o ecrã não mostra carros.",
+    "count_one": "{count} carro",
+    "count_other": "{count} carros",
+    "new_item": "Novo carro",
+    "missing": "Falta nome: será descartado ao guardar",
+    "required": "Obrigatório. Sem nome, este item é descartado ao guardar.",
+    "dropped_one": "{count} carro sem nome foi descartado",
+    "dropped_other": "{count} carros sem nome foram descartados",
+    "shows_at_home": "aparece quando está em casa",
+    "shows_always": "aparece sempre",
+    "kinds": {
+      "electric": "Elétrico",
+      "fuel": "A combustão"
+    },
+    "fields": {
+      "name": {
+        "label": "Nome",
+        "ph": "Ex.: Megane"
+      },
+      "kind": {
+        "label": "Tipo"
+      },
+      "homeEntityId": {
+        "label": "Em casa",
+        "help": "Quando esta entidade diz que o carro está em casa, o cartão aparece. Vazio: aparece sempre."
+      },
+      "fuelEntityId": {
+        "label": "Combustível",
+        "help": "Em % do depósito."
+      },
+      "rangeEntityId": {
+        "label": "Autonomia"
+      },
+      "lockEntityId": {
+        "label": "Trancado",
+        "help": "Mostra se o carro está trancado ou destrancado."
+      },
+      "batterySocEntityId": {
+        "label": "Bateria",
+        "help": "Em %."
+      },
+      "chargingEntityId": {
+        "label": "A carregar"
+      },
+      "plugConnectedEntityId": {
+        "label": "Ficha ligada",
+        "help": "Para o estado \"à espera de carga\"."
+      },
+      "chargeLimitEntityId": {
+        "label": "Limite de carga",
+        "help": "A marca na barra de bateria."
+      },
+      "chargePowerEntityId": {
+        "label": "Potência de carga"
+      }
+    }
+  },
+  "picker": {
+    "choose_entity": "Escolher entidade",
+    "choose": "Escolher {label}",
+    "clear": "Limpar {label}",
+    "search": "Pesquisar entidades",
+    "no_results": "Nenhuma entidade encontrada.",
+    "only_domains": "Só entidades do tipo {domains}",
+    "or": "ou",
+    "any": "Qualquer entidade",
+    "results_one": "{count} resultado",
+    "results_other": "{count} resultados",
+    "search_more": "pesquise para ver mais"
+  },
+  "bar": {
+    "region": "Guardar alterações",
+    "saving": "A guardar…",
+    "error": "Erro ao guardar.",
+    "save_failed": "O Home Assistant não respondeu. As alterações continuam aqui.",
+    "saved": "Guardado.",
+    "unsaved": "Alterações por guardar",
+    "unsaved_in": "em {sections}",
+    "no_changes": "Sem alterações por guardar.",
+    "discard": "Descartar",
+    "save": "Guardar",
+    "retry": "Tentar de novo"
+  },
+  "leave": {
+    "title": "Sair sem guardar?",
+    "text": "Há alterações por guardar em {sections}. Se sair agora, perdem-se.",
+    "this_section": "esta secção",
+    "stay": "Ficar",
+    "leave": "Sair sem guardar",
+    "save_and_leave": "Guardar e sair"
+  }
+}

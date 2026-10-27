@@ -1,0 +1,32 @@
+# Checks every translation against English (tool/check_translations.py):
+# fails on keys English doesn't have or placeholders that differ from it;
+# missing texts only show in the log, since they fall back to English.
+name: Translations
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "lib/l10n/*.arb"
+      - "custom_components/bytehomedash/frontend/i18n/**"
+      - "custom_components/bytehomedash/i18n/**"
+      - "tool/check_translations.py"
+      - ".github/workflows/translations.yml"
+  pull_request:
+    paths:
+      - "lib/l10n/*.arb"
+      - "custom_components/bytehomedash/frontend/i18n/**"
+      - "custom_components/bytehomedash/i18n/**"
+      - "tool/check_translations.py"
+      - ".github/workflows/translations.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Same texts and placeholders as English
+        run: python3 tool/check_translations.py

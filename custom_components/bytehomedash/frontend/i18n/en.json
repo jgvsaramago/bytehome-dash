@@ -1,0 +1,632 @@
+{
+  "common": {
+    "menu": "Menu",
+    "back": "Back",
+    "cancel": "Cancel",
+    "changed": "Changed",
+    "optional": "optional",
+    "advanced": "Advanced",
+    "of_max": "{items} of {max}",
+    "max_reached": "Maximum of {max} reached",
+    "move_up": "Move {name} up",
+    "move_down": "Move {name} down",
+    "remove": "Remove {name}"
+  },
+  "colors": {
+    "blue": "Blue",
+    "amber": "Orange",
+    "green": "Green",
+    "accent": "Purple",
+    "pink": "Pink",
+    "red": "Red"
+  },
+  "appliances": {
+    "boiler": "Heat pump",
+    "fridge": "Fridge",
+    "tv": "TV",
+    "washer": "Washing machine",
+    "oven": "Oven",
+    "plug": "Plug"
+  },
+  "domains": {
+    "calendar": "calendar",
+    "sensor": "sensor",
+    "weather": "weather",
+    "light": "light",
+    "switch": "switch",
+    "climate": "climate",
+    "binary_sensor": "binary sensor",
+    "cover": "cover/gate",
+    "lock": "lock",
+    "alarm_control_panel": "alarm",
+    "water_heater": "water heater",
+    "scene": "scene",
+    "script": "script",
+    "camera": "camera",
+    "number": "number",
+    "device_tracker": "location",
+    "person": "person",
+    "sun": "sun",
+    "todo": "list",
+    "select": "select",
+    "vacuum": "vacuum"
+  },
+  "auto": {
+    "badge": "Automatic",
+    "badge_tooltip": "Chosen by the integration. Change the value to pin it.",
+    "home_note_one": "The integration chose {count} entity or list on its own, marked “Automatic” in each section. They follow new devices until you change them; whatever you change stays your choice.",
+    "home_note_other": "The integration chose {count} entities and lists on its own, marked “Automatic” in each section. They follow new devices until you change them; whatever you change stays your choice.",
+    "takeover_title": "{name}: automatic choice",
+    "takeover_list": "This list was filled in by the integration, which keeps it up to date on its own (for example, when new devices appear in Home Assistant). If you change it, the whole list becomes yours and the integration stops updating it.",
+    "takeover_field": "This field was chosen by the integration, which keeps it up to date on its own (for example, if the entity disappears). If you change it, it becomes your choice and the integration stops updating it.",
+    "takeover_confirm": "Change",
+    "reset": "Reset to automatic",
+    "reset_tooltip": "Give this choice back to the integration",
+    "reset_title": "Back to automatic?",
+    "reset_text_list": "The integration will choose the {list} list on its own again and keep it up to date. Your current choice is lost and the change is saved right away.",
+    "reset_text_field": "The integration will choose this field on its own again and keep it up to date. Your current choice is lost and the change is saved right away.",
+    "reset_confirm": "Back to automatic",
+    "reset_done": "Back to automatic.",
+    "reset_failed": "Home Assistant didn't respond. The choice is still yours."
+  },
+  "home": {
+    "title": "Set up the screen",
+    "lead": "What the screen shows and which entities it reads its data from. Meals, tasks and lists are edited on the screen itself.",
+    "load_error": "Couldn't read the settings: {error}",
+    "loading": "Loading…"
+  },
+  "status": {
+    "unknown_title": "Screen status unknown",
+    "unknown_text": "Restart Home Assistant after updating the integration to see here whether the screen is connected.",
+    "none_title": "No screen connected",
+    "none_text": "The screen shows up here once it's connected to Home Assistant.",
+    "connected_one": "Screen {name} connected",
+    "connected_other": "{count} screens connected",
+    "live_text": "Saved changes show up on the screen within a few seconds."
+  },
+  "sections": {
+    "family": {
+      "title": "Family",
+      "desc": "People in the house, colours and personal calendars.",
+      "intro": "Who lives in the house. The colour shows on their tasks and events.",
+      "empty": "Nobody"
+    },
+    "calendars": {
+      "title": "Other calendars",
+      "desc": "Holidays and calendars that don't belong to anyone.",
+      "intro": "A holiday calendar is recognised by its name and is always red.",
+      "empty": "None"
+    },
+    "weather": {
+      "title": "Weather",
+      "desc": "Outdoor temperature and the header forecast.",
+      "intro": "What shows in the screen's header, next to the clock.",
+      "complete": "Set up",
+      "partial": "{count} of 2 set up"
+    },
+    "rooms": {
+      "title": "Rooms",
+      "desc": "Light, climate, window and blinds for each area.",
+      "intro": "One card per Home Assistant area, in the order they appear on the House page.",
+      "summary": "{count} of {total} areas"
+    },
+    "house": {
+      "title": "House",
+      "desc": "Alarm, hot water, scenes, locks and cameras.",
+      "intro": "Security, hot water and shortcuts on the House page.",
+      "alarm": "Alarm"
+    },
+    "energy": {
+      "title": "Energy",
+      "desc": "Solar, grid and battery flow, and consumers.",
+      "intro": "The sensors of the Energy card.",
+      "sensors": "{count} of 5 sensors"
+    },
+    "assistant": {
+      "title": "Voice assistant",
+      "desc": "Name and wake word.",
+      "intro": "What the assistant is called on the screen. The integration takes these from the voice satellite's wake word.",
+      "summary": "{name} · “{phrase}”",
+      "unnamed": "No name"
+    },
+    "lists": {
+      "title": "Lists",
+      "desc": "Which to-do lists show on the screen.",
+      "intro": "The lists on the Lists page and the Shopping card on Home.",
+      "empty": "None"
+    },
+    "vacuums": {
+      "title": "Vacuums",
+      "desc": "Robot vacuums and what the screen controls.",
+      "intro": "The Vacuums card on the House page and the controls for each robot.",
+      "empty": "None"
+    },
+    "cars": {
+      "title": "Cars",
+      "desc": "Electric and combustion cars, and when they're home.",
+      "intro": "The screen shows up to 2 cars, the ones at home, in the order of this list.",
+      "empty": "No cars",
+      "missing_one": "{count} field missing",
+      "missing_other": "{count} fields missing"
+    }
+  },
+  "people": {
+    "title": "People",
+    "add": "Add person",
+    "empty": "No people set up: the screen shows nobody on tasks or events.",
+    "count_one": "{count} person",
+    "count_other": "{count} people",
+    "new_item": "New person",
+    "missing": "Name missing: will be discarded on save",
+    "required": "Required. Without a name, this item is discarded on save.",
+    "dropped_one": "{count} person without a name was discarded",
+    "dropped_other": "{count} people without a name were discarded",
+    "personal_calendar": "{calendar} · personal calendar",
+    "no_personal_calendar": "No personal calendar",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Ana"
+      },
+      "calendarEntityId": {
+        "label": "Personal calendar",
+        "help": "New events \"for\" this person are created in this calendar."
+      },
+      "todoEntityId": {
+        "label": "Personal to-do list",
+        "help": "The \"my\" reminders and tasks when the assistant recognises this person's voice."
+      },
+      "speakerId": {
+        "label": "Voice identification",
+        "ph": "E.g. ana",
+        "help": "The name this person's voice was enrolled under in the voice assistant. When it recognises them, the assistant uses their calendar and list."
+      },
+      "personEntityId": {
+        "label": "Person in Home Assistant",
+        "help": "This person's phone (with the Home Assistant app) receives the pages sent from the assistant. Empty: the Home Assistant person with the same name."
+      },
+      "color": {
+        "label": "Colour",
+        "help": "Shows on this person's tasks and events."
+      }
+    }
+  },
+  "calendars": {
+    "title": "Calendars",
+    "add": "Add calendar",
+    "hint": "Calendars that don't belong to anyone, such as holidays or a household calendar.",
+    "empty": "No extra calendars. The screen shows only the people's calendars.",
+    "count_one": "{count} calendar",
+    "count_other": "{count} calendars",
+    "new_item": "New calendar",
+    "missing": "Calendar missing: will be discarded on save",
+    "required": "Required. Without a calendar, this item is discarded on save.",
+    "dropped_one": "{count} entry without a calendar was discarded",
+    "dropped_other": "{count} entries without a calendar were discarded",
+    "owner": "{name}'s calendar",
+    "owner_color": "{name}'s calendar: always uses this person's colour. Change it in Family.",
+    "holiday_color": "Recognised as holidays: always red.",
+    "fields": {
+      "entityId": {
+        "label": "Calendar"
+      },
+      "color": {
+        "label": "Colour"
+      }
+    }
+  },
+  "weather": {
+    "title": "Weather",
+    "fields": {
+      "exteriorTempEntityId": {
+        "label": "Outdoor temperature",
+        "help": "The big number in the screen's header."
+      },
+      "weatherStateEntityId": {
+        "label": "Weather entity",
+        "help": "Provides the conditions, highs and lows, and the forecast."
+      },
+      "sunEntityId": {
+        "label": "Sun",
+        "help": "Sunrise and sunset: in the forecast and for automatic dark mode."
+      },
+      "warningEntityId": {
+        "label": "Weather warning",
+        "help": "E.g. your weather service's warning. Shows in the forecast."
+      },
+      "fireRiskEntityId": {
+        "label": "Fire risk"
+      },
+      "uvEntityId": {
+        "label": "Forecast UV index"
+      }
+    }
+  },
+  "assistant": {
+    "title": "Voice assistant",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Nabu",
+        "help": "Shows at the top of the assistant on the screen."
+      },
+      "wakePhrase": {
+        "label": "Wake word",
+        "ph": "E.g. Okay Nabu",
+        "help": "What you say to call it. Should match the voice satellite's."
+      }
+    }
+  },
+  "weather_station": {
+    "title": "Weather station",
+    "hint": "The readings on the Outdoor card, on the House page. Empty: the reading doesn't show.",
+    "fields": {
+      "feels": {
+        "label": "Feels like"
+      },
+      "dewPoint": {
+        "label": "Dew point"
+      },
+      "humidity": {
+        "label": "Humidity"
+      },
+      "pressure": {
+        "label": "Pressure"
+      },
+      "wind": {
+        "label": "Wind"
+      },
+      "windDir": {
+        "label": "Wind direction"
+      },
+      "gust": {
+        "label": "Gust"
+      },
+      "gustMax": {
+        "label": "Today's max gust"
+      },
+      "rain": {
+        "label": "Rain today"
+      },
+      "rainRate": {
+        "label": "Rain rate"
+      },
+      "uv": {
+        "label": "UV"
+      },
+      "irradiance": {
+        "label": "Solar radiation"
+      }
+    }
+  },
+  "rooms": {
+    "title": "Home Assistant areas",
+    "hint": "Areas and floors come from Home Assistant. Temperature and humidity are the area's own sensors in Home Assistant. The integration picks each area's light, air conditioning, window and blinds on its own (marked “Automatic”); whatever you change here stays your choice. An area with nothing (not even temperature or humidity sensors) doesn't show on the screen.",
+    "configured": "{count} of {total} areas set up",
+    "empty": "No areas in Home Assistant. Create areas in Settings › Areas, labels & zones.",
+    "no_floor": "No floor",
+    "fields_configured": "{floor} · {count} of {total} fields set up",
+    "drag": "Drag {name} to change the order",
+    "expand": "Expand {name}",
+    "collapse": "Collapse {name}",
+    "area_note": "The name, floor and temperature and humidity sensors come from the \"{name}\" area in Home Assistant (Settings › Areas).",
+    "fields": {
+      "lightEntityId": {
+        "label": "Light",
+        "help": "The light button on the card and \"Turn off all lights\"."
+      },
+      "climateEntityId": {
+        "label": "Air conditioning",
+        "help": "The Climate controls."
+      },
+      "windowEntityId": {
+        "label": "Window",
+        "help": "Shows \"Window open\"."
+      },
+      "coverEntityId": {
+        "label": "Blinds",
+        "help": "The position of the blinds."
+      },
+      "secondaryEntityId": {
+        "label": "Extra line",
+        "help": "One more state. A lock shows as locked/unlocked."
+      }
+    }
+  },
+  "alarm": {
+    "title": "Alarm and hot water",
+    "fields": {
+      "alarmEntityId": {
+        "label": "Alarm"
+      },
+      "waterHeaterEntityId": {
+        "label": "Hot water (heat pump)"
+      },
+      "waterHeaterTempEntityId": {
+        "label": "Water temperature"
+      },
+      "waterHeaterPowerEntityId": {
+        "label": "Power"
+      }
+    }
+  },
+  "scenes": {
+    "title": "Scenes",
+    "add": "Add scene",
+    "empty": "No scenes set up.",
+    "count_one": "{count} scene",
+    "count_other": "{count} scenes",
+    "new_item": "New scene",
+    "missing": "Scene or script missing: will be discarded on save",
+    "required": "Required. Without a scene or script, this item is discarded on save.",
+    "dropped_one": "{count} scene without a scene or script was discarded",
+    "dropped_other": "{count} scenes without a scene or script were discarded",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Good morning"
+      },
+      "entityId": {
+        "label": "Scene or script"
+      }
+    }
+  },
+  "locks": {
+    "title": "Locks and gates",
+    "add": "Add lock or gate",
+    "empty": "No locks set up: the screen shows no locks.",
+    "count_one": "{count} lock or gate",
+    "count_other": "{count} locks and gates",
+    "new_item": "New lock or gate",
+    "missing": "Lock or gate missing: will be discarded on save",
+    "required": "Required. Without a lock or gate, this item is discarded on save.",
+    "dropped_one": "{count} entry without a lock or gate was discarded",
+    "dropped_other": "{count} entries without a lock or gate were discarded",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Gate"
+      },
+      "entityId": {
+        "label": "Lock, gate or sensor",
+        "help": "A door or gate sensor only shows whether it's open or closed."
+      }
+    }
+  },
+  "vacuums": {
+    "title": "Vacuums",
+    "add": "Add vacuum",
+    "hint": "The vacuum is enough: the integration finds the rest of the same device on its own (mode, suction, dock, maintenance, map…).",
+    "empty": "No vacuums: the screen doesn't show the Vacuums card.",
+    "count_one": "{count} vacuum",
+    "count_other": "{count} vacuums",
+    "new_item": "New vacuum",
+    "missing": "Vacuum missing: will be discarded on save",
+    "required": "Required. Without a vacuum, this item is discarded on save.",
+    "dropped_one": "{count} entry without a vacuum was discarded",
+    "dropped_other": "{count} entries without a vacuum were discarded",
+    "fields": {
+      "entityId": {
+        "label": "Vacuum"
+      },
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Dusty",
+        "help": "Empty uses the vacuum's name in Home Assistant."
+      },
+      "where": {
+        "label": "Where",
+        "ph": "E.g. First floor",
+        "help": "Shows below the name."
+      }
+    }
+  },
+  "cameras": {
+    "title": "Cameras",
+    "add": "Add camera",
+    "empty": "No cameras set up.",
+    "count_one": "{count} camera",
+    "count_other": "{count} cameras",
+    "new_item": "New camera",
+    "missing": "Camera missing: will be discarded on save",
+    "required": "Required. Without a camera, this item is discarded on save.",
+    "dropped_one": "{count} entry without a camera was discarded",
+    "dropped_other": "{count} entries without a camera were discarded",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Gate"
+      },
+      "entityId": {
+        "label": "Camera"
+      }
+    }
+  },
+  "energy_flow": {
+    "title": "Energy flow",
+    "adv_same": "Ignore below {value} W",
+    "adv_mixed": "Per-source limits",
+    "adv_note": "The flow ignores values below these limits, so it doesn't flicker with sensor noise. Default: 10 W.",
+    "fields": {
+      "solarPowerEntityId": {
+        "label": "Solar power",
+        "help": "Always positive."
+      },
+      "gridPowerEntityId": {
+        "label": "Grid power",
+        "help": "Positive = importing, negative = exporting."
+      },
+      "batteryPowerEntityId": {
+        "label": "Battery power",
+        "help": "Positive = discharging, negative = charging."
+      },
+      "batterySocEntityId": {
+        "label": "Battery charge",
+        "help": "In %."
+      },
+      "homePowerEntityId": {
+        "label": "House consumption",
+        "help": "Always positive. Split across the sources in the middle of the card."
+      },
+      "tariffEntityId": {
+        "label": "Tariff",
+        "help": "The current period (e.g. off-peak, peak) in the energy dialog."
+      },
+      "solarZeroThresholdW": {
+        "label": "Solar: ignore below"
+      },
+      "gridZeroThresholdW": {
+        "label": "Grid: ignore below"
+      },
+      "batteryZeroThresholdW": {
+        "label": "Battery: ignore below"
+      },
+      "homeZeroThresholdW": {
+        "label": "House: ignore below"
+      }
+    }
+  },
+  "consumers": {
+    "title": "Consumers",
+    "add": "Add consumer",
+    "hint": "Up to 4 appliances around the house on the Energy card.",
+    "empty": "No consumers: the card shows only the sources and the house.",
+    "count_one": "{count} consumer",
+    "count_other": "{count} consumers",
+    "new_item": "New consumer",
+    "missing": "Power sensor missing: will be discarded on save",
+    "required": "Required. Without a power sensor, this item is discarded on save.",
+    "dropped_one": "{count} consumer without a power sensor was discarded",
+    "dropped_other": "{count} consumers without a power sensor were discarded",
+    "boiler_help_own": "The Hot water card uses the entities from House › Alarm and hot water.",
+    "boiler_help_shared": "Also feeds the Hot water card, which has no entities of its own.",
+    "fields": {
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Fridge"
+      },
+      "powerEntityId": {
+        "label": "Power"
+      },
+      "icon": {
+        "label": "Icon"
+      },
+      "temperatureEntityId": {
+        "label": "Temperature"
+      }
+    }
+  },
+  "lists": {
+    "title": "Lists",
+    "add": "Add list",
+    "hint": "The Home Assistant to-do lists that show on the Lists page. The shopping list is the one with the cart icon.",
+    "empty": "No lists: the Lists page stays empty.",
+    "count_one": "{count} list",
+    "count_other": "{count} lists",
+    "new_item": "New list",
+    "missing": "List missing: will be discarded on save",
+    "required": "Required. Without a list, this item is discarded on save.",
+    "dropped_one": "{count} entry without a list was discarded",
+    "dropped_other": "{count} entries without a list were discarded",
+    "fields": {
+      "entityId": {
+        "label": "List"
+      }
+    }
+  },
+  "cars": {
+    "title": "Cars",
+    "add": "Add car",
+    "hint": "The screen shows up to 2 cars: the first ones on this list that are at home. Each car's “At home” entity decides.",
+    "empty": "No cars set up: the screen shows no cars.",
+    "count_one": "{count} car",
+    "count_other": "{count} cars",
+    "new_item": "New car",
+    "missing": "Name missing: will be discarded on save",
+    "required": "Required. Without a name, this item is discarded on save.",
+    "dropped_one": "{count} car without a name was discarded",
+    "dropped_other": "{count} cars without a name were discarded",
+    "shows_at_home": "shows when at home",
+    "shows_always": "always shows",
+    "kinds": {
+      "electric": "Electric",
+      "fuel": "Combustion"
+    },
+    "fields": {
+      "name": {
+        "label": "Name",
+        "ph": "E.g. Megane"
+      },
+      "kind": {
+        "label": "Type"
+      },
+      "homeEntityId": {
+        "label": "At home",
+        "help": "When this entity says the car is at home, the card shows. Empty: always shows."
+      },
+      "fuelEntityId": {
+        "label": "Fuel",
+        "help": "In % of the tank."
+      },
+      "rangeEntityId": {
+        "label": "Range"
+      },
+      "lockEntityId": {
+        "label": "Locked",
+        "help": "Shows whether the car is locked or unlocked."
+      },
+      "batterySocEntityId": {
+        "label": "Battery",
+        "help": "In %."
+      },
+      "chargingEntityId": {
+        "label": "Charging"
+      },
+      "plugConnectedEntityId": {
+        "label": "Plug connected",
+        "help": "For the \"waiting to charge\" state."
+      },
+      "chargeLimitEntityId": {
+        "label": "Charge limit",
+        "help": "The mark on the battery bar."
+      },
+      "chargePowerEntityId": {
+        "label": "Charging power"
+      }
+    }
+  },
+  "picker": {
+    "choose_entity": "Choose entity",
+    "choose": "Choose {label}",
+    "clear": "Clear {label}",
+    "search": "Search entities",
+    "no_results": "No entities found.",
+    "only_domains": "Only {domains} entities",
+    "or": "or",
+    "any": "Any entity",
+    "results_one": "{count} result",
+    "results_other": "{count} results",
+    "search_more": "search to see more"
+  },
+  "bar": {
+    "region": "Save changes",
+    "saving": "Saving…",
+    "error": "Couldn't save.",
+    "save_failed": "Home Assistant didn't respond. Your changes are still here.",
+    "saved": "Saved.",
+    "unsaved": "Unsaved changes",
+    "unsaved_in": "in {sections}",
+    "no_changes": "No unsaved changes.",
+    "discard": "Discard",
+    "save": "Save",
+    "retry": "Try again"
+  },
+  "leave": {
+    "title": "Leave without saving?",
+    "text": "There are unsaved changes in {sections}. If you leave now, they're lost.",
+    "this_section": "this section",
+    "stay": "Stay",
+    "leave": "Leave without saving",
+    "save_and_leave": "Save and leave"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ByteHomeDash",
+        "description": "Cria o armazenamento partilhado das definições do ByteHomeDash, para que todos os ecrãs com a app leiam e gravem as mesmas definições em vez de cada um guardar uma cópia sua. Não é preciso configurar nada."
+      }
+    },
+    "abort": {
+      "already_configured": "Já está configurado. Só é preciso uma instância."
+    }
+  }
+}

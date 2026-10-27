@@ -1,0 +1,9 @@
+[Unit]
+Description=Flight recorder for unexplained reboots (/var/lib/blackbox)
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/blackbox.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

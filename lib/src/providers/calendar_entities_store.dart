@@ -1,0 +1,42 @@
+import '../ha_client/ha_websocket_client.dart';
+
+/// The colour a calendar is drawn in, as saved by the HA sidebar panel.
+/// The kiosk maps each key onto its own palette (see `KPersonColor.fromKey`).
+enum CalendarColorKey { accent, blue, green, amber, red, pink }
+
+/// One calendar the app should read events from, and the colour it draws in
+/// the calendar card/sheet — a household picks the entity from its own HA
+/// instance (this app has no calendar wired in by default, unlike the
+/// weather/energy entities which have a working household default).
+class CalendarEntryConfig {
+  const CalendarEntryConfig({required this.entityId, required this.color});
+
+  final String entityId;
+  final CalendarColorKey color;
+
+  CalendarEntryConfig copyWith({String? entityId, CalendarColorKey? color}) =>
+      CalendarEntryConfig(entityId: entityId ?? this.entityId, color: color ?? this.color);
+
+  Map<String, dynamic> toJson() => {'entityId': entityId, 'color': color.name};
+
+  factory CalendarEntryConfig.fromJson(Map<String, dynamic> json) => CalendarEntryConfig(
+    entityId: json['entityId'] as String,
+    color: CalendarColorKey.values.firstWhere((c) => c.name == json['color'], orElse: () => CalendarColorKey.accent),
+  );
+}
+
+/// Persists the configured calendar list via the `bytehomedash` HA
+/// integration, so any device running this app shares the same calendars.
+class CalendarEntitiesStore {
+  CalendarEntitiesStore(this._client);
+
+  final HaWebSocketClient _client;
+
+  static const _key = 'calendar_entities';
+
+  Future<List<CalendarEntryConfig>> read() async {
+    final raw = await _client.getSettings(_key);
+    if (raw is! List) return const [];
+    return raw.cast<Map<String, dynamic>>().map(CalendarEntryConfig.fromJson).toList();
+  }
+}
