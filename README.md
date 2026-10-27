@@ -12,7 +12,9 @@ The family's calendar, meals, tasks and lists next to the whole house, music, a 
 [![Translations](https://github.com/jgvsaramago/bytehomedash/actions/workflows/translations.yml/badge.svg)](https://github.com/jgvsaramago/bytehomedash/actions/workflows/translations.yml)
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H6L329JLEM)
 
-<img src="docs/screenshots/home.png" width="32%" alt="Home: the house at a glance, this week's calendar and today's tasks, meals and shopping"> <img src="docs/screenshots/calendar.png" width="32%" alt="The family calendar, each person in their colour"> <img src="docs/screenshots/house.png" width="32%" alt="House: rooms, climate, energy, cars and cameras">
+<a href="https://youtu.be/K4Ck8zx9_Qo"><img src="docs/video-thumbnail.png" width="90%" alt="Watch the ByteHomeDash v0.1.0 demo on YouTube"></a>
+
+▶ **[Watch the v0.1.0 demo on YouTube](https://youtu.be/K4Ck8zx9_Qo)**
 
 [Features](#features) · [What you need](#what-you-need) · [Getting started](#getting-started) · [Documentation](https://github.com/jgvsaramago/bytehomedash/wiki) · [Roadmap](#roadmap) · [Contributing](#contributing)
 
