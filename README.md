@@ -151,6 +151,10 @@ cd ~/src/bytehomedash/device && sudo sh setup.sh
 
 The setup installs everything, including the latest app release. Put your Home Assistant URL and a long-lived token in `/etc/bytehomedash.env`, reboot, and the screen comes up.
 
+**3. Optional: the voice assistant**
+
+Plug a reSpeaker XVF3800 into the board, run the setup again and add the screen to Home Assistant's ESPHome integration. Then, in your LLM conversation agent's options, select **ByteHomeDash** next to Assist under *Control Home Assistant*. Without that, the assistant can't plan meals, open Cooking mode, show web results or know who is speaking. See the [Voice assistant](https://github.com/jgvsaramago/bytehomedash/wiki/Voice-assistant#turn-on-the-agent-tools) page.
+
 **New to this?** The wiki's **[Installation guide](https://github.com/jgvsaramago/bytehomedash/wiki/Installation)** walks you through every step, from writing the card to the first start, with no programming knowledge needed.
 
 ## Documentation
